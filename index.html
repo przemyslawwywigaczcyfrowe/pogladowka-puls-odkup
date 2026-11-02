@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Puls sklepu - Odkup (poglądówka)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600&family=Figtree:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--f:"Google Sans Flex","Google Sans",Roboto,system-ui,sans-serif;--ink:#1F1F1F;--mut:#444746;--mut2:#747775;--acc:#0B57D0;--acc2:#D3E3FD;--acc3:#A8C7FA;
+--pap:#F0F4F9;--track:#E9EEF6;--line:#E1E3E1;--good:#0F5223;--goodbg:#C4EED0;--bad:#8C1D18;--badbg:#FFDAD6;--warn:#7A4100;--warnbg:#FFE0B2;--card:#fff}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--pap);color:var(--ink);font-family:var(--f);font-size:14px}
+.shell{display:grid;grid-template-columns:96px minmax(0,1fr);min-height:100vh}
+.rail{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:4px}
+.fab{width:56px;height:56px;border-radius:16px;background:var(--acc2);display:grid;place-items:center;margin:4px 0 16px;color:#041E49}
+.rl{width:80px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 0 8px;color:var(--mut);text-decoration:none;font:500 12px/1.25 var(--f);text-align:center}
+.rl .p{width:56px;height:32px;border-radius:16px;display:grid;place-items:center}
+.rl.on{color:#001D35;font-weight:600}.rl.on .p{background:#C2E7FF}
+.rl svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rl.new .p{position:relative}.rl.new .p::after{content:"nowe";position:absolute;top:-6px;right:-10px;background:var(--acc);color:#fff;font:600 9px var(--f);padding:1px 5px;border-radius:8px}
+.main{padding:12px 24px 48px 0;min-width:0}
+.top{display:flex;align-items:center;gap:12px 20px;min-height:64px;flex-wrap:wrap;margin-bottom:12px}
+.logo{width:40px;height:40px;border-radius:14px;background:var(--acc);display:grid;place-items:center;color:#fff}
+.top h1{font:500 22px/1.25 var(--f);margin:0}.top p{margin:2px 0 0;font-size:12px;color:var(--mut)}
+.seg{display:inline-flex;gap:2px;margin-left:auto}
+.seg b{height:40px;padding:0 16px;display:grid;place-items:center;background:var(--track);font:500 14px var(--f);border-radius:8px;cursor:default}
+.seg b:first-child{border-radius:20px 8px 8px 20px}.seg b:last-child{border-radius:8px 20px 20px 8px}.seg b.on{background:var(--acc);color:#fff;border-radius:20px}
+.demo{background:var(--warnbg);color:var(--warn);border-radius:12px;padding:10px 16px;font-size:13px;margin-bottom:16px;display:flex;gap:10px;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.card{background:var(--card);border-radius:28px;padding:24px 28px;min-width:0;position:relative}
+.c12{grid-column:span 12}.c8{grid-column:span 8}.c7{grid-column:span 7}.c6{grid-column:span 6}.c5{grid-column:span 5}.c4{grid-column:span 4}
+.ch{display:flex;align-items:flex-start;gap:10px;margin-bottom:16px}
+.ch h2{font:500 18px/1.3 var(--f);margin:0;flex:1}
+.ch .sub{display:block;font-size:13px;color:var(--mut);font-weight:400;margin-top:4px}
+.q{flex:none;width:24px;height:24px;border-radius:12px;background:var(--track);color:var(--mut);display:grid;place-items:center;font:600 12px var(--f);cursor:help;position:relative}
+.q:hover::after{content:attr(data-tt);position:absolute;right:0;top:30px;width:320px;background:#1F1F1F;color:#fff;font:400 12.5px/1.45 var(--f);padding:10px 12px;border-radius:10px;z-index:5;white-space:normal}
+.src{margin-top:16px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--mut2)}
+.ai{margin-top:14px;background:#F3EDF7;border-radius:16px;padding:12px 16px;font-size:13.5px;line-height:1.5;color:#21005D}
+.ai b{font-weight:600}.ai .k{display:block;font:600 11px var(--f);letter-spacing:.04em;text-transform:uppercase;color:#6750A4;margin-bottom:4px}
+/* nagłówek */
+.hero{background:var(--card);border-radius:28px;padding:28px 32px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr);gap:28px}
+.kick{font:600 13.5px 'Figtree',var(--f);color:var(--mut)}
+.hero h2{font:800 38px/1.12 'Figtree',var(--f);margin:6px 0 10px;letter-spacing:-.01em}
+.hero h2 em{font-style:normal;color:var(--acc)}
+.hero p{margin:0;font-size:16px;line-height:1.5;color:var(--mut)}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tile{background:var(--pap);border-radius:22px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile .l{font-size:13px;color:var(--mut)}
+.tile .v{font-size:32px;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tile .v small{font-size:15px;color:var(--mut);font-weight:400}
+.pill{display:inline-flex;align-items:center;gap:4px;font:500 12px var(--f);padding:3px 8px;border-radius:8px;width:max-content}
+.up{background:var(--goodbg);color:var(--good)}.dn{background:var(--badbg);color:var(--bad)}.eq{background:var(--line);color:var(--mut)}
+.spark{height:28px;margin-top:auto}
+/* lejek */
+.fun{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;align-items:end}
+.fs{display:flex;flex-direction:column;gap:8px;min-width:0}
+.fb{background:var(--track);border-radius:14px;height:220px;display:flex;align-items:flex-end;overflow:hidden}
+.fb i{display:block;width:100%;background:var(--acc);border-radius:14px 14px 0 0}
+.fs.key .fb i{background:#0842A0}
+.fn{font:500 22px var(--f);font-variant-numeric:tabular-nums}
+.fl{font-size:13px;color:var(--mut);line-height:1.3;min-height:34px}
+.fl b{display:block;color:var(--ink);font-weight:500}
+.drop{font-size:12px;color:var(--bad);font-weight:500;min-height:16px}
+.drop.ok{color:var(--mut2);font-weight:400}
+/* tabele */
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font:500 12px var(--f);color:var(--mut);text-align:right;padding:0 8px 10px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;padding-left:0}
+td{padding:0 8px;height:48px;border-bottom:1px solid var(--line);text-align:right;font-size:14px}
+tr:last-child td{border-bottom:0}
+.bar{display:inline-block;height:8px;border-radius:4px;background:var(--acc);vertical-align:middle;margin-right:8px}
+.tag{font:500 11px var(--f);padding:2px 7px;border-radius:6px}
+/* porównanie */
+.cmp{display:grid;grid-template-columns:150px minmax(0,1fr) 64px;gap:10px 14px;align-items:center}
+.cmp .n{font-size:13px;color:var(--mut)}
+.cmp .t{height:14px;background:var(--track);border-radius:7px;position:relative}
+.cmp .t i{position:absolute;left:0;top:0;bottom:0;border-radius:7px}
+.cmp .t i.a{background:var(--acc)}.cmp .t i.b{background:#A0A4A8;top:4px;bottom:4px}
+.cmp .p{font:500 14px var(--f);text-align:right;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--mut);margin-bottom:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+/* po wycenie */
+.path{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.st{border-radius:20px;padding:16px;background:var(--pap);display:flex;flex-direction:column;gap:6px;min-height:150px}
+.st .l{font-size:13px;color:var(--mut);line-height:1.3}
+.st .v{font:500 28px var(--f);font-variant-numeric:tabular-nums}
+.st .r{font-size:12px;color:var(--mut2);margin-top:auto}
+.st.e2{background:repeating-linear-gradient(135deg,#fff,#fff 8px,#F0F4F9 8px,#F0F4F9 16px);border:1px dashed #A8C7FA}
+.st.e2 .v{color:var(--mut2)}
+.st.bad{background:#FFF4F2}
+/* paski udziałów */
+.stack{display:flex;height:28px;border-radius:10px;overflow:hidden;gap:2px;margin:6px 0 10px}
+.stack i{display:grid;place-items:center;color:#fff;font:500 12px var(--f);font-style:normal;min-width:0}
+.sl{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut)}
+.sl span{display:inline-flex;gap:6px;align-items:center}.sl i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.sl b{color:var(--ink);font-weight:500}
+.blk+.blk{margin-top:18px}.blk h3{font:500 14px var(--f);margin:0}
+/* wykres */
+.chart svg{width:100%;height:auto;display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.mini h3{font:500 14px var(--f);margin:0 0 10px}
+@media (max-width:1300px){.c8,.c7,.c6,.c5,.c4{grid-column:span 12}.hero{grid-template-columns:1fr}.path{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.shell{grid-template-columns:1fr}.rail{display:none}.main{padding:12px 16px}.tiles{grid-template-columns:1fr 1fr}.fun{grid-template-columns:repeat(4,1fr)}.two{grid-template-columns:1fr}.path{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="rail" aria-label="Widoki Pulsu">
+  <div class="fab"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+  <a class="rl"><span class="p"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg></span>Przegląd</a>
+  <a class="rl"><span class="p"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>Sprzedaż</a>
+  <a class="rl"><span class="p"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8"/></svg></span>Produkty</a>
+  <a class="rl"><span class="p"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 12h11l2-8H6"/></svg></span>Koszyk</a>
+  <a class="rl"><span class="p"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-6 10a1 1 0 001 2h14a1 1 0 001-2l-6-10V3"/></svg></span>Testy A/B</a>
+  <a class="rl on new"><span class="p"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3L20 9M20 4v5h-5M20 12a8 8 0 01-14 5.3L4 15M4 20v-5h5"/></svg></span>Odkup</a>
+  <a class="rl" style="margin-top:auto"><span class="p"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></span>Dostęp</a>
+</nav>
+
+<main class="main">
+  <div class="top">
+    <div class="logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+    <div><h1>Puls sklepu - Cyfrowe.pl</h1><p>Odkup używanych · odkup.cyfrowe.pl · GA4 do przedwczoraj</p></div>
+    <div class="seg"><b class="on">7 dni</b><b>28 dni</b><b>90 dni</b></div>
+  </div>
+
+  <div class="demo"><b>Poglądówka.</b> Liczby są przykładowe. Prawdziwe są tylko udziały starego kreatora w karcie porównania (GA4, 20-31.10). Prawdziwe dane pojawią się po wdrożeniu pomiaru w GTM-NDXT48BF i włączeniu banera zgód na odkup.cyfrowe.pl.</div>
+
+  <div class="grid">
+    <section class="hero c12">
+      <div>
+        <div class="kick">Odkup · 26.10 - 1.11</div>
+        <h2>610 wycen wysłanych, <em>1,28 mln zł</em> sprzętu do odkupu</h2>
+        <p>Klienci zobaczyli 1 020 wycen, 6 na 10 wysłało je do nas. Najwięcej osób odpada na kroku "Twoje dane": przed pokazaniem kwoty musi podać e-mail i telefon.</p>
+        <div class="ai"><span class="k">Notatka AI</span>Wycena eksperta (brak produktu w cenniku) to <b>12% wycen</b>. Najczęściej pytają o GoPro Hero 12 i Canon 5D Mark IV, których nie ma w katalogu odkupu.</div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span class="l">Wejścia na odkup</span><span class="v">3 420</span><span class="pill up">▲ 14% do poprzednich 7 dni</span><svg class="spark" id="sp1" viewBox="0 0 120 28"></svg></div>
+        <div class="tile"><span class="l">Pokazane wyceny</span><span class="v">1 020</span><span class="pill up">▲ 9%</span><svg class="spark" id="sp2" viewBox="0 0 120 28"></svg></div>
+        <div class="tile"><span class="l">Wysłane wyceny</span><span class="v">610</span><span class="pill dn">▼ 3%</span><svg class="spark" id="sp3" viewBox="0 0 120 28"></svg></div>
+        <div class="tile"><span class="l">Wartość wysłanych</span><span class="v">1,28 <small>mln zł</small></span><span class="pill eq">średnio 2 105 zł</span><svg class="spark" id="sp4" viewBox="0 0 120 28"></svg></div>
+      </div>
+    </section>
+
+    <section class="card c12">
+      <div class="ch"><h2>Gdzie klienci odpadają?<span class="sub">Osoby, które doszły do kroku kreatora. Czerwona liczba to ubytek do poprzedniego kroku.</span></h2>
+        <span class="q" data-tt="Zdarzenie buyback_step z numerem kroku (1-7) i wysłana wycena (qualify_lead). Liczymy użytkowników, nie odsłony: cofnięcie się o krok nie zawyża liczby.">?</span></div>
+      <div class="fun" id="fun"></div>
+      <div class="ai"><span class="k">Notatka AI</span>Z kroku "Twoje dane" do wyceny przechodzi <b>69%</b> osób, to największy ubytek w kreatorze (450 osób w 7 dni). Na starym kreatorze z kroku "Twoje dane" do wyceny przechodziło 97% osób.</div>
+      <div class="src">GA4, usługa sklepu, host odkup.cyfrowe.pl · zdarzenia buyback_step, generate_lead, qualify_lead</div>
+    </section>
+
+    <section class="card c7">
+      <div class="ch"><h2>Czy nowa strona prowadzi lepiej niż stary kreator?<span class="sub">Udział osób z kroku 1, które doszły do danego miejsca.</span></h2>
+        <span class="q" data-tt="Stary kreator na www.cyfrowe.pl/sprzedaj-uzywane wysyła awu_form_steps z tekstem nagłówka (w kilku językach). Panel sprowadza te teksty do tych samych etapów co nowy kreator.">?</span></div>
+      <div class="legend"><span><i style="background:var(--acc)"></i>odkup.cyfrowe.pl</span><span><i style="background:#A0A4A8"></i>stary kreator (www)</span></div>
+      <div class="cmp" id="cmp"></div>
+      <div class="src">GA4 · nowy: buyback_step · stary: awu_form_steps po step_name</div>
+    </section>
+
+    <section class="card c5">
+      <div class="ch"><h2>Jak szło dzień po dniu?<span class="sub">Pokazane i wysłane wyceny od startu strony 1.11.</span></h2>
+        <span class="q" data-tt="Słupki: generate_lead (pokazana wycena). Linia: qualify_lead (wysłana wycena). Ostatnie dwa dni GA4 jeszcze koryguje, więc są wyszarzone.">?</span></div>
+      <div class="chart"><svg id="daily" viewBox="0 0 520 250"></svg></div>
+      <div class="src">GA4 · seria dzienna</div>
+    </section>
+
+    <section class="card c12">
+      <div class="ch"><h2>Co dzieje się z wyceną po wysłaniu?<span class="sub">Kroki klienta na stronach z linków w mailach. Pola kreskowane dojdą z danych B2H (etap 2).</span></h2>
+        <span class="q" data-tt="Przesyłka, decyzje i umowa to working_lead, close_convert_lead i close_unconvert_lead z odkup.cyfrowe.pl. Przyjęcie w centrali i wypłata dzieją się w panelu operatora B2H, GA4 ich nie widzi.">?</span></div>
+      <div class="path">
+        <div class="st"><span class="l">Wysłane wyceny</span><span class="v">610</span><span class="r">100%</span></div>
+        <div class="st"><span class="l">Zamówiona przesyłka albo wybrany salon</span><span class="v">420</span><span class="r">69% wysłanych</span></div>
+        <div class="st e2"><span class="l">Przyjęte w centrali</span><span class="v">B2H</span><span class="r">etap 2</span></div>
+        <div class="st"><span class="l">Cena przyjęta po weryfikacji</span><span class="v">260</span><span class="r">62% przesyłek</span></div>
+        <div class="st bad"><span class="l">Cena albo serwis odrzucone</span><span class="v">31</span><span class="r">7% przesyłek</span></div>
+        <div class="st"><span class="l">Wgrana umowa albo faktura</span><span class="v">238</span><span class="r">39% wysłanych</span></div>
+      </div>
+      <div class="src">GA4 · working_lead, close_convert_lead, close_unconvert_lead · etap 2: arkusz z B2H połączony po numerze wyceny</div>
+    </section>
+
+    <section class="card c6">
+      <div class="ch"><h2>Czego klienci szukają?<span class="sub">Frazy z wyszukiwarki kreatora i to, co z nich wynikło.</span></h2>
+        <span class="q" data-tt="Zdarzenie search z frazą i liczbą wyników. Frazy scalone bez względu na wielkość liter. Wycena to generate_lead w tej samej sesji.">?</span></div>
+      <table><thead><tr><th>Fraza</th><th>Wyszukań</th><th>Wybrany produkt</th><th>Wycena</th></tr></thead><tbody id="srch"></tbody></table>
+      <div class="src">GA4 · search, select_item, generate_lead</div>
+    </section>
+
+    <section class="card c6">
+      <div class="ch"><h2>Czego nie ma w cenniku odkupu?<span class="sub">Frazy bez wyników i prośby o wycenę eksperta.</span></h2>
+        <span class="q" data-tt="search ze statusem brak oraz buyback_expert_start. Błąd blad oznacza, że wyszukiwarka nie odpowiedziała (np. blokada Cloudflare), a klient zobaczył Brak wyników.">?</span></div>
+      <table><thead><tr><th>Fraza</th><th>Wyszukań</th><th>Status</th><th>Prośba do eksperta</th></tr></thead><tbody id="miss"></tbody></table>
+      <div class="src">GA4 · search (status brak, blad), buyback_expert_start</div>
+    </section>
+
+    <section class="card c4">
+      <div class="ch"><h2>Jak klienci chcą dostać pieniądze?</h2>
+        <span class="q" data-tt="Forma wypłaty i rodzaj dokumentu z wysłanej wyceny (qualify_lead). Karta podarunkowa ma bonus do kwoty.">?</span></div>
+      <div class="blk"><h3>Forma wypłaty</h3><div class="stack" id="st1"></div><div class="sl" id="sl1"></div></div>
+      <div class="blk"><h3>Dokument</h3><div class="stack" id="st2"></div><div class="sl" id="sl2"></div></div>
+      <div class="src">GA4 · qualify_lead po payment_type, document_type</div>
+    </section>
+
+    <section class="card c4">
+      <div class="ch"><h2>Jak sprzęt do nas trafia?</h2>
+        <span class="q" data-tt="Sposób dostawy z wysłanej wyceny (qualify_lead, delivery_type).">?</span></div>
+      <div class="blk"><h3>Dostawa</h3><div class="stack" id="st3"></div><div class="sl" id="sl3"></div></div>
+      <div class="blk"><h3>Produktów w jednej wycenie</h3><div class="stack" id="st4"></div><div class="sl" id="sl4"></div></div>
+      <div class="src">GA4 · qualify_lead po delivery_type, products_count</div>
+    </section>
+
+    <section class="card c4">
+      <div class="ch"><h2>W jakim stanie jest sprzęt?</h2>
+        <span class="q" data-tt="Ocena stanu wybrana przez klienta przy dodaniu produktu (buyback_product_added, rating). Kompletność to udział zaznaczonych akcesoriów.">?</span></div>
+      <div class="blk"><h3>Ocena klienta</h3><div class="stack" id="st5"></div><div class="sl" id="sl5"></div></div>
+      <div class="blk"><h3>Komplet akcesoriów</h3><div class="stack" id="st6"></div><div class="sl" id="sl6"></div></div>
+      <div class="src">GA4 · buyback_product_added</div>
+    </section>
+
+    <section class="card c7">
+      <div class="ch"><h2>Skąd przychodzą klienci, którzy wysyłają wyceny?</h2>
+        <span class="q" data-tt="Kanał sesji GA4 dla hosta odkup.cyfrowe.pl. Przejście ze sklepu to sesja, która zaczęła się na www.cyfrowe.pl.">?</span></div>
+      <table><thead><tr><th>Kanał</th><th>Wejścia</th><th>Pokazane wyceny</th><th>Wysłane</th><th>Wysłane z wejść</th></tr></thead><tbody id="ch"></tbody></table>
+      <div class="src">GA4 · kanał sesji, host odkup.cyfrowe.pl</div>
+    </section>
+
+    <section class="card c5">
+      <div class="ch"><h2>Co przeszkadza klientom?<span class="sub">Błędy, blokady i porzucenia w kreatorze.</span></h2>
+        <span class="q" data-tt="buyback_error: odpowiedź API spoza 2xx albo komunikat błędu. 403 to blokada Cloudflare, 429 limit zapytań. buyback_leave: okno Opuścić wycenę?">?</span></div>
+      <table><thead><tr><th>Co się stało</th><th>Razy</th><th>Na kroku</th></tr></thead><tbody id="err"></tbody></table>
+      <div class="src">GA4 · buyback_error, buyback_leave</div>
+    </section>
+  </div>
+</main>
+</div>
+
+<script>
+const fmt=n=>n.toLocaleString('pl-PL');
+const C=['#0B57D0','#4C8DF6','#A8C7FA','#7FCFA0','#F6AEA9','#C4C7C5'];
+// lejek
+const F=[['Sprzęt','szuka produktu',2610],['Stan','ocenia stan',1780],['Akcesoria','zaznacza',1690],['Lista','podsumowanie',1610],['Twoje dane','e-mail, telefon',1470],['Wycena','pokazana kwota',1020,1],['Dostawa','wybiera sposób',690],['Wysłana','potwierdzenie',610,1]];
+document.getElementById('fun').innerHTML=F.map((s,i)=>{const p=s[2]/F[0][2]*100;const d=i?Math.round((1-s[2]/F[i-1][2])*100):null;
+return `<div class="fs ${s[3]?'key':''}"><div class="drop ${d!==null&&d<10?'ok':''}">${d===null?'':'-'+d+'% ('+fmt(F[i-1][2]-s[2])+')'}</div><div class="fb"><i style="height:${p}%"></i></div><div class="fn">${fmt(s[2])}</div><div class="fl"><b>${i+1}. ${s[0]}</b>${s[1]}</div></div>`}).join('');
+// porównanie
+const CM=[['Stan',68,63],['Akcesoria',65,61],['Lista',62,58],['Twoje dane',56,57],['Wycena',39,55],['Wysłana',23,14]];
+document.getElementById('cmp').innerHTML=CM.map(r=>`<span class="n">${r[0]}</span><span class="t"><i class="a" style="width:${r[1]}%"></i></span><span class="p">${r[1]}%</span><span></span><span class="t" style="background:transparent"><i class="b" style="width:${r[2]}%"></i></span><span class="p" style="color:var(--mut2)">${r[2]}%</span>`).join('');
+// iskierki
+function spark(id,a){const mx=Math.max(...a),mn=Math.min(...a);const pts=a.map((v,i)=>[i*(120/(a.length-1)),26-(v-mn)/(mx-mn||1)*22]);document.getElementById(id).innerHTML=`<polyline fill="none" stroke="#0B57D0" stroke-width="2" points="${pts.map(p=>p.join(',')).join(' ')}"/>`}
+spark('sp1',[410,450,520,480,530,560,470]);spark('sp2',[120,135,160,150,155,170,130]);spark('sp3',[80,85,96,90,92,95,72]);spark('sp4',[160,175,205,190,196,203,151]);
+// dzienny
+(function(){const D=[['26.10',120,80],['27.10',135,85],['28.10',160,96],['29.10',150,90],['30.10',155,92],['31.10',170,95],['1.11',130,72]];
+const W=520,H=250,L=36,B=30,T=14,mx=200,bw=40,st=(W-L-10)/D.length;let s='';
+[0,50,100,150,200].forEach(v=>{const y=H-B-(v/mx)*(H-B-T);s+=`<line x1="${L}" x2="${W}" y1="${y}" y2="${y}" stroke="#E1E3E1"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="#747775">${v}</text>`});
+let pl=[];D.forEach((d,i)=>{const x=L+i*st+(st-bw)/2,h=d[1]/mx*(H-B-T),late=i>=D.length-2;s+=`<rect x="${x}" y="${H-B-h}" width="${bw}" height="${h}" rx="8" fill="${late?'#C2D7F8':'#A8C7FA'}"/><text x="${x+bw/2}" y="${H-10}" text-anchor="middle" font-size="11" fill="#444746">${d[0]}</text>`;pl.push([x+bw/2,H-B-d[2]/mx*(H-B-T)])});
+s+=`<polyline fill="none" stroke="#0842A0" stroke-width="2.5" points="${pl.map(p=>p.join(',')).join(' ')}"/>`+pl.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#0842A0"/>`).join('');
+s+=`<rect x="${L}" y="2" width="10" height="10" rx="3" fill="#A8C7FA"/><text x="${L+16}" y="11" font-size="11" fill="#444746">pokazane</text><line x1="${L+90}" x2="${L+104}" y1="7" y2="7" stroke="#0842A0" stroke-width="2.5"/><text x="${L+110}" y="11" font-size="11" fill="#444746">wysłane</text>`;
+document.getElementById('daily').innerHTML=s})();
+// tabele
+const S=[['sony a7 iii',214,'Aparat Sony A7 III Body',96],['canon eos r6',180,'Aparat Canon EOS R6 Body',81],['fujifilm x-t4',122,'Aparat Fujifilm X-T4',52],['nikon z6',110,'Aparat Nikon Z6 Body',44],['dji mini 3',96,'Dron DJI Mini 3',39],['sony a6400',88,'Aparat Sony A6400 Body',35]];
+const mS=Math.max(...S.map(r=>r[1]));
+document.getElementById('srch').innerHTML=S.map(r=>`<tr><td><span class="bar" style="width:${r[1]/mS*70}px"></span>${r[0]}</td><td>${fmt(r[1])}</td><td style="font-size:13px;color:var(--mut)">${r[2]}</td><td>${fmt(r[3])}</td></tr>`).join('');
+const M=[['gopro hero 12',41,'brak',17],['canon 5d mark iv',33,'brak',14],['sony a7 iv',27,'blad',2],['leica q2',18,'brak',9],['dji mavic 3 pro',15,'brak',6],['pentax k-1',9,'brak',4]];
+document.getElementById('miss').innerHTML=M.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td><span class="tag" style="background:${r[2]=='blad'?'var(--badbg)':'var(--line)'};color:${r[2]=='blad'?'var(--bad)':'var(--mut)'}">${r[2]=='blad'?'błąd wyszukiwarki':'brak w cenniku'}</span></td><td>${r[3]}</td></tr>`).join('');
+// udziały
+function stack(id,lid,a){document.getElementById(id).innerHTML=a.map((r,i)=>`<i style="flex:${r[1]};background:${C[i]}">${r[1]>=12?r[1]+'%':''}</i>`).join('');document.getElementById(lid).innerHTML=a.map((r,i)=>`<span><i style="background:${C[i]}"></i>${r[0]} <b>${r[1]}%</b></span>`).join('')}
+stack('st1','sl1',[['przelew',49],['karta podarunkowa',46],['gotówka w salonie',5]]);
+stack('st2','sl2',[['osoba prywatna (umowa)',91],['firma (faktura)',9]]);
+stack('st3','sl3',[['InPost',38],['DPD',31],['salon',24],['własna',7]]);
+stack('st4','sl4',[['1 produkt',72],['2 produkty',19],['3 i więcej',9]]);
+stack('st5','sl5',[['10/10',9],['9/10',41],['8/10',33],['7/10',12],['6/10',5]]);
+stack('st6','sl6',[['komplet',34],['ponad połowa',45],['mniej niż połowa',21]]);
+const CH=[['Bezpłatne wyszukiwanie',1210,390,240],['Przejście ze sklepu',980,320,205],['Płatne wyszukiwanie',640,170,95],['Bezpośrednie',420,105,55],['Social',170,35,15]];
+document.getElementById('ch').innerHTML=CH.map(r=>`<tr><td>${r[0]}</td><td>${fmt(r[1])}</td><td>${fmt(r[2])}</td><td>${fmt(r[3])}</td><td>${(r[3]/r[1]*100).toFixed(1).replace('.',',')}%</td></tr>`).join('');
+const E=[['Okno "Opuścić wycenę?", klient wyszedł',92,'Twoje dane'],['Produkt nie jest skupowany (notBought)',64,'Lista'],['Blokada Cloudflare (403)',27,'Sprzęt'],['Za dużo zapytań (429)',3,'Wycena'],['Nieprawidłowy numer konta',48,'Wycena']];
+document.getElementById('err').innerHTML=E.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td style="color:var(--mut)">${r[2]}</td></tr>`).join('');
+</script>
+</body>
+</html>
