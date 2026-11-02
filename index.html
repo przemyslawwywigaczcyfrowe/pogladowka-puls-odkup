@@ -2447,110 +2447,95 @@ body, .main, .uk2 { font-family: var(--m3f); color: #1F1F1F; }
 </style>
 <meta name="robots" content="noindex, nofollow"><script>window.ODK_DANE={
  "przyklad": true,
- "okres": { "od": "2026-11-16", "do": "2026-11-22", "dni": 7, "poprzedni": { "wysl": 701, "pokaz": 1102, "wejscia": 3310, "wartosc": 1521000 } },
- "lejek": {
-  "kroki": [
-   { "id": "wejscie",   "n": "Weszli",             "s": "odkup.cyfrowe.pl",        "str": "kreator" },
-   { "id": "search",    "n": "Szukali",            "s": "wpisali frazę",           "str": "kreator" },
-   { "id": "produkt",   "n": "Wybrali produkt",    "s": "z listy wyników",         "str": "kreator" },
-   { "id": "rating",    "n": "Ocenili stan",       "s": "10/10 do 6/10",           "str": "kreator" },
-   { "id": "akcesoria", "n": "Akcesoria",          "s": "zaznaczyli komplet",      "str": "kreator" },
-   { "id": "summary",   "n": "Lista",              "s": "podsumowanie",            "str": "kreator" },
-   { "id": "client",    "n": "Dane",               "s": "e-mail i telefon",        "str": "kreator" },
-   { "id": "kwota",     "n": "Zobaczyli kwotę",    "s": "wycena gotowa",           "str": "kreator", "klucz": true },
-   { "id": "wyplata",   "n": "Wypłata",            "s": "forma wypłaty", "str": "kreator" },
-   { "id": "dostawa",   "n": "Dostawa",            "s": "kurier albo salon",       "str": "kreator" },
-   { "id": "wyslana",   "n": "Wysłali wycenę",     "s": "potwierdzenie",           "str": "kreator", "klucz": true },
-   { "id": "paczka",    "n": "Nadali paczkę",      "s": "link z maila",            "str": "mail" },
-   { "id": "weryf",     "n": "Zweryfikowane",      "s": "ekspertyza w centrali",   "str": "b2h" },
-   { "id": "cena",      "n": "Cena przyjęta",      "s": "po weryfikacji",          "str": "b2h" },
-   { "id": "umowa",     "n": "Umowa",              "s": "albo faktura",            "str": "b2h" },
-   { "id": "wyplacone", "n": "Wypłacone",          "s": "odkup zamknięty",         "str": "b2h", "klucz": true }
+ "okres": { "od": "2026-10-26", "do": "2026-11-22", "dni": 28 },
+ "przeglad": {
+  "odkupione_zl": 3620000, "odkupione_szt": 2290, "wyplacone_wyceny": 1760, "poprz_odkupione_zl": 3310000,
+  "w_toku_zl": 2140000, "w_toku_wyceny": 1065, "marza_proc": 0.21, "marza_zl": 962000,
+  "czas_do_wyplaty_med": 6.4, "czas_do_wyplaty_poprz": 7.1, "koszt_bonusu_zl": 118000,
+  "tydzien": [["26.10", 520, 0.82], ["2.11", 560, 0.87], ["9.11", 580, 0.92], ["16.11", 630, 1.01]]
+ },
+ "sankey": {
+  "kolumny": ["Weszli", "Kwota", "Wysłali", "Dotarło", "Zweryfikowane", "Zgoda", "Umowa", "Wypłata"],
+  "glowny": [14200, 4750, 2980, 2210, 2150, 1910, 1820, 1760],
+  "wyjscia": [
+   [["bez kwoty: odpadli w kreatorze", 9450, "ga4"]],
+   [["wycena wygasła bez wysłania", 1770, "klient"]],
+   [["nie nadali paczki", 770, "klient"]],
+   [["sprzęt niekompletny, zwrot", 60, "my"]],
+   [["klient odrzucił nową cenę", 170, "klient"], ["odrzucone przez nas", 70, "my"]],
+   [["umowa nie wróciła", 90, "klient"]],
+   [["czeka na komplet sprzętu", 60, "my"]]
   ],
-  "urz": {
-   "Wszystkie": [3560, 2710, 2140, 2020, 1930, 1860, 1740, 1190, 980, 860, 742, 498, 430, 371, 352, 339],
-   "Telefon":   [2065, 1540, 1190, 1110, 1050, 1010,  935,  600, 480, 415, 352, 232, 200, 172, 163, 157],
-   "Komputer":  [1424, 1120,  905,  865,  835,  810,  770,  560, 475, 425, 375, 254, 219, 189, 179, 172],
-   "Tablet":    [  71,   50,   45,   45,   45,   40,   35,   30,  25,  20,  15,  12,  11,  10,  10,  10]
+  "wartosc": [null, 10400000, 6600000, 4900000, 4750000, 3950000, 3760000, 3620000]
+ },
+ "czas": {
+  "etapy": [
+   ["Wycena do nadania paczki", "klient", 1.4, 4.8],
+   ["Paczka w drodze", "przewoźnik", 1.6, 3.1],
+   ["Przyjęcie do weryfikacji", "my", 1.2, 2.9],
+   ["Decyzja klienta po zmianie ceny", "klient", 2.1, 5.6],
+   ["Umowa: wysyłka, podpis, kontrasygnata", "my i klient", 1.8, 4.2],
+   ["Rozliczenie do wypłaty", "my", 0.9, 2.4]
+  ],
+  "przezycie": {
+   "dni": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+   "wyslane": [0.42,0.51,0.56,0.59,0.61,0.62,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63],
+   "dotarlo": [0,0.08,0.23,0.34,0.40,0.43,0.45,0.46,0.46,0.47,0.47,0.47,0.47,0.47,0.47],
+   "wyplacone": [0,0,0,0.02,0.08,0.15,0.22,0.27,0.31,0.33,0.35,0.36,0.37,0.37,0.37]
   },
-  "ekspert": 160,
-  "okno": { "pokazane": 214, "wyszli": 137 }
+  "kolejka": {
+   "stany": ["Nowa, czeka na paczkę", "Przyjęta", "W weryfikacji", "Czeka na decyzję klienta", "Podpisywanie umowy", "Faktura od firmy", "Serwis", "Rozliczenie"],
+   "kto": ["klient", "my", "my", "klient", "klient", "klient", "my", "my"],
+   "przedzialy": ["0-1 dnia", "2-3 dni", "4-7 dni", "8-14 dni", "ponad 14 dni"],
+   "liczby": [[310,180,120,0,0],[64,22,6,1,0],[48,19,8,3,1],[36,28,19,9,4],[52,31,14,6,2],[8,6,4,3,2],[3,5,6,4,3],[27,9,2,0,0]]
+  }
  },
- "wartosc": { "wyslane": 1642000, "umowy": 721600, "srednia": 2213, "mediana": 1690 },
- "dzien": {
-  "d": ["2026-11-16", "2026-11-17", "2026-11-18", "2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22"],
-  "wejscia": [470, 520, 545, 510, 480, 455, 580],
-  "pokaz":   [158, 172, 181, 170, 160, 148, 201],
-  "wysl":    [ 98, 108, 112, 106, 101,  92, 125]
+ "cena": {
+  "stany": ["10/10","9/10","8/10","7/10","6/10","5/10"],
+  "deklar_weryf": [
+   [118,46,12,3,1,0],
+   [9,612,128,24,4,1],
+   [1,22,548,61,9,2],
+   [0,2,19,236,22,3],
+   [0,0,2,11,104,9],
+   [0,0,0,1,4,38]
+  ],
+  "korekta": [["bez zmiany", 1480, 0.0], ["-0,1% do -5%", 210, 0.03], ["-5% do -10%", 190, 0.075], ["-10% do -20%", 170, 0.14], ["ponad -20%", 100, 0.27]],
+  "akceptacja": [null, 0.85, 0.70, 0.52, 0.31],
+  "forma": [["karta podarunkowa", 0.46, 2540, 0.07], ["przelew", 0.54, 2010, 0.0]],
+  "wyplata_zl": [["karta podarunkowa", 1810000], ["przelew", 1810000]]
  },
- "powroty": {
-  "wizyty": [["1 wizyta", 401], ["2 wizyty", 178], ["3 wizyty", 82], ["4 i więcej", 81]],
-  "czas": [["w tej samej wizycie", 364], ["do 24 godzin", 104], ["1-3 dni", 126], ["4-7 dni", 96], ["po 7 dniach", 52]],
-  "kohorta": {
-   "dni": ["16.11", "17.11", "18.11", "19.11", "20.11", "21.11", "22.11"],
-   "pokaz": [158, 172, 181, 170, 160, 148, 201],
-   "proc": [
-    [0.48, 0.54, 0.57, 0.59, 0.60, 0.61, 0.62, 0.63],
-    [0.50, 0.55, 0.58, 0.60, 0.61, 0.62, 0.62],
-    [0.47, 0.53, 0.56, 0.58, 0.59, 0.60],
-    [0.49, 0.56, 0.59, 0.61, 0.62],
-    [0.51, 0.57, 0.60, 0.62],
-    [0.46, 0.52, 0.55],
-    [0.52, 0.58]
-   ]
-  },
-  "sprzedawcy": { "wyslali": 742, "ponownie90": 59, "kupili30": 156, "kupKarta": 130, "kupPrzelew": 25, "kupGotowka": 1, "sredniZakup": 1880 }
+ "podaz": {
+  "modele": [
+   ["Sony A7 III", "Aparaty", 64, 9, 0.24],
+   ["Canon EOS R6", "Aparaty", 51, 7, 0.22],
+   ["Sony FE 24-70 GM", "Obiektywy", 38, 12, 0.19],
+   ["Fujifilm X-T4", "Aparaty", 35, 21, 0.14],
+   ["Nikon Z6 II", "Aparaty", 29, 16, 0.18],
+   ["DJI Mini 3 Pro", "Drony", 27, 34, 0.08],
+   ["Canon RF 24-105 f/4L", "Obiektywy", 26, 6, 0.26],
+   ["Sony A6400", "Aparaty", 24, 28, 0.11],
+   ["GoPro HERO11", "Kamery", 22, 41, 0.05],
+   ["Canon EOS R7", "Aparaty", 18, 11, 0.21],
+   ["Sigma 24-70 f/2.8 DG DN", "Obiektywy", 16, 8, 0.27],
+   ["Sony A7 IV", "Aparaty", 14, 5, 0.25]
+  ],
+  "kanban": [["Nowy", 0.6], ["Regał", 0.8], ["Indeks", 1.9], ["KG+EAN", 0.7], ["Sesja i pakowanie", 2.6], ["Karta produktu", 1.4], ["PZ", 0.5], ["Front", 0.3], ["Allegro", 0.4], ["Sprzedany", 9.8]],
+  "luki": [["GoPro HERO12", 41, 17, "brak w cenniku"], ["Canon 5D Mark IV", 33, 14, "brak w cenniku"], ["Leica Q2", 18, 9, "brak w cenniku"], ["DJI Mavic 3 Pro", 15, 6, "brak w cenniku"], ["Sony A7 IV", 27, 0, "błąd wyszukiwarki"]],
+  "popyt": [["Sony A7 IV", 5, 14, 42], ["Canon RF 24-105 f/4L", 6, 26, 31], ["Sigma 24-70 f/2.8 DG DN", 8, 16, 22], ["GoPro HERO11", 41, 22, 4], ["DJI Mini 3 Pro", 34, 27, 6]]
  },
- "formy": {
-  "wyplata": ["Karta podarunkowa", "Przelew", "Gotówka w salonie"],
-  "dostawa": ["InPost", "DPD", "Salon", "Własna"],
-  "macierz": [[120, 98, 104, 19], [162, 125, 52, 25], [0, 0, 37, 0]],
-  "srednia": [2540, 2010, 1180],
-  "dokument": [["Osoba prywatna, umowa", 676, 1960], ["Firma, faktura", 66, 4810]]
- },
- "kwoty": {
-  "kosze": ["do 500 zł", "500-1000", "1-2 tys.", "2-3 tys.", "3-5 tys.", "5-10 tys.", "ponad 10 tys."],
-  "pokaz": [200, 232, 280, 186, 160, 101, 31],
-  "wysl":  [ 96, 132, 188, 128, 112,  70, 16]
- },
- "produkty": [
-  { "n": "Aparat Sony A7 III Body",                  "k": "Aparaty",   "pokaz": 74, "wysl": 52, "sr": 3150, "ocena": 8.6, "komplet": 0.41, "zm": 0.12 },
-  { "n": "Aparat Canon EOS R6 Body",                 "k": "Aparaty",   "pokaz": 61, "wysl": 44, "sr": 4020, "ocena": 8.8, "komplet": 0.48, "zm": 0.09 },
-  { "n": "Aparat Fujifilm X-T4 Body",                "k": "Aparaty",   "pokaz": 48, "wysl": 31, "sr": 2380, "ocena": 8.7, "komplet": 0.39, "zm": -0.05 },
-  { "n": "Aparat Nikon Z6 II Body",                  "k": "Aparaty",   "pokaz": 39, "wysl": 27, "sr": 3260, "ocena": 8.5, "komplet": 0.44, "zm": 0.21 },
-  { "n": "Obiektyw Sony FE 24-70 mm f/2.8 GM",       "k": "Obiektywy", "pokaz": 36, "wysl": 28, "sr": 2870, "ocena": 8.9, "komplet": 0.72, "zm": 0.03 },
-  { "n": "Dron DJI Mini 3 Pro",                      "k": "Drony",     "pokaz": 34, "wysl": 19, "sr": 1340, "ocena": 8.3, "komplet": 0.35, "zm": 0.31 },
-  { "n": "Obiektyw Canon RF 24-105 mm f/4L IS USM",  "k": "Obiektywy", "pokaz": 31, "wysl": 23, "sr": 2150, "ocena": 8.7, "komplet": 0.68, "zm": -0.08 },
-  { "n": "Aparat Sony A6400 Body",                   "k": "Aparaty",   "pokaz": 30, "wysl": 18, "sr": 1520, "ocena": 8.4, "komplet": 0.37, "zm": 0.00 },
-  { "n": "Kamera GoPro HERO11 Black",                "k": "Kamery",    "pokaz": 27, "wysl": 12, "sr": 640,  "ocena": 8.1, "komplet": 0.29, "zm": 0.18 },
-  { "n": "Aparat Canon EOS R7 Body",                 "k": "Aparaty",   "pokaz": 25, "wysl": 17, "sr": 2960, "ocena": 8.9, "komplet": 0.52, "zm": 0.40 }
- ],
- "kategorie": [["Aparaty", 448], ["Obiektywy", 312], ["Drony", 68], ["Kamery sportowe", 54], ["Lampy", 38], ["Inne", 45]],
- "marki": [["Sony", 328], ["Canon", 280], ["Fujifilm", 125], ["Nikon", 116], ["DJI", 58], ["Inne", 58]],
- "stan": { "oceny": ["10/10", "9/10", "8/10", "7/10", "6/10"], "deklar": [68, 376, 328, 135, 58], "obnizone": [0.31, 0.14, 0.09, 0.07, 0.05] },
- "akcesoriaKomplet": [["komplet", 0.34], ["ponad połowa", 0.45], ["mniej niż połowa", 0.21]],
- "szukanie": {
-  "razem": 6420, "zWynikiem": 0.84, "bezWynikow": 0.14, "blad": 0.02,
-  "trafione": [["sony a7 iii", 214, 0.61], ["canon r6", 180, 0.58], ["fujifilm x-t4", 122, 0.49], ["nikon z6", 110, 0.47], ["dji mini 3", 96, 0.42], ["sony a6400", 88, 0.40]],
-  "brak": [["gopro hero 12", 41, 17], ["canon 5d mark iv", 33, 14], ["leica q2", 18, 9], ["dji mavic 3 pro", 15, 6], ["pentax k-1", 9, 4]],
-  "bledy": [["sony a7 iv", 27]]
- },
- "kanaly": [
-  ["Przejście ze sklepu", 1120, 452, 298],
-  ["Bezpłatne wyszukiwanie", 1010, 318, 196],
-  ["Płatne wyszukiwanie", 760, 196, 118],
-  ["Bezpośrednie", 410, 132, 82],
-  ["Mail (SALESmanago)", 140, 58, 31],
-  ["Media społecznościowe", 120, 34, 17]
- ],
- "zrodlaSklep": [["Karta produktu", 512], ["Strona główna", 246], ["Menu i stopka", 198], ["Koszyk", 92], ["Inne strony", 72]],
- "porownanie": {
-  "kroki": ["Ocenili stan", "Akcesoria", "Lista", "Dane", "Zobaczyli kwotę", "Wysłali wycenę"],
-  "stary": [0.63, 0.61, 0.58, 0.57, 0.55, 0.14],
-  "nowy":  [0.57, 0.54, 0.52, 0.49, 0.33, 0.21],
-  "staryOd": "20-31.10.2026, prawdziwe dane GA4"
- },
- "zdrowie": { "ga4Wysl": 742, "b2hWysl": 1010, "zgody": 0.71, "b403": 38, "b429": 4, "bezKwoty": 0 }
+ "klient": {
+  "sprzedajacy": 1650, "kupili30": 384, "kupKarta": 0.38, "kupPrzelew": 0.07, "ponownie90": 0.08,
+  "kanaly": [
+   ["Przejście ze sklepu", 1120, 1210000, 0.33],
+   ["Bezpłatne wyszukiwanie", 1010, 980000, 0.27],
+   ["Płatne wyszukiwanie", 760, 520000, 0.14],
+   ["Salon (szybka wycena)", 0, 610000, 0.17],
+   ["Mail (SALESmanago)", 140, 190000, 0.05],
+   ["Media społecznościowe", 120, 110000, 0.03]
+  ],
+  "karta": { "wydane_zl": 1810000, "wykorzystane_30d": 0.71, "doplata_na_zl": 0.62, "bonus_zl": 118000 }
+ }
 }
 ;window.TAB_DANE={blad:"poglądówka"};</script></head>
 <body>
@@ -12866,13 +12851,10 @@ window.TAB = (function () {
 })();
 </script>
 
-<!-- Widok "Odkup" (POGLĄDÓWKA 2.11.2026, nie wdrożone). Funkcje w window.ODK.
-  odkup.cyfrowe.pl (system B2H, start 1.11.2026), pomiar w kontenerze GTM-NDXT48BF. Dane: window.ODK_DANE
-  (stend: dane-odkup.json, LICZBY PRZYKŁADOWE). Kolejność kart = kolejność pytań osoby prowadzącej odkup:
-  ile wycen i za ile, gdzie tracimy klientów, czy wracają, czy sprzedający kupują u nas, jakie formy wypłaty
-  i dostawy, za jakie kwoty, jaki sprzęt, czego szukają, skąd przychodzą, kiedy, nowa strona a stary kreator,
-  czy pomiar jest kompletny. Źródła: GA4 (zdarzenia buyback_step, generate_lead, qualify_lead, working_lead,
-  close_convert_lead, search, select_item, buyback_product_added) i od etapu 2 dane z B2H po numerze wyceny. -->
+<!-- Widok "Odkup" (POGLĄDÓWKA v3, 2.11.2026, nie wdrożone). Siedem zakładek: metody analizy skupu (Podaż w skrócie,
+  Droga wyceny, Czas i kolejki, Cena i zaufanie, Podaż i rotacja, Sprzedający) i "Skąd dane?". Dane: window.ODK_DANE
+  (stend: dane-odkup-v3.json, LICZBY PRZYKŁADOWE). Źródła docelowe: GA4 z kontenera GTM-NDXT48BF i B2H (arkusz "Wycena",
+  kanban, raport marży), łączone numerem wyceny. Adres: ?widok=odkup&zakladka=przeglad|droga|czas|cena|podaz|klient|dane. -->
 <style>
 .odx .a3-k { padding: 28px 32px; }
 .odx .od-zak { display: inline-flex; gap: 2px; }
@@ -13001,367 +12983,309 @@ window.TAB = (function () {
 .od-tt b { font-weight: 600; } .od-tt .m { color: #C4C7C5; }
 @media (max-width: 1500px) { .odx .od-dwa, .odx .od-dwa.rowno { grid-template-columns: 1fr; } .odx .od-not { grid-template-columns: 1fr 1fr; } }
 </style>
+<style>
+/* ---- v3: zakładki metod ---- */
+.odx .od-meta { font-size: 13px; color: var(--sub); margin: -14px 0 18px; }
+.odx .od-meta b { color: var(--ink); font-weight: 500; }
+.odx .od-kto { display: inline-flex; align-items: center; gap: 6px; height: 22px; padding: 0 9px; border-radius: 11px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.odx .od-kto.klient { background: #FEF1DF; color: #8A4B00; }
+.odx .od-kto.my { background: #FCE4EC; color: #A3154A; }
+.odx .od-kto.prz { background: #E0F2F1; color: #00695C; }
+.odx .od-kto.ga4 { background: #E9EEF6; color: #444746; }
+.odx .od-sk svg { width: 100%; height: auto; display: block; overflow: visible; }
+.odx .od-et > div { display: grid; grid-template-columns: 280px minmax(0, 1fr) 120px; gap: 16px; align-items: center; min-height: 52px; border-top: 1px solid var(--lin2); }
+.odx .od-et > div:first-child { border-top: 0; }
+.odx .od-et .n { font-size: 14.5px; display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.odx .od-et .pl { position: relative; height: 20px; }
+.odx .od-et .pl i { position: absolute; top: 4px; height: 12px; border-radius: 4px; }
+.odx .od-et .pl i.p90 { top: 9px; height: 2px; border-radius: 1px; opacity: .5; }
+.odx .od-et .pl b { position: absolute; top: 2px; width: 2px; height: 16px; border-radius: 1px; }
+.odx .od-et .w { text-align: right; font-variant-numeric: tabular-nums; font-size: 15px; }
+.odx .od-et .w small { display: block; font-size: 12px; color: var(--sub); }
+.odx .od-hm .c.kr { box-shadow: inset 0 0 0 2px #B3261E; }
+.odx .od-mxc { display: grid; gap: 3px; }
+.odx .od-mxc .c { height: 50px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.odx .od-mxc .c.diag { box-shadow: inset 0 0 0 2px #1F1F1F; }
+.odx .od-mxc .h { font-size: 12px; color: var(--sub); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; }
+.odx .od-mxc .r { font-size: 13px; color: var(--mut); display: flex; align-items: center; }
+.odx .od-mxc .s { font-size: 13px; display: flex; align-items: center; justify-content: flex-end; font-variant-numeric: tabular-nums; }
+.odx .od-dane td { white-space: normal; overflow-wrap: anywhere; height: auto; padding: 14px 10px; vertical-align: top; text-align: left; font-size: 14px; line-height: 1.45; }
+.odx .od-dane td code { font-size: 12.5px; background: var(--pole); padding: 1px 5px; border-radius: 4px; }
+.odx .od-dane th { text-align: left; }
+.odx .od-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; align-items: stretch; }
+.odx .od-flow > div { padding: 16px 18px; background: var(--pole); position: relative; }
+.odx .od-flow > div:first-child { border-radius: 18px 0 0 18px; } .odx .od-flow > div:last-child { border-radius: 0 18px 18px 0; }
+.odx .od-flow > div + div { border-left: 2px solid #fff; }
+.odx .od-flow b { display: block; font-size: 24px; font-weight: 500; }
+.odx .od-flow span { font-size: 13px; color: var(--mut); }
+</style>
 <script>
 window.ODK = (function () {
-  var P, D, UR = 'Wszystkie';
+  var P, D, ZAK = 'przeglad';
   var KAT = ['#0B57D0', '#00897B', '#E8710A', '#8E24AA', '#C2185B', '#A0A4A8'];
+  var KTO = { klient: '#E8710A', my: '#C2185B', 'przewoźnik': '#00897B', 'my i klient': '#8E24AA', ga4: '#A0A4A8' };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (m) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]; }); }
   function nf(x, d) { return (x == null || isNaN(x)) ? '-' : Number(x).toLocaleString('pl-PL', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
   function pr(x, d) { return nf(x * 100, d == null ? 0 : d) + '%'; }
   function zl(x) { return x >= 1e6 ? nf(x / 1e6, 2) + ' mln zł' : x >= 1e4 ? nf(x / 1000) + ' tys. zł' : nf(x) + ' zł'; }
-  function odm(n, a, b, c) { n = Math.abs(Math.round(n)); return n === 1 ? a : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? b : c; }
   function dt(s) { var p = s.split('-'); return +p[2] + '.' + p[1]; }
   function tt(h) { return ' data-odtt="' + esc(h) + '"'; }
   function qm(tip, k) { try { return P('qm')(tip, k); } catch (e) { return ''; } }
   function slot(s) { try { return P('notatkaSlot')(s); } catch (e) { return ''; } }
   function ikona(n) { try { return P('icon')(n); } catch (e) { return ''; } }
-  function zmiana(a, b) { var z = (a - b) / b; return '<span class="od-pd ' + (z > 0.005 ? 'up' : z < -0.005 ? 'dn' : 'eq') + '">' + (z > 0 ? '▲ +' : z < 0 ? '▼ −' : '') + nf(Math.abs(z * 100), 1) + '%</span>'; }
-  /* kolor z jednej rampy (niebieski), jasny do ciemnego */
-  function ramp(t) {
-    t = Math.max(0, Math.min(1, t));
-    var a = [234, 241, 254], b = [8, 66, 160];
-    return 'rgb(' + a.map(function (v, i) { return Math.round(v + (b[i] - v) * t); }).join(',') + ')';
-  }
+  function ramp(t) { t = Math.max(0, Math.min(1, t)); var a = [234, 241, 254], b = [8, 66, 160]; return 'rgb(' + a.map(function (v, i) { return Math.round(v + (b[i] - v) * t); }).join(',') + ')'; }
   function tekstNa(t) { return t > 0.5 ? '#fff' : '#1F1F1F'; }
+  function kto(k) { var c = k === 'klient' ? 'klient' : k === 'my' ? 'my' : k === 'ga4' ? 'ga4' : 'prz'; var n = k === 'ga4' ? 'kreator' : k === 'my' ? 'po naszej stronie' : k === 'klient' ? 'po stronie klienta' : k; return '<span class="od-kto ' + c + '">' + esc(n) + '</span>'; }
   function karta(tytul, k, tip, opis, tresc, sek, prawo, zrodlo) {
     return '<section class="a3-k"><header><div><h2>' + tytul + qm(tip, k) + '</h2>' + (opis ? '<p>' + opis + '</p>' : '') + '</div>' + (prawo || '') + '</header>' +
       tresc + (sek ? slot(sek) : '') + (zrodlo ? '<div class="a3-zr">' + zrodlo + '</div>' : '') + '</section>';
   }
-  function spark(a, kol) {
-    var mx = Math.max.apply(null, a), mn = Math.min.apply(null, a), w = 200, h = 30;
-    var pts = a.map(function (v, i) { return [i * w / (a.length - 1), h - 3 - (v - mn) / (mx - mn || 1) * (h - 8)]; });
-    return '<svg class="sp" viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="' + (kol || '#0B57D0') + '" stroke-width="2" vector-effect="non-scaling-stroke" points="' +
-      pts.map(function (p) { return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' ') + '"/></svg>';
-  }
+  function kaf(l, k, tip, v, x) { return '<div class="a3-kaf od-kaf"><span class="l">' + l + qm(tip, k) + '</span><span class="v num">' + v + '</span><span class="x">' + x + '</span></div>'; }
+  function rz(a, b, klasa) { return '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="' + (klasa || 'a3-f1') + '">' + a + '</div>' + (b ? '<div class="a3-f1' + (klasa === 'a3-f2' ? ' boczna' : '') + '">' + b + '</div>' : '') + '</div>'; }
 
-  /* ======================= NAGŁÓWEK ======================= */
+  var ZAKLADKI = [
+    ['przeglad', 'Podaż w skrócie'], ['droga', 'Droga wyceny'], ['czas', 'Czas i kolejki'],
+    ['cena', 'Cena i zaufanie'], ['podaz', 'Podaż i rotacja'], ['klient', 'Sprzedający'], ['dane', 'Skąd dane?']
+  ];
+
   function naglowek() {
     var tb = '';
     try {
       tb = '<div class="topbar" id="sec-top"><span class="tb-logo" aria-hidden="true">' + ikona('m-pulse') + '</span>' +
-        '<div class="tb-t"><h1>Odkup używanych</h1><p>Puls sklepu · odkup.cyfrowe.pl · GA4, ' + dt(D.okres.od) + '-' + dt(D.okres.do) + '.2026' + (D.przyklad ? ' · liczby przykładowe' : '') + '</p></div><span class="gap"></span>' +
-        '<div class="seg" role="group" aria-label="Zakres"><button class="seg-b on" type="button">7 dni</button><button class="seg-b" type="button">28 dni</button><button class="seg-b" type="button">90 dni</button></div>' +
-        '<a class="btn" style="text-decoration:none" href="https://odkup.cyfrowe.pl/" target="_blank" rel="noopener">' + ikona('m-open') + '<span class="btn-t">odkup.cyfrowe.pl</span></a>' +
+        '<div class="tb-t"><h1>Odkup używanych</h1><p>Puls sklepu · odkup.cyfrowe.pl i panel B2H · ' + dt(D.okres.od) + '-' + dt(D.okres.do) + '.2026 · liczby przykładowe</p></div><span class="gap"></span>' +
+        '<div class="seg" role="group" aria-label="Zakres"><button class="seg-b" type="button">7 dni</button><button class="seg-b on" type="button">28 dni</button><button class="seg-b" type="button">90 dni</button></div>' +
         P('RAIL_VIEWS').map(function (v) { return '<button class="btn only-narrow" type="button" data-view="' + v.view + '">' + ikona(v.ic) + '<span class="btn-t">' + esc(v.n || v.t) + '</span></button>'; }).join('') + '</div>';
     } catch (e) { tb = '<div class="topbar"><div class="tb-t"><h1>Odkup używanych</h1></div></div>'; }
-    return tb;
+    var z = '<div class="tab-zak" role="tablist">' + ZAKLADKI.map(function (z, i) {
+      return (i === ZAKLADKI.length - 1 ? '<span class="sep"></span>' : '') + '<button type="button" role="tab" data-odzak="' + z[0] + '" class="' + (z[0] === ZAK ? 'on' : '') + '">' + z[1] + '</button>';
+    }).join('') + '</div>';
+    return tb + z;
   }
 
-  /* ======================= 1. KARTA NAGŁÓWKOWA ======================= */
-  function hero() {
-    var L = D.lejek.urz.Wszystkie, po = D.okres.poprzedni, dz = D.dzien;
-    var wej = L[0], pok = L[7], wys = L[10];
-    function kaf(l, k, tip, v, x, sp) {
-      return '<div class="a3-kaf od-kaf"><span class="l">' + l + qm(tip, k) + '</span><span class="v num">' + v + '</span><span class="x">' + x + '</span>' + (sp || '') + '</div>';
-    }
-    var h1 = nf(wys) + ' ' + odm(wys, 'osoba wysłała', 'osoby wysłały', 'osób wysłało') + ' nam wycenę na <em class="B" style="white-space:nowrap">' + zl(D.wartosc.wyslane) + '</em>. To ' + pr(wys / wej) + ' wejść na odkup.';
-    return '<section class="a3-k a3-hero" aria-label="Odkup">' +
-      '<div class="a3-hero-l"><div class="a3-stan">' + (D.przyklad ? '<span class="a3-tag szkic"><i></i>Liczby przykładowe, pomiar jeszcze nie działa</span>' : '<span class="a3-tag trwa"><i></i>GA4</span>') +
-      '<span>' + dt(D.okres.od) + '-' + dt(D.okres.do) + ', porównanie z poprzednimi 7 dniami</span></div>' +
-      '<h1>' + h1 + '</h1>' +
-      '<p class="a3-lead">Najwięcej klientów tracimy tuż przed kwotą: <b>' + nf(L[6] - L[7]) + ' osób</b> zostawia dane kontaktowe niewypełnione. ' +
-      'Z wysłanych wycen do wypłaty doszło dotąd <b>' + nf(L[15]) + '</b>, na <b>' + zl(D.wartosc.umowy) + '</b>.</p>' + slot('odkWerdykt') + '</div>' +
+  /* ================= 1. PODAŻ W SKRÓCIE ================= */
+  function przeglad() {
+    var G = D.przeglad, S = D.sankey, K = D.czas.kolejka;
+    var zm = (G.odkupione_zl - G.poprz_odkupione_zl) / G.poprz_odkupione_zl;
+    var hero = '<section class="a3-k a3-hero"><div class="a3-hero-l"><div class="a3-stan"><span class="a3-tag szkic"><i></i>Liczby przykładowe</span><span>' + dt(D.okres.od) + '-' + dt(D.okres.do) + ', porównanie z poprzednimi 28 dniami</span></div>' +
+      '<h1>Odkupiliśmy <em class="B" style="white-space:nowrap">' + nf(G.odkupione_szt) + ' sztuk za ' + zl(G.odkupione_zl) + '</em>. Kolejne ' + zl(G.w_toku_zl) + ' jest w drodze do nas.</h1>' +
+      '<p class="a3-lead">Miarą skupu jest towar, który trafił na półkę, a nie wyceny. Z <b>' + nf(S.glowny[1]) + '</b> pokazanych kwot do wypłaty doszło <b>' + nf(S.glowny[7]) + '</b> (' + pr(S.glowny[7] / S.glowny[1]) + '); od wyceny do pieniędzy mija mediana <b>' + nf(G.czas_do_wyplaty_med, 1) + ' dnia</b>.</p>' + slot('odkV3Przeglad') + '</div>' +
       '<div class="a3-hero-r">' +
-      kaf('Weszli na odkup', 'odk.wejscia', 'Użytkownicy z co najmniej jedną odsłoną na odkup.cyfrowe.pl. GA4 widzi tylko osoby, które zgodziły się na analitykę.', nf(wej), zmiana(wej, po.wejscia) + 'do poprzednich 7 dni', spark(dz.wejscia)) +
-      kaf('Zobaczyli kwotę', 'odk.pokazane', 'Zdarzenie generate_lead: B2H przyjął dane kontaktowe i pokazał wycenę.', nf(pok), zmiana(pok, po.pokaz) + pr(pok / wej) + ' wejść', spark(dz.pokaz)) +
-      kaf('Wysłali wycenę', 'odk.wyslane', 'Zdarzenie qualify_lead: klient wybrał wypłatę i dostawę i potwierdził wycenę.', nf(wys), zmiana(wys, po.wysl) + pr(wys / pok) + ' z kwotą', spark(dz.wysl, '#0842A0')) +
-      kaf('Wartość wysłanych wycen', 'odk.wartosc', 'Suma kwot z wysłanych wycen, przed weryfikacją w centrali. Kwota z wybraną formą wypłaty, więc z bonusem przy karcie podarunkowej.', zl(D.wartosc.wyslane), zmiana(D.wartosc.wyslane, po.wartosc) + 'średnio ' + nf(D.wartosc.srednia) + ' zł', spark(D.dzien.wysl.map(function (v, i) { return v * [2150, 2190, 2240, 2200, 2230, 2180, 2260][i]; }), '#0842A0')) +
+      kaf('Odkupione', 'odk3.odkupione', 'Wyceny w stanie COMPLETED w okresie: wypłata zlecona albo karta wydana. Źródło: B2H.', zl(G.odkupione_zl), '<span class="od-pd ' + (zm >= 0 ? 'up' : 'dn') + '">' + (zm >= 0 ? '▲ +' : '▼ −') + nf(Math.abs(zm * 100), 1) + '%</span>' + nf(G.wyplacone_wyceny) + ' wycen, ' + nf(G.odkupione_szt) + ' szt.') +
+      kaf('W toku', 'odk3.wtoku', 'Wyceny wysłane, ale jeszcze nie zakończone: od nadania paczki do rozliczenia. Wartość po cenie z wyceny.', zl(G.w_toku_zl), nf(G.w_toku_wyceny) + ' wycen między paczką a wypłatą') +
+      kaf('Od wyceny do wypłaty', 'odk3.czas', 'Mediana dni od pokazania kwoty do stanu COMPLETED, tylko wyceny zakończone w okresie.', nf(G.czas_do_wyplaty_med, 1) + ' <small>dnia</small>', '<span class="od-pd up">▼ ' + nf(G.czas_do_wyplaty_poprz - G.czas_do_wyplaty_med, 1) + ' dnia</span>krócej niż poprzednio') +
+      kaf('Marża odsprzedaży', 'odk3.marza', 'Różnica między ceną sprzedaży a ceną odkupu sprzedanych egzemplarzy, z raportu marży B2H (Administrator).', pr(G.marza_proc), zl(G.marza_zl) + ', bonus karty kosztował ' + zl(G.koszt_bonusu_zl)) +
       '</div></section>';
-  }
-
-  /* ======================= 2. LEJEK OD WEJŚCIA DO WYPŁATY ======================= */
-  function lejekSvg(A) {
-    var K = D.lejek.kroki, n = K.length, W = 1720, cw = W / n, bw = 58, base = 236, hmax = 196, mx = A[0];
-    var s = '<svg viewBox="0 0 ' + W + ' 330" role="img" aria-label="Lejek odkupu: ' + K.map(function (k, i) { return k.n + ' ' + A[i]; }).join(', ') + '">' +
-      '<defs><pattern id="od-kres" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#C2D7F8"/><rect width="3" height="8" fill="#fff" opacity=".7"/></pattern></defs>';
-    var xs = [], ys = [];
-    A.forEach(function (v, i) { xs.push(i * cw + (cw - bw) / 2); ys.push(base - v / mx * hmax); });
-    /* przepływ między słupkami */
-    for (var i = 0; i < n - 1; i++) {
-      s += '<path d="M' + (xs[i] + bw) + ' ' + ys[i] + ' L' + xs[i + 1] + ' ' + ys[i + 1] + ' L' + xs[i + 1] + ' ' + base + ' L' + (xs[i] + bw) + ' ' + base + 'Z" fill="#E8F0FE"/>';
-    }
-    /* największa strata w kreatorze */
-    var mi = 2; for (var j = 2; j <= 10; j++) if (1 - A[j] / A[j - 1] > 1 - A[mi] / A[mi - 1]) mi = j;
-    A.forEach(function (v, i) {
-      var k = K[i], x = xs[i], y = ys[i], h = base - y, b2h = k.str === 'b2h';
-      var fill = b2h ? 'url(#od-kres)' : k.str === 'mail' ? '#00897B' : k.klucz ? '#0842A0' : '#0B57D0';
-      var prz = i ? v / A[i - 1] : null, odp = i ? A[i - 1] - v : 0;
-      var tip = '<b>' + esc(k.n) + '</b> · ' + esc(k.s) + '<br>' + nf(v) + ' ' + odm(v, 'osoba', 'osoby', 'osób') + ', ' + pr(v / A[0], 1) + ' wejść' +
-        (i ? '<br>z poprzedniego kroku przeszło ' + pr(prz, 1) + ', odpadło ' + nf(odp) : '') + (b2h ? '<br><span class="m">Dane z B2H po numerze wyceny (etap 2).</span>' : '');
-      s += '<g class="kol"' + tt(tip) + '><rect class="tlo" x="' + (i * cw) + '" y="0" width="' + cw + '" height="330" fill="transparent"/>' +
-        '<path d="M' + x + ' ' + base + ' V' + (y + 5) + ' a5 5 0 0 1 5 -5 H' + (x + bw - 5) + ' a5 5 0 0 1 5 5 V' + base + 'Z" fill="' + fill + '"/>' +
-        '<text x="' + (x + bw / 2) + '" y="' + (y - 8) + '" text-anchor="middle" font-size="16" font-weight="500" fill="#1F1F1F">' + nf(v) + '</text>' +
-        '<text x="' + (x + bw / 2) + '" y="' + (base + 22) + '" text-anchor="middle" font-size="13.5" font-weight="500" fill="#1F1F1F">' + esc(k.n) + '</text>' +
-        '<text x="' + (x + bw / 2) + '" y="' + (base + 40) + '" text-anchor="middle" font-size="12" fill="#5E6366">' + esc(k.s) + '</text>' +
-        (i ? '<text x="' + (x + bw / 2) + '" y="' + (base + 64) + '" text-anchor="middle" font-size="12.5" font-weight="' + (prz < 0.8 ? 600 : 400) + '" fill="' + (prz < 0.8 ? '#B3261E' : '#5E6366') + '">' + (prz < 0.8 ? '−' + nf(odp) + ' (' + pr(1 - prz) + ')' : 'przeszło ' + pr(prz)) + '</text>' : '') +
-        '</g>';
-    });
-    /* znacznik największej straty */
-    var mx0 = xs[mi - 1] + bw, mx1 = xs[mi], my = Math.min(ys[mi - 1], ys[mi]) - 34;
-    s += '<g pointer-events="none"><path d="M' + mx0 + ' ' + (my + 10) + ' V' + my + ' H' + mx1 + ' V' + (my + 10) + '" fill="none" stroke="#B3261E" stroke-width="1.5"/>' +
-      '<rect x="' + ((mx0 + mx1) / 2 - 78) + '" y="' + (my - 28) + '" width="156" height="22" rx="11" fill="#FCE8E6"/>' +
-      '<text x="' + ((mx0 + mx1) / 2) + '" y="' + (my - 13) + '" text-anchor="middle" font-size="12" font-weight="600" fill="#B3261E">największa strata</text></g>';
-    return s + '</svg>';
-  }
-  function lejekUwagi(A) {
-    var ok = D.lejek.okno;
-    return '<div class="od-not">' +
-      '<div><span class="v zle num">−' + nf(A[6] - A[7]) + '</span><b>Dane kontaktowe przed kwotą.</b> ' + pr(1 - A[7] / A[6]) + ' osób, które doszły do formularza danych, nie zobaczyło wyceny. Kwotę widać dopiero po podaniu e-maila i telefonu.</div>' +
-      '<div><span class="v zle num">−' + nf(A[7] - A[10]) + '</span><b>Kwota bez wysłania.</b> ' + pr(1 - A[10] / A[7]) + ' osób zobaczyło kwotę i nie wysłało wyceny. Część wraca w ciągu 7 dni ważności oferty (karta niżej).</div>' +
-      '<div><span class="v zle num">−' + nf(A[10] - A[11]) + '</span><b>Wysłana, ale bez paczki.</b> ' + pr(1 - A[11] / A[10]) + ' wysłanych wycen nie ma nadanej przesyłki ani wybranego salonu. To lista do przypomnienia mailem.</div>' +
-      '<div><span class="v num">' + nf(D.lejek.ekspert) + '</span><b>Poza lejkiem: wycena eksperta.</b> Produktu nie było w cenniku. Okno "Opuścić wycenę?" pokazało się ' + nf(ok.pokazane) + ' razy, ' + nf(ok.wyszli) + ' osób mimo to wyszło.</div>' +
-      '</div>';
-  }
-  function lejek() {
-    var A = D.lejek.urz[UR], K = D.lejek.kroki, n = K.length;
-    var zak = '<div class="od-zak" role="group" aria-label="Urządzenie">' + Object.keys(D.lejek.urz).map(function (u) {
-      var a = D.lejek.urz[u];
-      return '<button type="button" data-odur="' + u + '" class="' + (u === UR ? 'on' : '') + '">' + u + '<em>' + pr(a[10] / a[0]) + '</em></button>';
+    /* tydzień po tygodniu: wartość odkupu */
+    var T = G.tydzien, mx = Math.max.apply(null, T.map(function (t) { return t[2]; }));
+    var tyg = '<div class="od-sm" style="grid-template-columns:repeat(' + T.length + ',minmax(0,1fr));gap:12px;align-items:end;height:200px">' + T.map(function (t) {
+      return '<div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:6px"' + tt('<b>Tydzień od ' + t[0] + '</b><br>odkupione ' + nf(t[2], 2) + ' mln zł, ' + nf(t[1]) + ' szt.') + '><span class="num" style="font-size:15px;font-weight:500;text-align:center">' + nf(t[2], 2) + ' mln</span><i style="display:block;height:' + (t[2] / mx * 130) + 'px;background:#0B57D0;border-radius:6px 6px 0 0"></i><span style="font-size:12px;color:var(--sub);text-align:center">od ' + t[0] + '<br>' + nf(t[1]) + ' szt.</span></div>';
     }).join('') + '</div>';
-    var strefy = '<div class="od-strefy" style="grid-template-columns:' + (11 / n * 100) + '% ' + (1 / n * 100) + '% 1fr"><span class="k">Kreator na stronie · GA4</span><span class="m">Z maila</span><span class="b">Za ladą w centrali · dane B2H, etap 2</span></div>';
-    return karta('Gdzie tracimy klientów od wejścia do wypłaty?', 'odk.lejek',
-      'Każdy słupek to liczba osób, które doszły do kroku. Kroki kreatora z buyback_step i generate_lead/qualify_lead, paczka z working_lead, kroki w centrali z B2H. Przy przycisku urządzenia: odsetek wejść zakończonych wysłaną wyceną.',
-      'Osoby, które doszły do kroku. Pod słupkiem: ile przeszło z poprzedniego kroku, na czerwono kroki, na których odpada więcej niż 20%.',
-      '<div class="od-lj" id="od-lj">' + strefy + lejekSvg(A) + '</div><div id="od-lj-not">' + lejekUwagi(A) + '</div>',
-      'odkLejek', zak, 'Źródło: GA4, host odkup.cyfrowe.pl, zdarzenia buyback_step, generate_lead, qualify_lead, working_lead; kroki w centrali: eksport z B2H (etap 2).');
+    /* gdzie są pieniądze w toku */
+    var sr = G.w_toku_zl / G.w_toku_wyceny, wart = K.stany.map(function (s, i) { return [s, K.liczby[i].reduce(function (a, b) { return a + b; }, 0) * sr, K.kto[i]]; });
+    var sum = wart.reduce(function (a, x) { return a + x[1]; }, 0);
+    var st = '<div class="od-st" style="height:36px">' + wart.map(function (x, i) { return '<i style="flex:' + x[1] + ';background:' + (x[2] === 'klient' ? '#E8710A' : '#C2185B') + ';opacity:' + (0.55 + (i % 3) * 0.15) + '"' + tt('<b>' + esc(x[0]) + '</b><br>' + zl(x[1]) + ' (' + pr(x[1] / sum) + ')<br>ruch ' + (x[2] === 'klient' ? 'po stronie klienta' : 'po naszej stronie')) + '>' + (x[1] / sum > 0.09 ? pr(x[1] / sum) : '') + '</i>'; }).join('') + '</div>' +
+      '<div class="od-lg">' + wart.map(function (x) { return '<span>' + kto(x[2]) + ' ' + esc(x[0]) + ' <b>' + zl(x[1]) + '</b></span>'; }).join('') + '</div>';
+    return hero + rz(
+      karta('Ile sprzętu kupujemy tydzień po tygodniu?', 'odk3.tydzien', 'Wartość wycen, które w danym tygodniu doszły do wypłaty (COMPLETED).', '', tyg, '', '', 'Źródło: B2H, arkusz "Wycena", data zakończenia.'),
+      karta('Gdzie są teraz pieniądze w toku?', 'odk3.wtoku2', 'Wartość wycen w toku według stanu B2H. Kolor mówi, czyj ruch: klienta (paczka, decyzja, podpis, faktura) czy nasz (przyjęcie, weryfikacja, serwis, rozliczenie).', 'Pomarańczowe czeka na klienta, malinowe na nas.', st, 'odkV3Wtoku', '', 'Źródło: B2H, stan i kwota każdej wyceny.'));
   }
 
-  /* ======================= 3. POWROTY ======================= */
-  function powroty() {
-    var R = D.powroty, k = R.kohorta;
-    var hm = '<div class="od-hm" style="grid-template-columns:112px repeat(8, minmax(0,1fr))"><div class="h"></div>';
-    for (var d = 0; d <= 7; d++) hm += '<div class="h">' + (d === 0 ? 'ten sam dzień' : '+' + d + ' ' + odm(d, 'dzień', 'dni', 'dni')) + '</div>';
-    k.dni.forEach(function (dz, i) {
-      hm += '<div class="r">' + dz + '<small>' + nf(k.pokaz[i]) + ' wycen</small></div>';
-      for (var d = 0; d <= 7; d++) {
-        var v = k.proc[i][d];
-        if (v == null) { hm += '<div class="c pusta"' + tt('Ten dzień jeszcze nie minął.') + '></div>'; continue; }
-        var t = (v - 0.4) / 0.25;
-        hm += '<div class="c" style="background:' + ramp(t) + ';color:' + tekstNa(t) + '"' + tt('<b>Wyceny z ' + dz + '</b><br>' + pr(v) + ' wysłanych ' + (d ? 'do ' + d + '. dnia' : 'tego samego dnia') + '<br><span class="m">' + nf(Math.round(v * k.pokaz[i])) + ' z ' + nf(k.pokaz[i]) + '</span>') + '>' + pr(v) + '</div>';
+  /* ================= 2. DROGA WYCENY (przepływ) ================= */
+  function droga() {
+    var S0 = D.sankey, S = { kolumny: S0.kolumny.slice(1), glowny: S0.glowny.slice(1), wyjscia: S0.wyjscia.slice(1), wartosc: S0.wartosc.slice(1) };
+    var K = S.kolumny, A = S.glowny, n = K.length, W = 1700, H = 500, top = 70, hmax = 280, mx = A[0], cw = W / n, bw = 22;
+    var sc = function (v) { return Math.max(2, v / mx * hmax); };
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Droga wyceny od wejścia do wypłaty">';
+    var x = function (i) { return i * cw + cw / 2 - bw / 2; };
+    var yTop = top;
+    for (var i = 0; i < n; i++) {
+      var h = sc(A[i]);
+      if (i < n - 1) {
+        var h2 = sc(A[i + 1]), wy = S.wyjscia[i] || [], ex = x(i) + bw, nx = x(i + 1);
+        /* przepływ główny: górna część słupka */
+        s += '<path d="M' + ex + ' ' + yTop + ' C' + (ex + cw / 2) + ' ' + yTop + ',' + (nx - cw / 2) + ' ' + yTop + ',' + nx + ' ' + yTop + ' L' + nx + ' ' + (yTop + h2) + ' C' + (nx - cw / 2) + ' ' + (yTop + h2) + ',' + (ex + cw / 2) + ' ' + (yTop + h2) + ',' + ex + ' ' + (yTop + h2) + 'Z" fill="#0B57D0" opacity=".16"' + tt('<b>' + K[i] + ' → ' + K[i + 1] + '</b><br>przeszło ' + nf(A[i + 1]) + ' (' + pr(A[i + 1] / A[i], 1) + ')') + '/>';
+        /* wyjścia: w dół */
+        var y0 = yTop + h2, yE = top + hmax + 40;
+        wy.forEach(function (e, j) {
+          var he = sc(e[1]), kol = KTO[e[2]] || '#A0A4A8', xe = ex + cw * 0.38 + j * 16;
+          s += '<path d="M' + ex + ' ' + y0 + ' C' + (ex + cw * 0.3) + ' ' + y0 + ',' + xe + ' ' + (y0 + 20) + ',' + xe + ' ' + yE + ' L' + (xe + Math.min(he, 40)) + ' ' + yE + ' C' + (xe + Math.min(he, 40)) + ' ' + (y0 + he) + ',' + (ex + cw * 0.3) + ' ' + (y0 + he) + ',' + ex + ' ' + (y0 + he) + 'Z" fill="' + kol + '" opacity=".38"' + tt('<b>' + esc(e[0]) + '</b><br>' + nf(e[1]) + ' (' + pr(e[1] / A[i], 1) + ' z ' + K[i].toLowerCase() + ')') + '/>';
+          y0 += he;
+        });
       }
-    });
-    hm += '</div><div class="od-skala">40%<i></i>65% pokazanych wycen wysłanych</div>';
-    function hb(lista, tytul, opis) {
-      var mx = Math.max.apply(null, lista.map(function (x) { return x[1]; })), sum = lista.reduce(function (a, x) { return a + x[1]; }, 0);
-      return '<div class="od-blk"><h3 class="od-pod">' + tytul + '<small>' + opis + '</small></h3><div class="od-hb">' + lista.map(function (x) {
-        return '<div' + tt('<b>' + esc(x[0]) + '</b><br>' + nf(x[1]) + ' wysłanych wycen, ' + pr(x[1] / sum, 1)) + '><span>' + esc(x[0]) + '</span><span class="t"><i style="width:' + (x[1] / mx * 100) + '%"></i></span><span class="w">' + pr(x[1] / sum) + '<small>' + nf(x[1]) + '</small></span></div>';
-      }).join('') + '</div></div>';
+      s += '<rect x="' + x(i) + '" y="' + yTop + '" width="' + bw + '" height="' + h + '" rx="4" fill="' + (i === n - 1 ? '#0842A0' : '#0B57D0') + '"' + tt('<b>' + K[i] + '</b><br>' + nf(A[i]) + (S.wartosc[i] ? '<br>' + zl(S.wartosc[i]) : '')) + '/>' +
+        '<text x="' + (x(i) + bw / 2) + '" y="' + (top - 34) + '" text-anchor="middle" font-size="14" font-weight="500" fill="#1F1F1F">' + K[i] + '</text>' +
+        '<text x="' + (x(i) + bw / 2) + '" y="' + (top - 14) + '" text-anchor="middle" font-size="18" font-weight="500" fill="#1F1F1F">' + nf(A[i]) + '</text>';
     }
-    var wrocili = R.czas.slice(1).reduce(function (a, x) { return a + x[1]; }, 0), wys = D.lejek.urz.Wszystkie[10];
-    return karta('Czy klienci wracają do wyceny?', 'odk.powroty',
-      'Kohorta: osoby, które zobaczyły kwotę danego dnia, i odsetek z nich, który wysłał wycenę do kolejnego dnia. Oferta jest ważna 7 dni. Wizyty i czas: liczone dla tego samego użytkownika GA4 (identyfikator w ciasteczku, więc ten sam telefon albo komputer).',
-      '<b>' + pr(wrocili / wys) + ' wysłanych wycen</b> przyszło w innej wizycie niż pierwsze wejście. Kwota działa jak oferta do przemyślenia.',
-      '<div class="od-dwa"><div><h3 class="od-pod">Ile z pokazanych wycen klienci wysyłają w kolejnych dniach?<small>według dnia, w którym zobaczyli kwotę</small></h3>' + hm + '</div>' +
-      '<div>' + hb(R.wizyty, 'Ile wizyt przed wysłaniem?', 'wysłane wyceny') + hb(R.czas, 'Po jakim czasie od pierwszego wejścia?', '') + '</div></div>',
-      'odkPowroty', '', 'Źródło: GA4 w BigQuery, user_pseudo_id i ga_session_id, zdarzenia generate_lead i qualify_lead.');
-  }
-
-  /* ======================= 4. SPRZEDAJĄCY KUPUJĄ? ======================= */
-  function sprzedawcy() {
-    var S = D.powroty.sprzedawcy, F = D.formy, wiersze = F.macierz.map(function (r) { return r.reduce(function (a, b) { return a + b; }, 0); });
-    var kupKarta = S.kupKarta / wiersze[0], kupPrz = S.kupPrzelew / wiersze[1];
-    var hb = '<div class="od-hb" style="margin-top:4px">' + [['Karta podarunkowa', kupKarta, S.kupKarta, wiersze[0]], ['Przelew', kupPrz, S.kupPrzelew, wiersze[1]], ['Gotówka w salonie', S.kupGotowka / wiersze[2], S.kupGotowka, wiersze[2]]].map(function (x, i) {
-      return '<div' + tt('<b>' + x[0] + '</b><br>' + nf(x[2]) + ' z ' + nf(x[3]) + ' sprzedających kupiło w sklepie w 30 dni') + '><span>' + x[0] + '</span><span class="t"><i style="width:' + (x[1] / 0.5 * 100) + '%;background:' + KAT[i] + '"></i></span><span class="w">' + pr(x[1]) + '<small>' + nf(x[2]) + '</small></span></div>';
+    /* etykiety wyjść */
+    var yl = top + hmax + 60;
+    S.wyjscia.forEach(function (wy, i) {
+      wy.forEach(function (e, j) {
+        var xe = x(i) + bw + cw * 0.38 + j * 16;
+        s += '<text x="' + xe + '" y="' + (yl + j * 34) + '" font-size="12.5" font-weight="600" fill="' + (KTO[e[2]] || '#5E6366') + '">−' + nf(e[1]) + '</text>' +
+          '<text x="' + xe + '" y="' + (yl + 15 + j * 34) + '" font-size="11.5" fill="#5E6366">' + esc(e[0]) + '</text>';
+      });
+    });
+    s += '</svg>';
+    var leg = '<div class="a3-leg" style="justify-content:flex-start;margin-bottom:10px"><span><i style="background:#0B57D0"></i>przepływ wycen</span><span><i style="background:#E8710A"></i>strata po stronie klienta</span><span><i style="background:#C2185B"></i>strata po naszej stronie</span></div>';
+    /* wartość na etapach */
+    var V = S.wartosc;
+    var wart = '<div class="od-flow" style="grid-template-columns:repeat(' + n + ',minmax(0,1fr));margin-top:20px">' + K.map(function (k, i) {
+      var v = V[i]; return '<div><span>' + k + '</span><b class="num">' + zl(v) + '</b><span>' + (i ? pr(v / V[i - 1]) + ' wartości z poprzedniego' : 'pokazane kwoty') + '</span></div>';
     }).join('') + '</div>';
-    return karta('Czy sprzedający kupują potem u nas?', 'odk.kupuja',
-      'Ta sama osoba w GA4 (ciasteczko na całej domenie cyfrowe.pl) wysłała wycenę na odkup.cyfrowe.pl, a potem złożyła zamówienie na www.cyfrowe.pl w ciągu 30 dni. Liczymy tylko osoby ze zgodą na analitykę na obu stronach.',
-      '',
-      '<div class="od-duza num">' + pr(S.kupili30 / S.wyslali) + '<small>w 30 dni</small></div>' +
-      '<p class="od-zd"><b>' + nf(S.kupili30) + ' z ' + nf(S.wyslali) + '</b> osób, które wysłały wycenę, złożyło zamówienie w sklepie. Średnio za <b>' + nf(S.sredniZakup) + ' zł</b>.</p>' +
-      '<h3 class="od-pod">Według formy wypłaty</h3>' + hb +
-      '<div class="od-trzy"><div><b class="num">' + pr(S.ponownie90 / S.wyslali) + '</b><span>sprzedało nam coś drugi raz w 90 dni</span></div>' +
-      '<div><b class="num">' + nf(kupKarta / kupPrz, 1) + '×</b><span>częściej kupuje wybierający kartę niż przelew</span></div>' +
-      '<div><b class="num">' + zl(S.kupili30 * S.sredniZakup) + '</b><span>zamówień od sprzedających w 30 dni</span></div></div>',
-      'odkSprzedawcy', '', 'Źródło: GA4 w BigQuery, ta sama osoba na odkup.cyfrowe.pl i www.cyfrowe.pl, zdarzenia qualify_lead i purchase.');
+    /* kto traci */
+    var sumK = 0, sumM = 0; S.wyjscia.forEach(function (wy) { wy.forEach(function (e) { if (e[2] === 'klient') sumK += e[1]; else sumM += e[1]; }); });
+    return rz(karta('Gdzie i z czyjej strony gubimy wyceny?', 'odk3.droga',
+      'Przepływ jak wykres Sankeya: grubość pasa to liczba wycen. Do kwoty liczy GA4 (osoby), od kwoty B2H (wyceny), połączone numerem wyceny. Każde wyjście ma przypisaną stronę, po której leży ruch.',
+      'Kwotę zobaczyło <b>' + nf(S0.glowny[1]) + '</b> z ' + nf(S0.glowny[0]) + ' osób, które weszły na odkup (GA4). Od kwoty <b>' + nf(sumK) + '</b> wycen gubi się po stronie klienta, <b>' + nf(sumM) + '</b> po naszej.',
+      leg + '<div class="od-sk">' + s + '</div>' + wart, 'odkV3Droga', '', 'Źródło: GA4 (kreator do kwoty) i B2H (stany wyceny, kwoty), złączone numerem wyceny AWU/B2H.'), '', 'a3-f3');
   }
 
-  /* ======================= 5. FORMY ======================= */
-  function formy() {
-    var F = D.formy, M = F.macierz, sumW = M.map(function (r) { return r.reduce(function (a, b) { return a + b; }, 0); });
-    var sumK = F.dostawa.map(function (x, j) { return M.reduce(function (a, r) { return a + r[j]; }, 0); }), tot = sumW.reduce(function (a, b) { return a + b; }, 0), mx = 0;
+  /* ================= 3. CZAS I KOLEJKI ================= */
+  function czas() {
+    var C = D.czas, E = C.etapy, mx = Math.max.apply(null, E.map(function (e) { return e[3]; }));
+    var et = '<div class="od-et">' + E.map(function (e) {
+      var k = KTO[e[1]] || '#A0A4A8';
+      return '<div' + tt('<b>' + esc(e[0]) + '</b><br>mediana ' + nf(e[2], 1) + ' dnia, 9 na 10 spraw do ' + nf(e[3], 1) + ' dnia') + '><span class="n">' + esc(e[0]) + kto(e[1] === 'przewoźnik' ? 'przewoźnik' : e[1] === 'my i klient' ? 'my i klient' : e[1]) + '</span>' +
+        '<span class="pl"><i class="p90" style="left:0;width:' + (e[3] / mx * 100) + '%;background:' + k + '"></i><i style="left:0;width:' + (e[2] / mx * 100) + '%;background:' + k + '"></i><b style="left:' + (e[3] / mx * 100) + '%;background:' + k + '"></b></span>' +
+        '<span class="w">' + nf(e[2], 1) + ' dnia<small>9 na 10: ' + nf(e[3], 1) + '</small></span></div>';
+    }).join('') + '</div>';
+    /* krzywe: co się stało z wyceną po N dniach */
+    var Pz = C.przezycie, Wd = 760, Hd = 280, L = 44, B = 34, T = 14, xs = function (d) { return L + d / 14 * (Wd - L - 10); }, ys = function (v) { return Hd - B - v / 0.7 * (Hd - B - T); };
+    var sv = '<svg viewBox="0 0 ' + Wd + ' ' + Hd + '" role="img" aria-label="Los wyceny w kolejnych dniach">';
+    [0, 0.2, 0.4, 0.6].forEach(function (v) { sv += '<line x1="' + L + '" x2="' + Wd + '" y1="' + ys(v) + '" y2="' + ys(v) + '" stroke="#EDEFF0"/><text x="' + (L - 8) + '" y="' + (ys(v) + 4) + '" text-anchor="end" font-size="11.5" fill="#5E6366">' + pr(v) + '</text>'; });
+    [0, 2, 4, 7, 10, 14].forEach(function (d) { sv += '<text x="' + xs(d) + '" y="' + (Hd - 12) + '" text-anchor="middle" font-size="11.5" fill="#5E6366">' + (d === 7 ? '7 (koniec ważności)' : d) + '</text>'; });
+    sv += '<line x1="' + xs(7) + '" x2="' + xs(7) + '" y1="' + T + '" y2="' + (Hd - B) + '" stroke="#B3261E" stroke-dasharray="4 4" opacity=".6"/>';
+    [['wyslane', '#0B57D0', 'wysłane'], ['dotarlo', '#00897B', 'dotarło do nas'], ['wyplacone', '#0842A0', 'wypłacone']].forEach(function (k, j) {
+      var pts = Pz.dni.map(function (d, i) { return xs(d) + ',' + ys(Pz[k[0]][i]); });
+      sv += '<polyline fill="none" stroke="' + k[1] + '" stroke-width="2.5" points="' + pts.join(' ') + '"' + (j === 2 ? ' stroke-dasharray=""' : '') + '/>';
+      var last = Pz[k[0]][14]; sv += '<text x="' + (Wd - 4) + '" y="' + (ys(last) - 6) + '" text-anchor="end" font-size="12.5" font-weight="600" fill="' + k[1] + '">' + k[2] + ' ' + pr(last) + '</text>';
+    });
+    sv += '</svg>';
+    /* kolejka: stan x wiek */
+    var Q = C.kolejka, mxq = 0; Q.liczby.forEach(function (r) { r.forEach(function (v) { if (v > mxq) mxq = v; }); });
+    var hm = '<div class="od-hm" style="grid-template-columns:240px repeat(5,minmax(0,1fr)) 70px"><div class="h"></div>' + Q.przedzialy.map(function (p) { return '<div class="h">' + p + '</div>'; }).join('') + '<div class="h" style="justify-content:flex-end">razem</div>';
+    Q.stany.forEach(function (st, i) {
+      var r = Q.liczby[i], s = r.reduce(function (a, b) { return a + b; }, 0);
+      hm += '<div class="r" style="flex-direction:row;gap:8px;align-items:center;justify-content:space-between">' + esc(st) + ' ' + kto(Q.kto[i]) + '</div>' + r.map(function (v, j) {
+        var t = v / mxq, kr = j >= 3 && v > 0;
+        return '<div class="c' + (kr ? ' kr' : '') + '" style="background:' + (v ? ramp(0.08 + t * 0.92) : '#F5F7FA') + ';color:' + (v ? tekstNa(0.08 + t * 0.92) : '#A0A4A8') + '"' + tt('<b>' + esc(st) + '</b>, ' + Q.przedzialy[j] + '<br>' + nf(v) + ' wycen' + (kr ? '<br>czeka za długo' : '')) + '>' + v + '</div>';
+      }).join('') + '<div class="s" style="justify-content:flex-end;display:flex;align-items:center;font-size:14px">' + s + '</div>';
+    });
+    hm += '</div><div class="od-skala">czerwona ramka: sprawa stoi w tym stanie ponad 7 dni</div>';
+    return rz(
+      karta('Na którym etapie czekamy najdłużej?', 'odk3.etapy', 'Czas między kolejnymi stanami B2H. Pasek: mediana; cienka linia: czas, w którym mieści się 9 na 10 spraw. Kolor: czyj ruch.', 'Najdłużej trwa <b>decyzja klienta po zmianie ceny</b>. Po naszej stronie najdłużej trwa przyjęcie do weryfikacji.', et, 'odkV3Etapy', '', 'Źródło: B2H, historia stanów wyceny (dziennik zdarzeń).'),
+      karta('Co dzieje się z wyceną w kolejnych dniach?', 'odk3.los', 'Dla wszystkich wycen z kwotą: odsetek wysłanych, dotartych i wypłaconych po N dniach od pokazania kwoty. Kreska: koniec ważności oferty.', 'Po 7 dniach ważności prawie nic już nie przybywa: kto nie nadał paczki do 3. dnia, zwykle nie nada wcale.', sv, 'odkV3Los', '', 'Źródło: GA4 (kwota pokazana) i B2H (daty stanów).')) +
+      rz(karta('Które sprawy utknęły i czyj jest ruch?', 'odk3.kolejka', 'Wyceny w toku dzisiaj według stanu i liczby dni w tym stanie. To lista robocza dla zespołu Używane: czerwone to sprawy do pchnięcia.', 'Stan na dziś, nie średnia z okresu.', hm, 'odkV3Kolejka', '', 'Źródło: B2H, stan i data wejścia w stan.'), '', 'a3-f3');
+  }
+
+  /* ================= 4. CENA I ZAUFANIE ================= */
+  function cena() {
+    var C = D.cena, Sn = C.stany, M = C.deklar_weryf, mx = 0;
     M.forEach(function (r) { r.forEach(function (v) { if (v > mx) mx = v; }); });
-    var g = '<div class="od-mx"><div class="h"></div>' + F.dostawa.map(function (d) { return '<div class="h">' + d + '</div>'; }).join('') + '<div class="h" style="justify-content:flex-end">razem</div>';
+    var g = '<div class="od-mxc" style="grid-template-columns:110px repeat(6,minmax(0,1fr)) 90px"><div class="h">deklaruje ↓ · ocenił technik →</div>' + Sn.map(function (s) { return '<div class="h">' + s + '</div>'; }).join('') + '<div class="h" style="justify-content:flex-end">zgodność</div>';
     M.forEach(function (r, i) {
-      g += '<div class="r">' + F.wyplata[i] + '<small>średnio ' + nf(F.srednia[i]) + ' zł</small></div>';
-      r.forEach(function (v, j) {
-        var t = v / mx;
-        g += v ? '<div class="c" style="background:' + ramp(0.12 + t * 0.88) + ';color:' + tekstNa(0.12 + t * 0.88) + '"' + tt('<b>' + F.wyplata[i] + ' + ' + F.dostawa[j] + '</b><br>' + nf(v) + ' wysłanych wycen, ' + pr(v / tot, 1) + ' wszystkich') + '>' + nf(v) + '<small>' + pr(v / tot) + '</small></div>'
-          : '<div class="c zero"' + tt(F.wyplata[i] + ' + ' + F.dostawa[j] + ': ta para nie występuje' + (i === 2 ? ', gotówka tylko przy odbiorze w salonie' : '')) + '>0</div>';
-      });
-      g += '<div class="s">' + nf(sumW[i]) + '<small>' + pr(sumW[i] / tot) + '</small></div>';
+      var s = r.reduce(function (a, b) { return a + b; }, 0);
+      g += '<div class="r">' + Sn[i] + '</div>' + r.map(function (v, j) { var t = Math.sqrt(v / mx); return '<div class="c' + (i === j ? ' diag' : '') + '" style="background:' + (v ? ramp(0.06 + t * 0.94) : '#F5F7FA') + ';color:' + (v ? tekstNa(0.06 + t * 0.94) : '#A0A4A8') + '"' + tt('<b>Klient: ' + Sn[i] + ', technik: ' + Sn[j] + '</b><br>' + nf(v) + ' produktów (' + pr(v / s, 1) + ' tej deklaracji)') + '>' + (v || '') + '</div>'; }).join('') +
+        '<div class="s"' + (r[i] / s < 0.75 ? ' style="color:var(--zle);font-weight:600"' : '') + '>' + pr(r[i] / s) + '</div>';
     });
-    g += '<div class="r" style="color:var(--sub)">razem</div>' + sumK.map(function (v) { return '<div class="s" style="align-items:center">' + nf(v) + '<small>' + pr(v / tot) + '</small></div>'; }).join('') + '<div class="s"><b>' + nf(tot) + '</b></div></div>';
-    var dok = F.dokument, dt0 = dok[0][1] + dok[1][1];
-    var st = '<div class="od-st" style="margin-top:4px">' + dok.map(function (x, i) { return '<i style="flex:' + x[1] + ';background:' + KAT[i] + '"' + tt('<b>' + x[0] + '</b><br>' + nf(x[1]) + ' wycen, średnio ' + nf(x[2]) + ' zł') + '>' + pr(x[1] / dt0) + '</i>'; }).join('') + '</div>' +
-      '<div class="od-lg">' + dok.map(function (x, i) { return '<span><i style="background:' + KAT[i] + '"></i>' + x[0] + ': <b>' + nf(x[1]) + '</b>, średnio ' + nf(x[2]) + ' zł</span>'; }).join('') + '</div>';
-    return karta('Jak klienci chcą dostać pieniądze i oddać sprzęt?', 'odk.formy',
-      'Forma wypłaty, dostawa i rodzaj dokumentu z wysłanej wyceny (qualify_lead: payment_type, delivery_type, document_type). Średnia kwota z wybraną formą wypłaty.',
-      'Wysłane wyceny według pary wypłata i dostawa.',
-      g + '<div class="od-blk" style="margin-top:28px"><h3 class="od-pod">Kto sprzedaje?</h3>' + st + '</div>',
-      'odkFormy', '', 'Źródło: GA4, zdarzenie qualify_lead.');
-  }
-
-  /* ======================= 6. KWOTY ======================= */
-  function kwoty() {
-    var Q = D.kwoty, n = Q.kosze.length, W = 760, H = 300, base = 220, hm = 180, mx = Math.max.apply(null, Q.pokaz), cw = W / n, bw = 30;
-    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Pokazane i wysłane wyceny według kwoty">';
-    [0, 100, 200, 300].forEach(function (v) { var y = base - v / mx * hm; if (y < 20) return; s += '<line x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="#EDEFF0"/><text x="0" y="' + (y - 4) + '" font-size="11.5" fill="#5E6366">' + v + '</text>'; });
-    Q.kosze.forEach(function (k, i) {
-      var x = i * cw + cw / 2, hp = Q.pokaz[i] / mx * hm, hw = Q.wysl[i] / mx * hm, r = Q.wysl[i] / Q.pokaz[i];
-      s += '<g' + tt('<b>' + k + '</b><br>pokazane ' + nf(Q.pokaz[i]) + ', wysłane ' + nf(Q.wysl[i]) + '<br>wysłało ' + pr(r, 1)) + '><rect x="' + (x - cw / 2) + '" y="0" width="' + cw + '" height="' + H + '" fill="transparent"/>' +
-        '<rect x="' + (x - bw - 1) + '" y="' + (base - hp) + '" width="' + bw + '" height="' + hp + '" rx="4" fill="#A8C7FA"/>' +
-        '<rect x="' + (x + 1) + '" y="' + (base - hw) + '" width="' + bw + '" height="' + hw + '" rx="4" fill="#0842A0"/>' +
-        '<text x="' + x + '" y="' + (base + 20) + '" text-anchor="middle" font-size="12.5" fill="#1F1F1F">' + k + '</text>' +
-        '<text x="' + x + '" y="' + (base + 42) + '" text-anchor="middle" font-size="13" font-weight="600" fill="' + (r < 0.55 ? '#B3261E' : '#146C2E') + '">' + pr(r) + '</text></g>';
-    });
-    s += '<text x="0" y="' + (base + 42) + '" font-size="11.5" fill="#5E6366"></text></svg>';
-    return karta('Za jakie kwoty klienci sprzedają i kiedy rezygnują?', 'odk.kwoty',
-      'Kwota pokazanej wyceny (generate_lead, value) w przedziałach. Pod przedziałem: jaki odsetek pokazanych wycen klienci wysłali.',
-      'Najchętniej wysyłają wyceny od 1 do 10 tys. zł. Najtańszy i najdroższy sprzęt częściej zostaje u klienta.',
-      '<div class="a3-leg" style="justify-content:flex-start;margin-bottom:12px"><span><i style="background:#A8C7FA;border-radius:3px"></i>pokazane</span><span><i style="background:#0842A0;border-radius:3px"></i>wysłane</span><span>pod spodem: odsetek wysłanych</span></div>' + s,
-      'odkKwoty', '', 'Źródło: GA4, generate_lead i qualify_lead z parametrem value.');
-  }
-
-  /* ======================= 7. PRODUKTY ======================= */
-  function produkty() {
-    var P0 = D.produkty, mx = Math.max.apply(null, P0.map(function (p) { return p.pokaz; }));
-    var t = '<table class="od-tb"><thead><tr><th class="l rk">#</th><th class="l">Produkt</th><th class="l pas">pokazane i wysłane</th><th>wysłało</th><th>średnia kwota</th><th>ocena klienta</th><th>z kompletem</th><th>cena po weryfikacji' + qm('Zmiana kwoty po ekspertyzie w centrali, średnio dla produktu. Dane z B2H (etap 2).', 'odk.weryf') + '</th></tr></thead><tbody>' +
-      P0.map(function (p, i) {
-        var r = p.wysl / p.pokaz, zm = p.zm;
-        var pil = zm >= 0.2 ? '<span class="pil zle">−' + pr(zm) + '</span>' : zm >= 0.1 ? '<span class="pil uw">−' + pr(zm) + '</span>' : zm > 0 ? '<span class="pil ok">−' + pr(zm) + '</span>' : zm < 0 ? '<span class="pil ok">+' + pr(-zm) + '</span>' : '<span class="pil ok">bez zmian</span>';
-        return '<tr' + tt('<b>' + esc(p.n) + '</b><br>pokazane ' + p.pokaz + ', wysłane ' + p.wysl + ' (' + pr(r) + ')<br>wartość wysłanych ' + zl(p.wysl * p.sr)) + '><td class="rk">' + (i + 1) + '</td><td class="l"><b>' + esc(p.n) + '</b><small>' + p.k + '</small></td>' +
-          '<td class="l pas"><div class="od-pp"><i class="a" style="width:' + (p.pokaz / mx * 100) + '%"></i><i class="b" style="width:' + (p.wysl / mx * 100) + '%"></i></div></td>' +
-          '<td><b style="font-weight:500">' + p.wysl + '</b> <small style="color:var(--sub)">/ ' + p.pokaz + '</small></td><td>' + nf(p.sr) + ' zł</td><td>' + nf(p.ocena, 1) + '</td><td>' + pr(p.komplet) + '</td><td>' + pil + '</td></tr>';
-      }).join('') + '</tbody></table>';
-    return karta('Jaki sprzęt chcą nam sprzedać?', 'odk.produkty',
-      'Produkty z pokazanych wycen (buyback_product_added i generate_lead, items). Ocena klienta: średnia z 10/10 do 6/10. Z kompletem: wszystkie akcesoria z listy zaznaczone.',
-      'Dziesięć produktów z największą liczbą pokazanych wycen. Jasny pasek: pokazane, ciemny: wysłane.',
-      t, 'odkProdukty', '', 'Źródło: GA4, zdarzenia buyback_product_added, generate_lead, qualify_lead (items); zmiana ceny: B2H (etap 2).');
-  }
-  function sprzet() {
-    function pas(lista, tytul) {
-      var sum = lista.reduce(function (a, x) { return a + x[1]; }, 0);
-      return '<div class="od-blk"><h3 class="od-pod">' + tytul + '<small>' + nf(sum) + ' produktów</small></h3><div class="od-st">' + lista.map(function (x, i) {
-        return '<i style="flex:' + x[1] + ';background:' + KAT[i] + '"' + tt('<b>' + esc(x[0]) + '</b><br>' + nf(x[1]) + ' produktów, ' + pr(x[1] / sum, 1)) + '>' + (x[1] / sum >= 0.09 ? pr(x[1] / sum) : '') + '</i>';
-      }).join('') + '</div><div class="od-lg">' + lista.map(function (x, i) { return '<span><i style="background:' + KAT[i] + '"></i>' + esc(x[0]) + ' <b>' + pr(x[1] / sum) + '</b></span>'; }).join('') + '</div></div>';
-    }
-    var S = D.stan, mx = Math.max.apply(null, S.deklar), sum = S.deklar.reduce(function (a, b) { return a + b; }, 0);
-    var st = '<div class="od-blk"><h3 class="od-pod">Stan, który deklaruje klient<small>i jak często centrala obniża cenę</small></h3><div class="od-hb">' + S.oceny.map(function (o, i) {
-      return '<div' + tt('<b>' + o + '</b><br>' + nf(S.deklar[i]) + ' produktów, ' + pr(S.deklar[i] / sum, 1) + '<br>cena obniżona po weryfikacji: ' + pr(S.obnizone[i]) + ' (B2H)') + '><span>' + o + '</span><span class="t"><i style="width:' + (S.deklar[i] / mx * 100) + '%"></i></span><span class="w">' + pr(S.deklar[i] / sum) + '<small>' + (S.obnizone[i] >= 0.2 ? '<b style="color:var(--zle)">↓ ' + pr(S.obnizone[i]) + '</b>' : '↓ ' + pr(S.obnizone[i])) + '</small></span></div>';
-    }).join('') + '</div></div>';
-    return karta('Co to za sprzęt?', 'odk.sprzet',
-      'Kategorie i marki produktów z wysłanych wycen. Stan: ocena wybrana przez klienta w kreatorze; strzałka w dół to odsetek produktów, którym centrala obniżyła cenę po ekspertyzie (B2H, etap 2).',
-      '', pas(D.kategorie, 'Kategorie') + pas(D.marki, 'Marki') + st,
-      '', '', 'Źródło: GA4, buyback_product_added (items, rating); obniżki: B2H (etap 2).');
-  }
-
-  /* ======================= 8. SZUKANIE ======================= */
-  function szukanie() {
-    var S = D.szukanie;
-    var st = '<div class="od-st">' + [['z wynikami', S.zWynikiem, '#0B57D0'], ['bez wyników', S.bezWynikow, '#E8710A'], ['błąd wyszukiwarki', S.blad, '#B3261E']].map(function (x) {
-      return '<i style="flex:' + x[1] + ';background:' + x[2] + '"' + tt('<b>' + x[0] + '</b><br>' + pr(x[1], 1) + ' z ' + nf(S.razem) + ' wyszukań') + '>' + (x[1] > 0.05 ? pr(x[1]) + ' ' + x[0] : '') + '</i>';
+    g += '</div>';
+    var K = C.korekta, A = C.akceptacja, mk = Math.max.apply(null, K.map(function (k) { return k[1]; }));
+    var kor = '<div class="od-hb">' + K.map(function (k, i) {
+      return '<div' + tt('<b>' + k[0] + '</b><br>' + nf(k[1]) + ' wycen' + (A[i] != null ? '<br>klient przyjął nową cenę: ' + pr(A[i]) : '')) + ' style="grid-template-columns:130px minmax(0,1fr) 70px 110px"><span>' + k[0] + '</span><span class="t"><i style="width:' + (k[1] / mk * 100) + '%;background:' + (i ? '#E8710A' : '#0B57D0') + '"></i></span><span class="w">' + nf(k[1]) + '</span><span class="w">' + (A[i] == null ? '<small>bez decyzji</small>' : '<b style="font-weight:500;color:' + (A[i] < 0.6 ? 'var(--zle)' : 'var(--ink)') + '">' + pr(A[i]) + '</b> <small>przyjęło</small>') + '</span></div>';
     }).join('') + '</div>';
-    var tr = '<table class="od-tb"><thead><tr><th class="l">Szukali i znaleźli</th><th>wyszukań</th><th>doszło do kwoty</th></tr></thead><tbody>' +
-      S.trafione.map(function (x) { return '<tr><td class="l">' + esc(x[0]) + '</td><td>' + nf(x[1]) + '</td><td>' + pr(x[2]) + '</td></tr>'; }).join('') + '</tbody></table>';
-    var br = '<table class="od-tb"><thead><tr><th class="l">Szukali i nie znaleźli</th><th>wyszukań</th><th>prośba do eksperta</th></tr></thead><tbody>' +
-      S.brak.map(function (x) { return '<tr><td class="l">' + esc(x[0]) + '</td><td>' + nf(x[1]) + '</td><td>' + nf(x[2]) + '</td></tr>'; }).join('') +
-      S.bledy.map(function (x) { return '<tr class="err"' + tt('Wyszukiwarka nie odpowiedziała (403 z Cloudflare), a klient zobaczył "Brak wyników". Produkt jest w cenniku.') + '><td class="l">' + esc(x[0]) + ' <small>błąd, produkt jest w cenniku</small></td><td>' + nf(x[1]) + '</td><td>-</td></tr>'; }).join('') + '</tbody></table>';
-    return karta('Czego klienci szukają i czego nie znajdują?', 'odk.szukanie',
-      'Zdarzenie search z frazą i liczbą wyników. Frazy scalone bez względu na wielkość liter. "Doszło do kwoty": generate_lead w tej samej sesji. Błąd: odpowiedź wyszukiwarki spoza 2xx (buyback_error).',
-      nf(S.razem) + ' wyszukań w 7 dni. Frazy bez wyników to lista braków w cenniku odkupu.',
-      st + '<div class="od-dwa rowno" style="margin-top:24px"><div>' + tr + '</div><div>' + br + '</div></div>',
-      'odkSzukanie', '', 'Źródło: GA4, search, buyback_expert_start, buyback_error.');
+    var F = C.forma;
+    var fo = '<div class="od-trzy" style="grid-template-columns:1fr 1fr">' + F.map(function (f) {
+      return '<div><b class="num">' + pr(f[1]) + '</b><span>' + f[0] + ', średnio ' + nf(f[2]) + ' zł' + (f[3] ? ', bonus ' + pr(f[3]) : '') + '</span></div>';
+    }).join('') + '</div><p class="od-zd" style="margin-top:16px">Bonus karty podarunkowej kosztował <b>' + zl(D.przeglad.koszt_bonusu_zl) + '</b>. Wraca w zakupach: <b>' + pr(D.klient.karta.wykorzystane_30d) + '</b> wartości kart wydano w 30 dni, z dopłatą <b>' + nf(D.klient.karta.doplata_na_zl, 2) + ' zł</b> na każdą złotówkę karty.</p>';
+    return rz(
+      karta('Czy klienci uczciwie oceniają stan sprzętu?', 'odk3.stan', 'Ocena stanu, którą klient wybrał w kreatorze, wobec oceny technika przy weryfikacji. Na przekątnej (obwódka) ocena się zgadza. Liczby: produkty.', 'Najczęściej zawyżają klienci deklarujący <b>10/10</b>: technik potwierdza to w ' + pr(M[0][0] / M[0].reduce(function (a, b) { return a + b; }, 0)) + ' przypadków.', g, 'odkV3Stan', '', 'Źródło: GA4 (ocena w kreatorze, buyback_product_added) i B2H (ocena po weryfikacji), po numerze wyceny i indeksie.'),
+      karta('Jak zmiana ceny po weryfikacji wpływa na zgodę klienta?', 'odk3.korekta', 'Wyceny według różnicy między kwotą z kreatora a kwotą po weryfikacji i odsetek klientów, którzy przyjęli nową cenę.', 'Przy obniżce ponad 10% co druga osoba rezygnuje i trzeba odesłać sprzęt.', kor + '<h3 class="od-pod" style="margin-top:28px">Karta podarunkowa czy przelew?</h3>' + fo, 'odkV3Korekta', '', 'Źródło: B2H (kwota przed i po weryfikacji, decyzja klienta) i GA4 (zakupy w sklepie po wypłacie).'));
   }
 
-  /* ======================= 9. KANAŁY ======================= */
-  function kanaly() {
-    var K = D.kanaly, mx = Math.max.apply(null, K.map(function (k) { return k[1]; }));
-    var g = '<div class="od-kn"><span class="hd">Kanał</span><span class="hd">wejścia, kwota, wysłane</span><span class="hd" style="text-align:right">wysłało</span>' + K.map(function (k) {
-      return '<span class="n">' + esc(k[0]) + '<small>' + nf(k[1]) + ' wejść</small></span><span class="tr"' + tt('<b>' + esc(k[0]) + '</b><br>weszli ' + nf(k[1]) + '<br>zobaczyli kwotę ' + nf(k[2]) + ' (' + pr(k[2] / k[1]) + ')<br>wysłali ' + nf(k[3]) + ' (' + pr(k[3] / k[1], 1) + ' wejść)') + '>' +
-        '<i class="e" style="width:' + (k[1] / mx * 100) + '%"></i><i class="p" style="width:' + (k[2] / mx * 100) + '%"></i><i class="w" style="width:' + (k[3] / mx * 100) + '%"></i></span><span class="w">' + pr(k[3] / k[1], 1) + '</span>';
-    }).join('') + '</div><div class="a3-leg" style="justify-content:flex-start;margin-top:12px"><span><i style="background:#D3E3FD;border-radius:3px"></i>weszli</span><span><i style="background:#7CACF8;border-radius:3px"></i>zobaczyli kwotę</span><span><i style="background:#0842A0;border-radius:3px"></i>wysłali</span></div>';
-    var Z = D.zrodlaSklep, zs = Z.reduce(function (a, x) { return a + x[1]; }, 0);
-    var sk = '<div class="od-blk" style="margin-top:28px"><h3 class="od-pod">Skąd w sklepie przyszli?<small>' + nf(zs) + ' przejść z www.cyfrowe.pl</small></h3><div class="od-st">' + Z.map(function (x, i) {
-      return '<i style="flex:' + x[1] + ';background:' + KAT[i] + '"' + tt('<b>' + esc(x[0]) + '</b><br>' + nf(x[1]) + ' przejść, ' + pr(x[1] / zs, 1)) + '>' + (x[1] / zs >= 0.1 ? pr(x[1] / zs) : '') + '</i>';
-    }).join('') + '</div><div class="od-lg">' + Z.map(function (x, i) { return '<span><i style="background:' + KAT[i] + '"></i>' + esc(x[0]) + ' <b>' + nf(x[1]) + '</b></span>'; }).join('') + '</div></div>';
-    return karta('Skąd przychodzą klienci, którzy wysyłają wyceny?', 'odk.kanaly',
-      'Domyślny kanał sesji GA4 dla hosta odkup.cyfrowe.pl. "Przejście ze sklepu": poprzednia strona to www.cyfrowe.pl (page_referrer), skąd w sklepie mówi rodzaj tej strony.',
-      'Ze sklepu przychodzi najwięcej osób i one najczęściej kończą wycenę.',
-      g + sk, 'odkKanaly', '', 'Źródło: GA4, kanał sesji i page_referrer, host odkup.cyfrowe.pl.');
-  }
-
-  /* ======================= 10. KIEDY ======================= */
-  function kiedy() {
-    var dni = ['pon.', 'wt.', 'śr.', 'czw.', 'pt.', 'sob.', 'niedz.'], prof = [], dm = [0.86, 0.92, 0.95, 0.93, 0.88, 1.05, 1.41], sum = 0, M = [];
-    for (var h = 0; h < 24; h++) prof.push(h < 6 ? 0.08 + h * 0.01 : h < 9 ? 0.3 + (h - 6) * 0.15 : h < 17 ? 0.75 + Math.sin((h - 9) / 8 * Math.PI) * 0.15 : h < 23 ? 0.9 + (h - 17) * 0.09 - (h > 21 ? 0.35 : 0) : 0.35);
-    dni.forEach(function (d, i) { M.push(prof.map(function (p) { var v = p * dm[i]; sum += v; return v; })); });
-    var tot = D.lejek.urz.Wszystkie[10], mx = 0;
-    M = M.map(function (r) { return r.map(function (v) { var x = Math.round(v / sum * tot); if (x > mx) mx = x; return x; }); });
-    var g = '<div class="od-hm godz" style="grid-template-columns:52px repeat(24, minmax(0,1fr))"><div class="h"></div>';
-    for (var hh = 0; hh < 24; hh++) g += '<div class="h">' + (hh % 3 === 0 ? hh : '') + '</div>';
-    M.forEach(function (r, i) {
-      g += '<div class="r">' + dni[i] + '</div>' + r.map(function (v, hh) { var t = v / mx; return '<div class="c" style="background:' + ramp(t) + '"' + tt('<b>' + dni[i] + ' ' + hh + ':00-' + (hh + 1) + ':00</b><br>' + nf(v) + ' wysłanych wycen') + '></div>'; }).join('');
+  /* ================= 5. PODAŻ I ROTACJA ================= */
+  function podaz() {
+    var M = D.podaz.modele, W = 820, H = 440, L = 54, B = 44, T = 20, R = 20;
+    var mxX = 70, mxY = 45, xs = function (v) { return L + v / mxX * (W - L - R); }, ys = function (v) { return T + v / mxY * (H - T - B); };
+    var medX = 26.5, medY = 11.5;
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Odkupione sztuki wobec dni do sprzedaży">';
+    s += '<rect x="' + L + '" y="' + T + '" width="' + (xs(medX) - L) + '" height="' + (ys(medY) - T) + '" fill="#E6F4EA" opacity=".5"/>';
+    s += '<rect x="' + xs(medX) + '" y="' + T + '" width="' + (W - R - xs(medX)) + '" height="' + (ys(medY) - T) + '" fill="#E6F4EA"/>';
+    s += '<rect x="' + xs(medX) + '" y="' + ys(medY) + '" width="' + (W - R - xs(medX)) + '" height="' + (H - B - ys(medY)) + '" fill="#FCE8E6" opacity=".7"/>';
+    [0, 10, 20, 30, 40].forEach(function (v) { s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + ys(v) + '" y2="' + ys(v) + '" stroke="#EDEFF0"/><text x="' + (L - 8) + '" y="' + (ys(v) + 4) + '" text-anchor="end" font-size="11.5" fill="#5E6366">' + v + ' d</text>'; });
+    [0, 20, 40, 60].forEach(function (v) { s += '<text x="' + xs(v) + '" y="' + (H - B + 18) + '" text-anchor="middle" font-size="11.5" fill="#5E6366">' + v + ' szt.</text>'; });
+    s += '<text x="' + (W - R) + '" y="' + (H - 6) + '" text-anchor="end" font-size="12" fill="#5E6366">odkupione sztuki w 28 dni →</text><text x="' + L + '" y="12" font-size="12" fill="#5E6366">↓ dni od odkupu do sprzedaży (krócej = wyżej)</text>';
+    s += '<text x="' + (W - R - 8) + '" y="' + (T + 18) + '" text-anchor="end" font-size="12.5" font-weight="600" fill="#146C2E">kupujemy dużo i szybko schodzi</text>';
+    s += '<text x="' + (W - R - 8) + '" y="' + (H - B - 10) + '" text-anchor="end" font-size="12.5" font-weight="600" fill="#B3261E">kupujemy dużo, a leży</text>';
+    s += '<text x="' + (L + 8) + '" y="' + (T + 18) + '" font-size="12.5" font-weight="600" fill="#146C2E">schodzi szybko, a kupujemy mało: szukać podaży</text>';
+    var POZ = { 'Sigma 24-70 f/2.8 DG DN': 'l', 'Canon EOS R7': 'd' };
+    var kats = []; M.forEach(function (m) { if (kats.indexOf(m[1]) < 0) kats.push(m[1]); });
+    M.forEach(function (m) {
+      var r = 4 + m[4] * 36, c = KAT[kats.indexOf(m[1])], lewo = m[2] > 55 || POZ[m[0]] === 'l', dy = POZ[m[0]] === 'g' ? -r - 4 : POZ[m[0]] === 'd' ? r + 12 : 4;
+      var lx = POZ[m[0]] === 'g' || POZ[m[0]] === 'd' ? xs(m[2]) : lewo ? xs(m[2]) - r - 4 : xs(m[2]) + r + 4, anc = POZ[m[0]] === 'g' || POZ[m[0]] === 'd' ? 'middle' : lewo ? 'end' : 'start';
+      s += '<g' + tt('<b>' + esc(m[0]) + '</b> · ' + m[1] + '<br>odkupione ' + m[2] + ' szt., sprzedaż po ' + m[3] + ' dniach<br>marża ' + pr(m[4])) + '><circle cx="' + xs(m[2]) + '" cy="' + ys(m[3]) + '" r="' + r + '" fill="' + c + '" fill-opacity=".75" stroke="#fff" stroke-width="2"/>' +
+        '<text x="' + lx + '" y="' + (ys(m[3]) + dy) + '" text-anchor="' + anc + '" font-size="10.5" fill="#1F1F1F">' + esc(m[0]) + '</text></g>';
     });
-    g += '</div><div class="od-skala">0<i></i>' + mx + ' wysłanych wycen na godzinę</div>';
-    return karta('Kiedy klienci wyceniają sprzęt?', 'odk.kiedy',
-      'Wysłane wyceny (qualify_lead) według dnia tygodnia i godziny, czas polski.',
-      'Najwięcej wieczorem i w niedzielę, czyli poza godzinami pracy centrali. Odpowiedź na pytanie klienta w niedzielę wieczorem przyjdzie najwcześniej w poniedziałek.',
-      g, 'odkKiedy', '', 'Źródło: GA4, qualify_lead, godzina zdarzenia.');
-  }
-  function dziennie() {
-    var Z = D.dzien;
-    function mini(a, tytul, kol) {
-      var W = 300, H = 250, base = 210, hm = 170, mx = Math.max.apply(null, a), cw = W / a.length, bw = 26, imx = a.indexOf(mx);
-      var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + tytul + ' dzień po dniu">';
-      a.forEach(function (v, i) {
-        var x = i * cw + (cw - bw) / 2, h = v / mx * hm, lbl = i === 0 || i === a.length - 1 || i === imx;
-        s += '<g' + tt('<b>' + dt(Z.d[i]) + '</b><br>' + tytul.toLowerCase() + ': ' + nf(v)) + '><rect x="' + (i * cw) + '" y="0" width="' + cw + '" height="' + H + '" fill="transparent"/><path d="M' + x + ' ' + base + ' V' + (base - h + 4) + ' a4 4 0 0 1 4 -4 H' + (x + bw - 4) + ' a4 4 0 0 1 4 4 V' + base + 'Z" fill="' + kol + '"/>' +
-          (lbl ? '<text x="' + (x + bw / 2) + '" y="' + (base - h - 6) + '" text-anchor="middle" font-size="12" font-weight="500" fill="#1F1F1F">' + nf(v) + '</text>' : '') +
-          '<text x="' + (x + bw / 2) + '" y="' + (base + 18) + '" text-anchor="middle" font-size="11.5" fill="#5E6366">' + dt(Z.d[i]) + '</text></g>';
-      });
-      return '<div><h3 class="od-pod">' + tytul + '<small>' + nf(a.reduce(function (x, y) { return x + y; }, 0)) + '</small></h3>' + s + '</svg></div>';
-    }
-    return karta('Jak szło dzień po dniu?', 'odk.dzien', 'Trzy wykresy, każdy w swojej skali, bo liczby różnią się kilkukrotnie.', '',
-      '<div class="od-sm">' + mini(Z.wejscia, 'Weszli', '#A8C7FA') + mini(Z.pokaz, 'Zobaczyli kwotę', '#0B57D0') + mini(Z.wysl, 'Wysłali', '#0842A0') + '</div>',
-      '', '', 'Źródło: GA4, seria dzienna.');
+    s += '</svg>';
+    var leg = '<div class="a3-leg" style="justify-content:flex-start;margin-bottom:8px">' + kats.map(function (k, i) { return '<span><i style="background:' + KAT[i] + '"></i>' + k + '</span>'; }).join('') + '<span>wielkość koła: marża odsprzedaży</span></div>';
+    var Kb = D.podaz.kanban, mk = Math.max.apply(null, Kb.map(function (k) { return k[1]; }));
+    var kb = '<div class="od-hb">' + Kb.map(function (k) { return '<div style="grid-template-columns:150px minmax(0,1fr) 70px"' + tt('<b>' + k[0] + '</b><br>mediana ' + nf(k[1], 1) + ' dnia') + '><span>' + k[0] + '</span><span class="t"><i style="width:' + (k[1] / mk * 100) + '%;background:' + (k[0] === 'Sprzedany' ? '#00897B' : '#0B57D0') + '"></i></span><span class="w">' + nf(k[1], 1) + ' d</span></div>'; }).join('') + '</div>';
+    var Lk = D.podaz.luki;
+    var lk = '<table class="od-tb" style="table-layout:fixed"><thead><tr><th class="l" style="width:40%">Czego szukają, a nie kupujemy?</th><th>wyszukań</th><th>do eksperta</th><th class="l" style="width:30%">dlaczego</th></tr></thead><tbody>' + Lk.map(function (x) { return '<tr' + (/błąd/.test(x[3]) ? ' class="err"' : '') + '><td class="l">' + esc(x[0]) + '</td><td>' + x[1] + '</td><td>' + x[2] + '</td><td class="l" style="font-size:13px">' + esc(x[3]) + '</td></tr>'; }).join('') + '</tbody></table>';
+    return rz(
+      karta('Który sprzęt warto kupować więcej, a który leży?', 'odk3.podaz', 'Każde koło to model: ile sztuk odkupiliśmy w 28 dni i po ilu dniach od odkupu je sprzedaliśmy (mediana). Wielkość: marża odsprzedaży. Kreski podziału: mediany obu osi.', 'Sony A7 IV i Canon RF 24-105 schodzą w tydzień z marżą ponad 25%, a kupujemy ich mało. GoPro i DJI Mini leżą ponad miesiąc.', leg + s, 'odkV3Podaz', '', 'Źródło: B2H (odkup, kanban produktowy, marża) i sprzedaż w sklepie po indeksie.'),
+      karta('Ile trwa droga od odkupu do sprzedaży?', 'odk3.kanban', 'Mediana dni w każdym z 10 etapów kanbanu przygotowania do sprzedaży; "Sprzedany" to czas od wystawienia do sprzedaży.', '', kb + '<div style="margin-top:28px">' + lk + '</div>', 'odkV3Kanban', '', 'Źródło: B2H, kanban produktowy; GA4, search i buyback_expert_start.'), 'a3-f2');
   }
 
-  /* ======================= 11. NOWA STRONA A STARY KREATOR ======================= */
-  function porownanie() {
-    var C = D.porownanie, sk = function (v) { return v / 0.7 * 100; };
-    var g = '<div class="od-hn"><div style="height:24px"><span></span><div class="os">' + [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7].map(function (v) { return '<span style="left:' + sk(v) + '%">' + pr(v) + '</span>'; }).join('') + '</div><span></span></div>' +
-      C.kroki.map(function (k, i) {
-        var a = C.stary[i], b = C.nowy[i], lo = Math.min(a, b), hi = Math.max(a, b);
-        return '<div' + tt('<b>' + k + '</b><br>nowa strona ' + pr(b) + ' wejść<br>stary kreator ' + pr(a) + ' wejść') + '><span>' + k + '</span><div class="pl">' + [0.1, 0.2, 0.3, 0.4, 0.5, 0.6].map(function (v) { return '<i class="g" style="left:' + sk(v) + '%"></i>'; }).join('') +
-          '<i class="ln" style="left:' + sk(lo) + '%;width:' + (sk(hi) - sk(lo)) + '%"></i><i class="d s" style="left:' + sk(a) + '%"></i><i class="d n" style="left:' + sk(b) + '%"></i></div>' +
-          '<span class="w"><b style="font-weight:500;color:' + (b >= a ? 'var(--dob)' : 'var(--zle)') + '">' + (b >= a ? '+' : '−') + nf(Math.abs(b - a) * 100) + ' pkt</b> <small>' + pr(b) + ' / ' + pr(a) + '</small></span></div>';
-      }).join('') + '</div>';
-    return karta('Czy nowa strona prowadzi lepiej niż stary kreator?', 'odk.porownanie',
-      'Odsetek osób z pierwszego ekranu, które doszły do kroku. Stary kreator na www.cyfrowe.pl/sprzedaj-uzywane wysyła awu_form_steps z tekstem nagłówka w czterech językach; sprowadzam go do tych samych kroków. Oba kreatory pytają o dane kontaktowe przed kwotą.',
-      'Stary kreator: ' + C.staryOd + '. Nowa strona traci więcej osób przed kwotą, ale częściej kończy się wysłaniem wyceny.',
-      '<div class="a3-leg" style="justify-content:flex-start;margin-bottom:8px"><span><i style="background:var(--b)"></i>odkup.cyfrowe.pl</span><span><i style="background:#80868B"></i>stary kreator na www</span></div>' + g,
-      'odkPorownanie', '', 'Źródło: GA4, buyback_step i qualify_lead (nowa strona), awu_form_steps po step_name (stary kreator).');
+  /* ================= 6. SPRZEDAJĄCY ================= */
+  function klient() {
+    var K = D.klient, C = K.kanaly, mx = Math.max.apply(null, C.map(function (c) { return c[2]; }));
+    var kn = '<div class="od-hb">' + C.map(function (c, i) { return '<div style="grid-template-columns:200px minmax(0,1fr) 110px"' + tt('<b>' + esc(c[0]) + '</b><br>odkupione ' + zl(c[2]) + ' (' + pr(c[3]) + ')' + (c[1] ? '<br>wejścia ' + nf(c[1]) : '<br>salon, bez strony')) + '><span>' + esc(c[0]) + '</span><span class="t"><i style="width:' + (c[2] / mx * 100) + '%;background:' + KAT[i] + '"></i></span><span class="w">' + zl(c[2]) + '<small>' + pr(c[3]) + '</small></span></div>'; }).join('') + '</div>';
+    var Kt = K.karta;
+    var fl = '<div class="od-flow"><div><span>Wydane karty</span><b class="num">' + zl(Kt.wydane_zl) + '</b><span>z bonusem ' + zl(Kt.bonus_zl) + '</span></div><div><span>Wykorzystane w 30 dni</span><b class="num">' + pr(Kt.wykorzystane_30d) + '</b><span>' + zl(Kt.wydane_zl * Kt.wykorzystane_30d) + '</span></div><div><span>Dopłata klientów</span><b class="num">' + zl(Kt.wydane_zl * Kt.wykorzystane_30d * Kt.doplata_na_zl) + '</b><span>' + nf(Kt.doplata_na_zl, 2) + ' zł na 1 zł karty</span></div><div><span>Bonus wobec dopłaty</span><b class="num">' + nf(Kt.wydane_zl * Kt.wykorzystane_30d * Kt.doplata_na_zl / Kt.bonus_zl, 1) + '×</b><span>sprzedaży więcej niż koszt bonusu</span></div></div>';
+    var tr = '<div class="od-trzy"><div><b class="num">' + pr(K.kupili30 / K.sprzedajacy) + '</b><span>sprzedających kupiło w sklepie w 30 dni</span></div><div><b class="num">' + pr(K.kupKarta) + ' / ' + pr(K.kupPrzelew) + '</b><span>kupiło po karcie / po przelewie</span></div><div><b class="num">' + pr(K.ponownie90) + '</b><span>sprzedało nam drugi raz w 90 dni</span></div></div>';
+    return rz(
+      karta('Skąd przychodzi sprzęt, który odkupujemy?', 'odk3.kanaly', 'Wartość odkupionego sprzętu (COMPLETED) według kanału, z którego przyszła wycena. Salon: szybka wycena bez strony.', 'Liczę złotówki odkupu, nie wejścia: płatne wyszukiwanie daje 14% wartości przy 24% wejść.', kn, 'odkV3Kanaly', '', 'Źródło: GA4 (kanał sesji z kwotą) i B2H (wartość odkupu, źródło STORE/WEB).'),
+      karta('Czy odkup napędza sprzedaż sklepu?', 'odk3.petla', 'Karta podarunkowa jako pętla: ile wartości kart wraca do sklepu i ile klienci dopłacają ponad kartę.', '', fl + tr, 'odkV3Petla', '', 'Źródło: B2H (karty wydane) i Verto albo GA4 (zakupy kartą i zakupy tej samej osoby).'));
   }
 
-  /* ======================= 12. CZY POMIAR JEST KOMPLETNY ======================= */
-  function zdrowie() {
-    var Z = D.zdrowie, pok = Z.ga4Wysl / Z.b2hWysl;
-    function w(st, t, op, v) { return '<div><span class="ik ' + st + '">' + (st === 'ok' ? '✓' : st === 'uw' ? '!' : '×') + '</span><span>' + t + '<small>' + op + '</small></span><span class="w">' + v + '</span></div>'; }
-    return karta('Czy liczbom można ufać?', 'odk.zdrowie',
-      'Porównanie GA4 z bazą B2H i kontrola tego, co wysyła kontener GTM-NDXT48BF.', '',
-      '<div class="od-zdr">' +
-      w(pok < 0.8 ? 'uw' : 'ok', 'GA4 widzi ' + pr(pok) + ' wysłanych wycen z B2H', nf(Z.ga4Wysl) + ' w GA4, ' + nf(Z.b2hWysl) + ' w B2H. Reszta to osoby bez zgody na analitykę.', pr(pok)) +
-      w(Z.zgody < 0.75 ? 'uw' : 'ok', 'Zgoda na analitykę na odkup.cyfrowe.pl', 'odsetek wejść z analytics_storage = granted (Cookiebot)', pr(Z.zgody)) +
-      w(Z.b403 > 20 ? 'zle' : 'ok', 'Blokady Cloudflare w kreatorze (403)', 'klient widzi "Brak wyników" albo nie może przejść dalej', nf(Z.b403)) +
-      w(Z.b429 ? 'uw' : 'ok', 'Limit zapytań (429)', 'B2H przyjmuje 20 zapisów na minutę z jednego adresu', nf(Z.b429)) +
-      w('ok', 'Wyceny bez kwoty', 'generate_lead i qualify_lead bez parametru value', nf(Z.bezKwoty)) +
-      w('ok', 'Token z linku w adresie strony', 'token i offer wycinane z page_location przed wysyłką do GA4', '0') +
-      '</div>', '', '', 'Źródło: GA4 i B2H (liczba wysłanych wycen z tego samego okresu).');
+  /* ================= 7. SKĄD DANE ================= */
+  function dane() {
+    var W = [
+      ['Podaż w skrócie', 'kanał sesji i data pokazania kwoty (<code>generate_lead</code> z <code>offer_number</code>)', 'arkusz "Wycena": numer, stan, data stanu, kwota, forma wypłaty; raport marży', 'numer wyceny'],
+      ['Droga wyceny', '<code>buyback_step</code> (kroki 1-4), <code>generate_lead</code> przy POST /offers z <code>offer_number</code>, <code>qualify_lead</code> przy POST /delivery albo /submit', 'stany wyceny z datami: przyjęta, zweryfikowana, decyzja, umowa, zakończona, odrzucona, zamknięta', 'numer wyceny'],
+      ['Czas i kolejki', 'czas pokazania kwoty (<code>generate_lead</code>)', 'historia stanów (dziennik zdarzeń) z datą wejścia w stan; pod-statusy umowy, faktury, serwisu', 'numer wyceny'],
+      ['Cena i zaufanie', '<code>buyback_product_added</code>: <code>item_id</code> (indeks), <code>rating</code>, akcesoria; <code>qualify_lead</code>: <code>payment_type</code>, <code>value</code> karty i przelewu', 'ocena technika, kwota przed i po weryfikacji per produkt, decyzja klienta', 'numer wyceny i indeks'],
+      ['Podaż i rotacja', '<code>search</code> (fraza, czy wybrał z listy), <code>buyback_expert_start</code>', 'kanban produktowy (etapy, daty), marża odsprzedaży, sprzedaż po indeksie', 'indeks produktu'],
+      ['Sprzedający', 'kanał sesji, <code>user_pseudo_id</code> wspólny dla www i odkup, <code>purchase</code> w sklepie', 'forma wypłaty, wartość karty, numer karty podarunkowej (Verto)', 'numer wyceny; osoba w GA4']
+    ];
+    var t = '<table class="od-tb od-dane" style="table-layout:fixed"><thead><tr><th style="width:14%">Zakładka</th><th style="width:42%">Z GA4 (kontener GTM-NDXT48BF)</th><th style="width:32%">Z B2H</th><th style="width:12%">Klucz złączenia</th></tr></thead><tbody>' +
+      W.map(function (w) { return '<tr><td><b style="font-weight:500">' + w[0] + '</b></td><td>' + w[1] + '</td><td>' + w[2] + '</td><td>' + w[3] + '</td></tr>'; }).join('') + '</tbody></table>';
+    var zm = '<ul style="margin:0;padding-left:18px;font-size:14.5px;line-height:1.7;color:var(--mut)">' +
+      ['<b style="color:var(--ink);font-weight:500">Numer wyceny w GA4.</b> Bez niego GA4 i B2H się nie połączą. Nasłuch czyta <code>offer.number</code> z odpowiedzi POST /offers i wysyła go w <code>generate_lead</code> i każdym kolejnym zdarzeniu.',
+        '<b style="color:var(--ink);font-weight:500">Wysłanie wyceny to /delivery, nie /submit.</b> <code>qualify_lead</code> podpinam pod POST /delivery (zwykła wycena) i POST /submit (wycena eksperta).',
+        '<b style="color:var(--ink);font-weight:500">Kwota z pola <code>total_price_transfer_grosze</code> i <code>total_price_gift_card_grosze</code></b> (grosze, dzielone przez 100).',
+        '<b style="color:var(--ink);font-weight:500">Produkty jako parametry, nie tylko <code>items</code>.</b> GA4 zapisuje <code>items</code> tylko przy zdarzeniach handlowych, więc indeks, ocena i cena idą też w parametrach.',
+        '<b style="color:var(--ink);font-weight:500">Wyszukiwarka: "czy wybrał z listy"</b> zamiast liczby wyników (lista prawie zawsze ma 50 pozycji).',
+        '<b style="color:var(--ink);font-weight:500">B2H: arkusz "Wycena" z historią stanów</b> (eksport co 15 minut już działa) albo token API do raportu CSV; dostęp nadaje administrator B2H.',
+        '<b style="color:var(--ink);font-weight:500">Kolejność zdarzeń bez zgubionych.</b> Zdarzenia wysyłane w tej samej chwili trzeba rozdzielić odstępem, dziś część z nich ginie.'
+      ].map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
+    return rz(karta('Czego potrzebuje każda zakładka?', 'odk3.dane', 'Dla każdej zakładki: co musi wysłać GA4 z kontenera GTM-NDXT48BF, co bierzemy z B2H i po czym je łączymy.', 'GA4 widzi klienta do chwili wysłania wyceny, B2H od założenia wyceny do wypłaty. Łączy je numer wyceny.', t, '', '', ''), '', 'a3-f3') +
+      rz(karta('Co zmieniam w pomiarze GA4 po zatwierdzeniu prototypu?', 'odk3.zmiany', 'Lista zmian w nasłuchu i tagach GTM, wynikająca z zakładek i z przejścia procesu do końca 2.11.2026.', '', zm, '', '', ''), '', 'a3-f3');
   }
 
-  /* ---------- dymki ---------- */
+  /* ---------- dymki i przełączanie ---------- */
+  function rysuj() {
+    var el = document.getElementById('odk-tresc');
+    if (!el) return;
+    el.innerHTML = tresc();
+    [].forEach.call(document.querySelectorAll('[data-odzak]'), function (b) { b.classList.toggle('on', b.getAttribute('data-odzak') === ZAK); });
+    setTimeout(notatki, 0);
+  }
+  function tresc() {
+    return '<div class="a3x odx">' + (ZAK === 'przeglad' ? '<div class="a3-stos">' + przeglad() + '</div>' : ZAK === 'droga' ? droga() : ZAK === 'czas' ? czas() : ZAK === 'cena' ? cena() : ZAK === 'podaz' ? podaz() : ZAK === 'klient' ? klient() : dane()) + '</div>';
+  }
   function dymki() {
-    if (window.__odTt) return; window.__odTt = 1;
+    if (window.__odTt3) return; window.__odTt3 = 1;
     var el = document.createElement('div'); el.className = 'od-tt'; el.hidden = true; document.body.appendChild(el);
     document.addEventListener('mousemove', function (e) {
       var t = e.target.closest ? e.target.closest('[data-odtt]') : null;
@@ -13373,29 +13297,26 @@ window.ODK = (function () {
       el.style.left = x + 'px'; el.style.top = y + 'px';
     });
     document.addEventListener('click', function (e) {
-      var b = e.target.closest ? e.target.closest('[data-odur]') : null;
+      var b = e.target.closest ? e.target.closest('[data-odzak]') : null;
       if (!b) return;
-      UR = b.getAttribute('data-odur');
-      var A = D.lejek.urz[UR], n = D.lejek.kroki.length;
-      document.getElementById('od-lj').innerHTML = '<div class="od-strefy" style="grid-template-columns:' + (11 / n * 100) + '% ' + (1 / n * 100) + '% 1fr"><span class="k">Kreator na stronie · GA4</span><span class="m">Z maila</span><span class="b">Za ladą w centrali · dane B2H, etap 2</span></div>' + lejekSvg(A);
-      document.getElementById('od-lj-not').innerHTML = lejekUwagi(A);
-      [].forEach.call(document.querySelectorAll('[data-odur]'), function (x) { x.classList.toggle('on', x === b); });
+      ZAK = b.getAttribute('data-odzak');
+      try { history.replaceState(null, '', location.pathname + '?widok=odkup&zakladka=' + ZAK); } catch (x) {}
+      rysuj();
     });
   }
-
-  /* ---------- notatki AI: w poglądówce wzory, w Pulsie pisze je rutyna z faktów ---------- */
   var WZOR = {
-    odkWerdykt: { teza: 'Odkup zbiera więcej wycen niż tydzień wcześniej, ale co trzecia osoba odpada na formularzu danych przed kwotą.', rozwiniecie: 'Wysłane wyceny: 742 (+5,8%), wartość 1,64 mln zł (+8,0%). Z 1 740 osób na kroku danych kontaktowych kwotę zobaczyło 1 190. Na telefonie do wysłania dochodzi 17% wejść, na komputerze 26%.', oparteNa: 'GA4, 16-22.11.2026 (przykład)', pewnosc: 'średnia' },
-    odkLejek: { teza: 'Krok danych kontaktowych kosztuje 550 osób tygodniowo. Pokazanie przedziału kwoty przed formularzem to pierwszy kandydat do testu A/B.', rozwiniecie: 'Na starym kreatorze ten sam krok przechodziło 97% osób (20-31.10, prawdziwe dane). Druga strata: 244 wysłane wyceny bez nadanej paczki, czyli wyceny do przypomnienia mailem przed końcem ważności.', oparteNa: 'GA4, buyback_step i generate_lead (przykład)', pewnosc: 'średnia' },
-    odkPowroty: { teza: 'Co druga wysłana wycena przychodzi w innej wizycie niż pierwsze wejście, a po 3. dniu prawie nikt już nie wraca.', rozwiniecie: 'Odsetek wysłanych rośnie z 48% w dniu pokazania do 59% po 3 dniach i tylko do 63% po 7. Przypomnienie warto wysłać 2. dnia, a nie przed końcem ważności oferty.', oparteNa: 'GA4 w BigQuery (przykład)', pewnosc: 'średnia' },
-    odkSprzedawcy: { teza: 'Karta podarunkowa wraca do sklepu: 38% wybierających kartę kupuje w ciągu 30 dni, przy przelewie 7%.', rozwiniecie: '156 sprzedających złożyło zamówienia na 293 tys. zł. Bonus do karty podarunkowej ma więc zwrot w sprzedaży, który da się policzyć.', oparteNa: 'GA4 w BigQuery, purchase na www.cyfrowe.pl (przykład)', pewnosc: 'niska' },
-    odkFormy: { teza: 'Przelew i karta podarunkowa dzielą się prawie po równo, a co trzecia karta idzie z odbiorem w salonie.', rozwiniecie: 'Karta podarunkowa: średnio 2 540 zł, przelew 2 010 zł. Gotówka występuje wyłącznie przy salonie (37 wycen).', oparteNa: 'GA4, qualify_lead (przykład)', pewnosc: 'wysoka' },
-    odkKwoty: { teza: 'Wyceny poniżej 500 zł klienci wysyłają najrzadziej (48%), podobnie powyżej 10 tys. zł (52%).', rozwiniecie: 'Przy drogim sprzęcie klient porównuje ofertę z rynkiem, przy tanim nie opłaca mu się wysyłka. Przedział 2-10 tys. zł wysyła 69-70% osób.', oparteNa: 'GA4, generate_lead i qualify_lead (przykład)', pewnosc: 'średnia' },
-    odkProdukty: { teza: 'Canon EOS R7 i Dron DJI Mini 3 Pro tracą po weryfikacji najwięcej: 40% i 31% kwoty.', rozwiniecie: 'Przy obu produktach klienci deklarują stan 9/10, a centrala obniża cenę. Opis ocen stanu w kreatorze przy tych kategoriach warto uzupełnić zdjęciem przykładowego egzemplarza.', oparteNa: 'GA4 i B2H (przykład)', pewnosc: 'niska' },
-    odkSzukanie: { teza: '"sony a7 iv" daje klientom "Brak wyników", choć produkt jest w cenniku: to blokada Cloudflare, nie brak w katalogu.', rozwiniecie: 'Błąd wyszukiwarki dotknął 2% wyszukań. Najczęściej szukanego brakującego produktu, GoPro HERO12, szukano 41 razy, a 17 osób poprosiło o wycenę eksperta.', oparteNa: 'GA4, search i buyback_error (przykład)', pewnosc: 'wysoka' },
-    odkKanaly: { teza: 'Ze sklepu przychodzi 31% wejść i 40% wysłanych wycen, najwięcej z karty produktu.', rozwiniecie: 'Przejście ze sklepu kończy się wysłaniem w 26,6% przypadków, płatne wyszukiwanie w 15,5%.', oparteNa: 'GA4 (przykład)', pewnosc: 'średnia' },
-    odkKiedy: { teza: 'W niedzielę wieczorem klienci wysyłają 2,5 raza więcej wycen niż w poniedziałek rano.', rozwiniecie: 'Maile z pytaniami po wysłaniu wyceny trafiają do centrali w poniedziałek, więc kolejka obsługi jest najdłuższa na początku tygodnia.', oparteNa: 'GA4 (przykład)', pewnosc: 'średnia' },
-    odkPorownanie: { teza: 'Nowa strona traci 22 pkt przed kwotą, ale kończy wysłaniem 21% wejść wobec 14% na starym kreatorze.', rozwiniecie: 'Na starym kreatorze z danych do kwoty przechodziło 97% osób, na nowej stronie 68%. Za to po kwocie stary kreator tracił trzy czwarte osób, a nowa strona 38%.', oparteNa: 'GA4; stary kreator 20-31.10.2026 (prawdziwe dane)', pewnosc: 'średnia' }
+    odkV3Przeglad: { teza: 'Skup rośnie (+9,4% wartości), a czas od wyceny do pieniędzy skrócił się do 6,4 dnia.', rozwiniecie: 'Największy hamulec to decyzja klienta po zmianie ceny (mediana 2,1 dnia) i podpis umowy. Po naszej stronie najdłużej trwa przyjęcie w centrali.', oparteNa: 'B2H i GA4, 26.10-22.11 (przykład)', pewnosc: 'średnia' },
+    odkV3Wtoku: { teza: '78% wycen w toku czeka na ruch klienta, najwięcej na nadanie paczki.', rozwiniecie: 'Przypomnienie o paczce 2. dnia ważności oferty to najtańsza dźwignia: po 3. dniu prawie nikt już nie nadaje.', oparteNa: 'B2H (przykład)', pewnosc: 'średnia' },
+    odkV3Droga: { teza: 'Od pokazanej kwoty tracimy 2 990 wycen, z czego 2 800 po stronie klienta.', rozwiniecie: '1 770 wycen wygasa bez wysłania, a 770 wysłanych nigdy nie przychodzi. Po naszej stronie gubimy 190: niekompletny sprzęt, odrzucone przez nas i sprawy czekające na komplet.', oparteNa: 'GA4 i B2H po numerze wyceny (przykład)', pewnosc: 'średnia' },
+    odkV3Etapy: { teza: 'Decyzja klienta po zmianie ceny trwa najdłużej: 9 na 10 spraw do 5,6 dnia.', rozwiniecie: 'Mail z prośbą o decyzję wysyła operator ręcznie. Automatyczne przypomnienie po 48 godzinach skróci ten etap.', oparteNa: 'B2H, historia stanów (przykład)', pewnosc: 'średnia' },
+    odkV3Los: { teza: '37% wycen z kwotą kończy się wypłatą w 14 dni; 63% wysłanych to sufit już po 6. dniu.', rozwiniecie: 'Krzywa wysłanych spłaszcza się po 3. dniu, więc wydłużenie ważności oferty ponad 7 dni niewiele da.', oparteNa: 'GA4 i B2H (przykład)', pewnosc: 'średnia' },
+    odkV3Kolejka: { teza: '13 spraw czeka na decyzję klienta ponad tydzień, 7 jest w serwisie ponad tydzień.', rozwiniecie: 'Lista do przejścia przez zespół Używane dziś: decyzje (13), umowy (8), faktury (5), serwis (7).', oparteNa: 'B2H, stan na dziś (przykład)', pewnosc: 'wysoka' },
+    odkV3Stan: { teza: 'Deklaracja 10/10 zgadza się tylko w 66% przypadków, 9/10 w 79%.', rozwiniecie: 'Opis oceny 10/10 w kreatorze ("jak nowy wyjęty z pudełka") warto uzupełnić o zdjęcie wzorcowe, bo zawyżona ocena kończy się obniżką i rezygnacją.', oparteNa: 'GA4 i B2H (przykład)', pewnosc: 'średnia' },
+    odkV3Korekta: { teza: 'Obniżka ceny ponad 20% kończy się zgodą tylko w 31% przypadków.', rozwiniecie: 'Każda odrzucona wycena to koszt odesłania sprzętu. Przy dużych obniżkach rozmowa telefoniczna zamiast maila może uratować część odkupu.', oparteNa: 'B2H (przykład)', pewnosc: 'średnia' },
+    odkV3Podaz: { teza: 'Sony A7 IV i Canon RF 24-105 schodzą w 5-6 dni z marżą 25-26%, a kupujemy ich 14 i 26 sztuk.', rozwiniecie: 'Na te modele warto podnieść cenę skupu albo dać wyższy bonus karty. GoPro HERO11 i DJI Mini 3 Pro leżą ponad 30 dni z marżą 5-8%: kandydaci do obniżki ceny skupu.', oparteNa: 'B2H (przykład)', pewnosc: 'niska' },
+    odkV3Kanban: { teza: 'Najdłużej przed sprzedażą sprzęt czeka na sesję zdjęciową i nadanie indeksu (2,6 i 1,9 dnia).', rozwiniecie: 'Razem 9,2 dnia pracy działu przed wystawieniem; sama sprzedaż to kolejne 9,8 dnia.', oparteNa: 'B2H, kanban produktowy (przykład)', pewnosc: 'średnia' },
+    odkV3Kanaly: { teza: 'Przejście ze sklepu daje 33% wartości odkupu, płatne wyszukiwanie 14%.', rozwiniecie: 'Salon (szybka wycena) dokłada 17% wartości bez żadnego ruchu na stronie.', oparteNa: 'GA4 i B2H (przykład)', pewnosc: 'średnia' },
+    odkV3Petla: { teza: 'Bonus karty (118 tys. zł) wraca jako 797 tys. zł dopłat w sklepie.', rozwiniecie: 'Wybierający kartę kupują 5,4 raza częściej niż wybierający przelew.', oparteNa: 'B2H i GA4 (przykład)', pewnosc: 'niska' }
   };
   function notatki() {
     try {
@@ -13404,24 +13325,17 @@ window.ODK = (function () {
         st.notatki = st.notatki || {}; st.notatki.zakres = st.days; st.notatki.sekcje = st.notatki.sekcje || {};
         var teraz = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Warsaw' }).slice(0, 16);
         Object.keys(WZOR).forEach(function (k) { var o = {}; Object.keys(WZOR[k]).forEach(function (x) { o[x] = WZOR[k][x]; }); o.kiedy = teraz; o.faktyZ = teraz; st.notatki.sekcje[k] = o; });
+        P('wstawNotatki')();
       }
-      if (D.przyklad) P('wstawNotatki')(); else P('notatkiWidoku')();
     } catch (e) { if (window.console) console.error('Notatki odkupu: ' + e); }
   }
-
   return {
     widok: function (c, data, an, p) {
       P = p; D = window.ODK_DANE;
-      if (!D) return naglowek() + '<div class="a3x"><div class="a3-k">Brak danych odkupu.</div></div>';
+      var m = location.search.match(/[?&]zakladka=([a-z]+)/); if (m && ZAKLADKI.some(function (z) { return z[0] === m[1]; })) ZAK = m[1];
+      if (!D) return '<div class="a3x"><div class="a3-k">Brak danych odkupu.</div></div>';
       dymki(); setTimeout(notatki, 0);
-      var o = '<div class="a3x odx"><div class="a3-stos">' + hero() + lejek() + '</div>' +
-        '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="a3-f2">' + powroty() + '</div><div class="a3-f1 boczna">' + sprzedawcy() + '</div></div>' +
-        '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="a3-f1">' + formy() + '</div><div class="a3-f1">' + kwoty() + '</div></div>' +
-        '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="a3-f2">' + produkty() + '</div><div class="a3-f1 boczna">' + sprzet() + '</div></div>' +
-        '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="a3-f1">' + szukanie() + '</div><div class="a3-f1">' + kanaly() + '</div></div>' +
-        '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="a3-f1">' + kiedy() + '</div><div class="a3-f1">' + porownanie() + '</div></div>' +
-        '<div class="a3-rz rowne" style="margin-bottom:16px"><div class="a3-f1">' + dziennie() + '</div><div class="a3-f1">' + zdrowie() + '</div></div></div>';
-      return naglowek() + o;
+      return naglowek() + '<div id="odk-tresc">' + tresc() + '</div>';
     }
   };
 })();
