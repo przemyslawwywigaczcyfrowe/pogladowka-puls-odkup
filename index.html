@@ -2448,798 +2448,549 @@ body, .main, .uk2 { font-family: var(--m3f); color: #1F1F1F; }
 <meta name="robots" content="noindex, nofollow"><script>window.ODK_DANE={
  "przyklad": true,
  "okres": {
-  "od": "2026-10-26",
-  "do": "2026-11-22",
+  "od": "2026-10-05",
+  "do": "2026-11-01",
   "dni": 28
  },
- "przeglad": {
+ "hero": {
+  "wejscia": 14200,
+  "pokazane": 4750,
+  "wyslane": 2980,
+  "wyslane_zl": 6600000,
+  "odkupione": 1760,
   "odkupione_zl": 3620000,
-  "odkupione_szt": 2290,
-  "wyplacone_wyceny": 1760,
-  "poprz_odkupione_zl": 3310000,
-  "w_toku_zl": 2140000,
-  "w_toku_wyceny": 1065,
-  "marza_proc": 0.21,
-  "marza_zl": 962000,
-  "czas_do_wyplaty_med": 6.4,
-  "czas_do_wyplaty_poprz": 7.1,
-  "koszt_bonusu_zl": 118000,
-  "tydzien": [
-   [
-    "26.10",
-    520,
-    0.82
-   ],
-   [
-    "2.11",
-    560,
-    0.87
-   ],
-   [
-    "9.11",
-    580,
-    0.92
-   ],
-   [
-    "16.11",
-    630,
-    1.01
-   ]
-  ]
- },
- "sankey": {
-  "kolumny": [
-   "Weszli",
-   "Kwota",
-   "Wysłali",
-   "Dotarło",
-   "Zweryfikowane",
-   "Zgoda",
-   "Umowa",
-   "Wypłata"
-  ],
-  "glowny": [
-   14200,
-   4750,
-   2980,
-   2210,
-   2150,
-   1910,
-   1820,
-   1760
-  ],
-  "wyjscia": [
-   [
-    [
-     "bez kwoty: odpadli w kreatorze",
-     9450,
-     "ga4"
-    ]
-   ],
-   [
-    [
-     "wycena wygasła bez wysłania",
-     1770,
-     "klient"
-    ]
-   ],
-   [
-    [
-     "nie nadali paczki",
-     770,
-     "klient"
-    ]
-   ],
-   [
-    [
-     "sprzęt niekompletny, zwrot",
-     60,
-     "my"
-    ]
-   ],
-   [
-    [
-     "klient odrzucił nową cenę",
-     170,
-     "klient"
-    ],
-    [
-     "odrzucone przez nas",
-     70,
-     "my"
-    ]
-   ],
-   [
-    [
-     "umowa nie wróciła",
-     90,
-     "klient"
-    ]
-   ],
-   [
-    [
-     "czeka na komplet sprzętu",
-     60,
-     "my"
-    ]
-   ]
-  ],
-  "wartosc": [
-   null,
-   10400000,
-   6600000,
-   4900000,
-   4750000,
-   3950000,
-   3760000,
-   3620000
-  ]
- },
- "czas": {
-  "etapy": [
-   [
-    "Wycena do nadania paczki",
-    "klient",
-    1.4,
-    4.8
-   ],
-   [
-    "Paczka w drodze",
-    "przewoźnik",
-    1.6,
-    3.1
-   ],
-   [
-    "Przyjęcie do weryfikacji",
-    "my",
-    1.2,
-    2.9
-   ],
-   [
-    "Decyzja klienta po zmianie ceny",
-    "klient",
-    2.1,
-    5.6
-   ],
-   [
-    "Umowa: wysyłka, podpis, kontrasygnata",
-    "my i klient",
-    1.8,
-    4.2
-   ],
-   [
-    "Rozliczenie do wypłaty",
-    "my",
-    0.9,
-    2.4
-   ]
-  ],
-  "przezycie": {
-   "dni": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14
-   ],
-   "wyslane": [
-    0.42,
-    0.51,
-    0.56,
-    0.59,
-    0.61,
-    0.62,
-    0.63,
-    0.63,
-    0.63,
-    0.63,
-    0.63,
-    0.63,
-    0.63,
-    0.63,
-    0.63
-   ],
-   "dotarlo": [
-    0,
-    0.08,
-    0.23,
-    0.34,
-    0.4,
-    0.43,
-    0.45,
-    0.46,
-    0.46,
-    0.47,
-    0.47,
-    0.47,
-    0.47,
-    0.47,
-    0.47
-   ],
-   "wyplacone": [
-    0,
-    0,
-    0,
-    0.02,
-    0.08,
-    0.15,
-    0.22,
-    0.27,
-    0.31,
-    0.33,
-    0.35,
-    0.36,
-    0.37,
-    0.37,
-    0.37
-   ]
+  "poprz": {
+   "wejscia": 12900,
+   "pokazane": 4410,
+   "wyslane": 2830,
+   "odkupione_zl": 3310000
   },
-  "kolejka": {
-   "stany": [
-    "Nowa, czeka na paczkę",
-    "Przyjęta",
-    "W weryfikacji",
-    "Czeka na decyzję klienta",
-    "Podpisywanie umowy",
-    "Faktura od firmy",
-    "Serwis",
-    "Rozliczenie"
-   ],
-   "kto": [
-    "klient",
-    "my",
-    "my",
-    "klient",
-    "klient",
-    "klient",
-    "my",
-    "my"
-   ],
-   "przedzialy": [
-    "0-1 dnia",
-    "2-3 dni",
-    "4-7 dni",
-    "8-14 dni",
-    "ponad 14 dni"
-   ],
-   "liczby": [
-    [
-     310,
-     180,
-     120,
-     0,
-     0
-    ],
-    [
-     64,
-     22,
-     6,
-     1,
-     0
-    ],
-    [
-     48,
-     19,
-     8,
-     3,
-     1
-    ],
-    [
-     36,
-     28,
-     19,
-     9,
-     4
-    ],
-    [
-     52,
-     31,
-     14,
-     6,
-     2
-    ],
-    [
-     8,
-     6,
-     4,
-     3,
-     2
-    ],
-    [
-     3,
-     5,
-     6,
-     4,
-     3
-    ],
-    [
-     27,
-     9,
-     2,
-     0,
-     0
-    ]
-   ]
-  }
- },
- "cena": {
-  "stany": [
-   "10/10",
-   "9/10",
-   "8/10",
-   "7/10",
-   "6/10",
-   "5/10"
-  ],
-  "deklar_weryf": [
-   [
-    118,
-    46,
-    12,
-    3,
-    1,
-    0
-   ],
-   [
-    9,
-    612,
-    128,
-    24,
-    4,
-    1
-   ],
-   [
-    1,
-    22,
-    548,
-    61,
-    9,
-    2
-   ],
-   [
-    0,
-    2,
-    19,
-    236,
-    22,
-    3
-   ],
-   [
-    0,
-    0,
-    2,
-    11,
-    104,
-    9
-   ],
-   [
-    0,
-    0,
-    0,
-    1,
-    4,
-    38
-   ]
-  ],
-  "korekta": [
-   [
-    "bez zmiany",
-    1480,
-    0.0
-   ],
-   [
-    "-0,1% do -5%",
-    210,
-    0.03
-   ],
-   [
-    "-5% do -10%",
-    190,
-    0.075
-   ],
-   [
-    "-10% do -20%",
-    170,
-    0.14
-   ],
-   [
-    "ponad -20%",
-    100,
-    0.27
-   ]
-  ],
-  "akceptacja": [
-   null,
-   0.85,
-   0.7,
-   0.52,
-   0.31
-  ],
-  "forma": [
-   [
-    "karta podarunkowa",
-    0.46,
-    2540,
-    0.07
-   ],
-   [
-    "przelew",
-    0.54,
-    2010,
-    0.0
-   ]
-  ],
-  "wyplata_zl": [
-   [
-    "karta podarunkowa",
-    1810000
-   ],
-   [
-    "przelew",
-    1810000
-   ]
-  ]
- },
- "podaz": {
-  "modele": [
-   [
-    "Sony A7 III",
-    "Aparaty",
-    64,
-    9,
-    0.24
-   ],
-   [
-    "Canon EOS R6",
-    "Aparaty",
-    51,
-    7,
-    0.22
-   ],
-   [
-    "Sony FE 24-70 GM",
-    "Obiektywy",
-    38,
-    12,
-    0.19
-   ],
-   [
-    "Fujifilm X-T4",
-    "Aparaty",
-    35,
-    21,
-    0.14
-   ],
-   [
-    "Nikon Z6 II",
-    "Aparaty",
-    29,
-    16,
-    0.18
-   ],
-   [
-    "DJI Mini 3 Pro",
-    "Drony",
-    27,
-    34,
-    0.08
-   ],
-   [
-    "Canon RF 24-105 f/4L",
-    "Obiektywy",
-    26,
-    6,
-    0.26
-   ],
-   [
-    "Sony A6400",
-    "Aparaty",
-    24,
-    28,
-    0.11
-   ],
-   [
-    "GoPro HERO11",
-    "Kamery",
-    22,
-    41,
-    0.05
-   ],
-   [
-    "Canon EOS R7",
-    "Aparaty",
-    18,
-    11,
-    0.21
-   ],
-   [
-    "Sigma 24-70 f/2.8 DG DN",
-    "Obiektywy",
-    16,
-    8,
-    0.27
-   ],
-   [
-    "Sony A7 IV",
-    "Aparaty",
-    14,
-    5,
-    0.25
-   ]
-  ],
-  "kanban": [
-   [
-    "Nowy",
-    0.6
-   ],
-   [
-    "Regał",
-    0.8
-   ],
-   [
-    "Indeks",
-    1.9
-   ],
-   [
-    "KG+EAN",
-    0.7
-   ],
-   [
-    "Sesja i pakowanie",
-    2.6
-   ],
-   [
-    "Karta produktu",
-    1.4
-   ],
-   [
-    "PZ",
-    0.5
-   ],
-   [
-    "Front",
-    0.3
-   ],
-   [
-    "Allegro",
-    0.4
-   ],
-   [
-    "Sprzedany",
-    9.8
-   ]
-  ],
-  "luki": [
-   [
-    "GoPro HERO12",
-    41,
-    17,
-    "brak w cenniku"
-   ],
-   [
-    "Canon 5D Mark IV",
-    33,
-    14,
-    "brak w cenniku"
-   ],
-   [
-    "Leica Q2",
-    18,
-    9,
-    "brak w cenniku"
-   ],
-   [
-    "DJI Mavic 3 Pro",
-    15,
-    6,
-    "brak w cenniku"
-   ],
-   [
-    "Sony A7 IV",
-    27,
-    0,
-    "błąd wyszukiwarki"
-   ]
-  ],
-  "popyt": [
-   [
-    "Sony A7 IV",
-    5,
-    14,
-    42
-   ],
-   [
-    "Canon RF 24-105 f/4L",
-    6,
-    26,
-    31
-   ],
-   [
-    "Sigma 24-70 f/2.8 DG DN",
-    8,
-    16,
-    22
-   ],
-   [
-    "GoPro HERO11",
-    41,
-    22,
-    4
-   ],
-   [
-    "DJI Mini 3 Pro",
-    34,
-    27,
-    6
-   ]
-  ]
- },
- "klient": {
-  "sprzedajacy": 1650,
-  "kupili30": 384,
-  "kupKarta": 0.38,
-  "kupPrzelew": 0.07,
-  "ponownie90": 0.08,
-  "kanaly": [
-   [
-    "Przejście ze sklepu",
-    1120,
-    1210000,
-    0.33
-   ],
-   [
-    "Bezpłatne wyszukiwanie",
-    1010,
-    980000,
-    0.27
-   ],
-   [
-    "Płatne wyszukiwanie",
-    760,
-    520000,
-    0.14
-   ],
-   [
-    "Salon (szybka wycena)",
-    0,
-    610000,
-    0.17
-   ],
-   [
-    "Mail (SALESmanago)",
-    140,
-    190000,
-    0.05
-   ],
-   [
-    "Media społecznościowe",
-    120,
-    110000,
-    0.03
-   ]
-  ],
-  "karta": {
-   "wydane_zl": 1810000,
-   "wykorzystane_30d": 0.71,
-   "doplata_na_zl": 0.62,
-   "bonus_zl": 118000
-  }
+  "czas_med": 6.4
  },
  "dzien": {
   "d": [
+   "2026-10-05",
+   "2026-10-06",
+   "2026-10-07",
+   "2026-10-08",
+   "2026-10-09",
+   "2026-10-10",
+   "2026-10-11",
+   "2026-10-12",
+   "2026-10-13",
+   "2026-10-14",
+   "2026-10-15",
+   "2026-10-16",
+   "2026-10-17",
+   "2026-10-18",
+   "2026-10-19",
+   "2026-10-20",
+   "2026-10-21",
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-24",
+   "2026-10-25",
    "2026-10-26",
    "2026-10-27",
    "2026-10-28",
    "2026-10-29",
    "2026-10-30",
    "2026-10-31",
-   "2026-11-01",
-   "2026-11-02",
-   "2026-11-03",
-   "2026-11-04",
-   "2026-11-05",
-   "2026-11-06",
-   "2026-11-07",
-   "2026-11-08",
-   "2026-11-09",
-   "2026-11-10",
-   "2026-11-11",
-   "2026-11-12",
-   "2026-11-13",
-   "2026-11-14",
-   "2026-11-15",
-   "2026-11-16",
-   "2026-11-17",
-   "2026-11-18",
-   "2026-11-19",
-   "2026-11-20",
-   "2026-11-21",
-   "2026-11-22"
+   "2026-11-01"
   ],
-  "zl": [
-   139900,
-   133900,
-   125900,
-   122200,
-   134800,
-   97100,
-   57700,
-   146000,
-   144000,
-   141700,
-   131800,
-   140100,
-   106000,
-   64600,
-   153900,
-   150600,
-   156700,
-   145100,
-   145300,
-   112400,
-   71900,
-   165600,
-   155100,
-   168800,
-   161300,
-   152700,
-   116200,
-   78700
+  "wejscia": [
+   578,
+   560,
+   493,
+   464,
+   469,
+   396,
+   453,
+   571,
+   577,
+   526,
+   471,
+   466,
+   415,
+   480,
+   570,
+   580,
+   558,
+   491,
+   461,
+   424,
+   511,
+   581,
+   576,
+   581,
+   520,
+   462,
+   425,
+   541
   ],
-  "poprz_zl": 3310000
+  "pokazane": [
+   200,
+   181,
+   160,
+   162,
+   159,
+   127,
+   151,
+   200,
+   191,
+   168,
+   161,
+   162,
+   135,
+   155,
+   198,
+   198,
+   179,
+   162,
+   161,
+   142,
+   164,
+   197,
+   200,
+   190,
+   168,
+   159,
+   146,
+   174
+  ],
+  "wyslane": [
+   126,
+   108,
+   102,
+   107,
+   98,
+   76,
+   98,
+   129,
+   115,
+   103,
+   106,
+   102,
+   81,
+   98,
+   130,
+   122,
+   108,
+   105,
+   105,
+   86,
+   100,
+   129,
+   127,
+   114,
+   105,
+   105,
+   91,
+   104
+  ],
+  "odkupione_zl": [
+   148565,
+   127861,
+   128515,
+   131583,
+   114232,
+   92039,
+   124270,
+   156684,
+   134830,
+   127725,
+   133201,
+   121680,
+   95202,
+   122931,
+   161474,
+   143734,
+   129420,
+   132451,
+   127512,
+   100566,
+   122590,
+   162623,
+   152380,
+   134419,
+   131123,
+   130586,
+   106982,
+   124822
+  ]
  },
- "straty": [
+ "lejek": [
   [
-   "Wycena wygasła, klient nie wysłał",
-   1770,
-   3800000,
-   "klient"
+   "Sprzęt",
+   "szuka produktu",
+   10840
   ],
   [
-   "Wysłana, paczka nie dotarła",
-   770,
-   1700000,
-   "klient"
+   "Stan",
+   "ocenia stan",
+   7390
   ],
   [
-   "Klient odrzucił cenę po weryfikacji",
-   170,
-   390000,
-   "klient"
+   "Akcesoria",
+   "zaznacza",
+   7020
   ],
   [
-   "Umowa nie wróciła podpisana",
-   90,
-   190000,
-   "klient"
+   "Lista",
+   "podsumowanie",
+   6690
   ],
   [
-   "Odrzucone przez nas po weryfikacji",
+   "Twoje dane",
+   "nieobowiązkowe",
+   6100
+  ],
+  [
+   "Wycena",
+   "pokazana kwota",
+   4750,
+   1
+  ],
+  [
+   "Dostawa",
+   "wybiera sposób",
+   3380
+  ],
+  [
+   "Wysłana",
+   "potwierdzenie",
+   2980,
+   1
+  ]
+ ],
+ "lejek_poprz": [
+  10120,
+  6860,
+  6520,
+  6230,
+  5650,
+  4410,
+  3150,
+  2830
+ ],
+ "stary": [
+  [
+   "Stan",
+   68,
+   63
+  ],
+  [
+   "Akcesoria",
+   65,
+   61
+  ],
+  [
+   "Lista",
+   62,
+   58
+  ],
+  [
+   "Twoje dane",
+   56,
+   57
+  ],
+  [
+   "Wycena",
+   44,
+   55
+  ],
+  [
+   "Wysłana",
+   27,
+   14
+  ]
+ ],
+ "po": [
+  [
+   "Wysłane wyceny",
+   2980,
+   "100%",
+   ""
+  ],
+  [
+   "Sprzęt dotarł do centrali",
+   2210,
+   "74% wysłanych",
+   ""
+  ],
+  [
+   "Zweryfikowany przez technika",
+   2150,
+   "97% dostarczonych",
+   ""
+  ],
+  [
+   "Klient przyjął cenę",
+   1910,
+   "89% zweryfikowanych",
+   ""
+  ],
+  [
+   "Cena odrzucona albo zwrot",
+   240,
+   "11% zweryfikowanych",
+   "bad"
+  ],
+  [
+   "Umowa albo faktura podpisana",
+   1820,
+   "95% przyjętych",
+   ""
+  ],
+  [
+   "Wypłacone",
+   1760,
+   "3,62 mln zł",
+   "key"
+  ]
+ ],
+ "szukaja": [
+  [
+   "sony a7 iii",
+   860,
+   "Aparat Sony A7 III Body",
+   384
+  ],
+  [
+   "canon eos r6",
+   720,
+   "Aparat Canon EOS R6 Body",
+   324
+  ],
+  [
+   "fujifilm x-t4",
+   490,
+   "Aparat Fujifilm X-T4 Body",
+   208
+  ],
+  [
+   "nikon z6",
+   440,
+   "Aparat Nikon Z6 II Body",
+   176
+  ],
+  [
+   "dji mini 3",
+   380,
+   "Dron DJI Mini 3 Pro",
+   156
+  ],
+  [
+   "sony a6400",
+   350,
+   "Aparat Sony A6400 Body",
+   140
+  ]
+ ],
+ "brak": [
+  [
+   "gopro hero 12",
+   164,
+   "brak",
+   68,
+   "GoPro HERO12"
+  ],
+  [
+   "canon 5d mark iv",
+   132,
+   "brak",
+   56,
+   "Canon EOS 5D Mark IV"
+  ],
+  [
+   "sony a7 iv",
+   108,
+   "blad",
+   8,
+   "Sony A7 IV"
+  ],
+  [
+   "leica q2",
+   72,
+   "brak",
+   36,
+   "Leica Q2"
+  ],
+  [
+   "dji mavic 3 pro",
+   60,
+   "brak",
+   24,
+   "DJI Mavic 3 Pro"
+  ],
+  [
+   "pentax k-1",
+   36,
+   "brak",
+   16,
+   "Pentax K-1"
+  ]
+ ],
+ "udzialy": {
+  "wyplata": [
+   [
+    "przelew",
+    54
+   ],
+   [
+    "karta podarunkowa (+7%)",
+    46
+   ]
+  ],
+  "dokument": [
+   [
+    "umowa",
+    91
+   ],
+   [
+    "faktura VAT",
+    7
+   ],
+   [
+    "faktura ZW",
+    2
+   ]
+  ],
+  "dostawa": [
+   [
+    "Paczkomat InPost",
+    38
+   ],
+   [
+    "kurier DPD",
+    31
+   ],
+   [
+    "salon",
+    24
+   ],
+   [
+    "wysyłka własna",
+    7
+   ]
+  ],
+  "ile": [
+   [
+    "1 produkt",
+    72
+   ],
+   [
+    "2 produkty",
+    19
+   ],
+   [
+    "3 i więcej",
+    9
+   ]
+  ],
+  "ocena": [
+   [
+    "10/10",
+    9
+   ],
+   [
+    "9/10",
+    41
+   ],
+   [
+    "8/10",
+    33
+   ],
+   [
+    "7/10",
+    12
+   ],
+   [
+    "6/10",
+    4
+   ],
+   [
+    "5/10",
+    1
+   ]
+  ],
+  "komplet": [
+   [
+    "komplet",
+    34
+   ],
+   [
+    "ponad połowa",
+    45
+   ],
+   [
+    "mniej niż połowa",
+    21
+   ]
+  ]
+ },
+ "kanaly": [
+  [
+   "Bezpłatne wyszukiwanie",
+   5020,
+   1820,
+   1180,
+   1310000
+  ],
+  [
+   "Przejście ze sklepu",
+   4070,
+   1490,
+   1000,
+   1210000
+  ],
+  [
+   "Płatne wyszukiwanie",
+   2660,
+   790,
+   460,
+   520000
+  ],
+  [
+   "Bezpośrednie",
+   1740,
+   490,
+   270,
+   370000
+  ],
+  [
+   "Media społecznościowe",
+   710,
+   160,
    70,
-   120000,
-   "my"
+   110000
+  ]
+ ],
+ "bledy": [
+  [
+   "Okno \"Opuścić wycenę?\", klient wyszedł",
+   368,
+   "Wycena"
   ],
   [
-   "Sprzęt niekompletny, zwrot",
-   60,
-   150000,
-   "my"
+   "Produkt nie jest skupowany",
+   256,
+   "Lista"
   ],
   [
-   "Czeka na komplet sprzętu",
-   60,
-   140000,
-   "my"
+   "Nieprawidłowy numer konta",
+   192,
+   "Wycena"
+  ],
+  [
+   "Blokada Cloudflare (403)",
+   108,
+   "Sprzęt"
+  ],
+  [
+   "Za dużo zapytań (429)",
+   12,
+   "Wycena"
   ]
  ],
  "produkty": [
@@ -13638,29 +13389,76 @@ window.TAB = (function () {
 })();
 </script>
 
-<!-- Widok "Odkup" (POGLĄDÓWKA v4, 2.11.2026, nie wdrożone). Funkcje w window.ODK.
-  Uwagi Przemka do v3: za dużo kolorów i wykresów-zabawek, osobna zakładka o źródłach zbędna, bo źródło każdej liczby
-  jest pod "?". Dlatego v4 składa się wyłącznie z klocków Pulsu: karta nagłówkowa i kafle jak w Sprzedaży (m3s-*),
-  pasy drogi i lista uwag jak w Przeglądzie (m3p-*), listy z poziomymi paskami w jednym kolorze. Czerwony tylko dla
-  problemu. Źródła: GA4 z kontenera GTM-NDXT48BF (kreator do wysłania wyceny) i B2H (od wyceny do wypłaty),
-  łączone numerem wyceny; wyjaśnienia "od.*" w WY. Dane: window.ODK_DANE (stend: dane-odkup-v4.json, LICZBY PRZYKŁADOWE). -->
+<!-- Widok "Odkup" (POGLĄDÓWKA v5, 2.11.2026, nie wdrożone). Funkcje w window.ODK.
+  Układ i formy wykresów z pierwszej poglądówki (v1), którą Przemek ocenił najlepiej: lejek kolumnowy kreatora,
+  porównanie ze starym kreatorem, dzień po dniu (słupki i linia), droga wyceny po wysłaniu, tabele wyszukiwań,
+  paski udziałów, kanały, błędy. Dołożone: rama Pulsu (s2-karta, s2Glowka, m3s-hero), źródło z linkiem pod "?"
+  (wyjaśnienia "od5.*" w WY), wniosek AI w KAŻDEJ karcie, dane z B2H od dotarcia sprzętu do wypłaty, tabela
+  odkupionego sprzętu z czasem do sprzedaży i marżą. Kolory: odcienie jednego niebieskiego, czerwony tylko dla straty.
+  Dane: window.ODK_DANE (stend: dane-odkup-v5.json, LICZBY PRZYKŁADOWE; prawdziwe tylko udziały starego kreatora). -->
 <style>
-.odk .s2-karta { margin: 0 !important; }
-.odk .m3s-rz > .s2-karta { flex: 1 1 640px; min-width: 0; }
-.odk .od-dz svg { width: 100%; height: auto; display: block; }
-.odk .od-dz text { font-family: var(--m3f); }
-.odk .m3s-pr.od-pr { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
-.odk .od-pr .m3s-pr-r { grid-template-columns: 24px minmax(0, 250px) minmax(0, 1fr); }
-.odk .od-pr .m3s-pr-t { grid-column: auto; }
-.odk .m3s-pr-r .od-x { display: block; font-size: 12.5px; color: #5E6366; font-weight: 400; margin-top: 2px; }
-.odk .od-tab { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin-top: 8px; }
-.odk .od-tab th { font: 500 12.5px var(--m3f); color: #5E6366; text-align: right; padding: 0 0 10px 12px; border-bottom: 1px solid #E1E3E1; }
-.odk .od-tab th:first-child, .odk .od-tab td:first-child { text-align: left; padding-left: 0; }
-.odk .od-tab td { height: 52px; padding: 0 0 0 12px; border-bottom: 1px solid #EDEFF0; text-align: right; font-size: 15px; }
-.odk .od-tab tr:last-child td { border-bottom: 0; }
-.odk .od-tab .zle { color: #B3261E; font-weight: 500; }
-.odk .od-tab .bar { display: inline-block; vertical-align: middle; height: 8px; border-radius: 4px; background: #0B57D0; margin-right: 10px; }
-.odk .od-pod { font-size: 13px; color: #5E6366; margin: 14px 0 0; }
+.odk5 .s2-karta { margin: 0 !important; min-width: 0; }
+.odk5 .od-g { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+.odk5 .od-w12 { grid-column: span 12; } .odk5 .od-w7 { grid-column: span 7; } .odk5 .od-w6 { grid-column: span 6; }
+.odk5 .od-w5 { grid-column: span 5; } .odk5 .od-w4 { grid-column: span 4; }
+.odk5 .od-demo { background: #FFF4E5; color: #7A4100; border-radius: 12px; padding: 10px 16px; font-size: 13px; }
+.odk5 .m3s-kafel .od-sp { display: block; width: 100%; height: 28px; margin-top: 8px; }
+/* lejek */
+.odk5 .od-fun { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 10px; align-items: end; margin-top: 8px; }
+.odk5 .od-fs { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.odk5 .od-fb { background: #E9EEF6; border-radius: 14px; height: 220px; display: flex; align-items: flex-end; overflow: hidden; position: relative; }
+.odk5 .od-fb i { display: block; width: 100%; background: #4C8DF6; border-radius: 14px 14px 0 0; }
+.odk5 .od-fs.key .od-fb i { background: #0B57D0; }
+.odk5 .od-fb u { position: absolute; left: 6px; right: 6px; height: 0; border-top: 2px solid #1F1F1F; }
+.odk5 .od-fn { font: 500 22px var(--m3f); font-variant-numeric: tabular-nums; }
+.odk5 .od-fl { font-size: 13px; color: #444746; line-height: 1.3; min-height: 34px; }
+.odk5 .od-fl b { display: block; color: #1F1F1F; font-weight: 500; }
+.odk5 .od-drop { font-size: 12px; color: #8C1D18; font-weight: 500; min-height: 16px; }
+.odk5 .od-drop.ok { color: #747775; font-weight: 400; }
+.odk5 .od-leg { display: flex; gap: 16px; font-size: 12px; color: #444746; margin: 4px 0 14px; flex-wrap: wrap; }
+.odk5 .od-leg span { display: inline-flex; align-items: center; gap: 6px; }
+.odk5 .od-leg i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.odk5 .od-leg i.kr { height: 0; border-top: 2px solid #1F1F1F; border-radius: 0; }
+/* porównanie */
+.odk5 .od-cmp { display: grid; grid-template-columns: 110px minmax(0, 1fr) 52px; gap: 8px 14px; align-items: center; }
+.odk5 .od-cmp .n { font-size: 13px; color: #444746; }
+.odk5 .od-cmp .t { height: 14px; background: #E9EEF6; border-radius: 7px; position: relative; }
+.odk5 .od-cmp .t i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 7px; background: #0B57D0; }
+.odk5 .od-cmp .t.b { background: transparent; } .odk5 .od-cmp .t.b i { background: #A0A4A8; top: 4px; bottom: 4px; }
+.odk5 .od-cmp .p { font: 500 14px var(--m3f); text-align: right; font-variant-numeric: tabular-nums; }
+.odk5 .od-cmp .p.b { color: #747775; font-weight: 400; }
+/* droga po wysłaniu */
+.odk5 .od-path { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+.odk5 .od-st { border-radius: 20px; padding: 16px; background: #F0F4F9; display: flex; flex-direction: column; gap: 6px; min-height: 140px; position: relative; }
+.odk5 .od-st .l { font-size: 13px; color: #444746; line-height: 1.3; }
+.odk5 .od-st .v { font: 500 28px var(--m3f); font-variant-numeric: tabular-nums; }
+.odk5 .od-st .r { font-size: 12px; color: #444746; margin-top: auto; }
+.odk5 .od-st.bad { background: #FFF4F2; } .odk5 .od-st.bad .v { color: #8C1D18; }
+.odk5 .od-st.key { background: #D3E3FD; } .odk5 .od-st.key .v { color: #041E49; }
+.odk5 .od-st .zr { position: absolute; top: 12px; right: 14px; font-size: 11px; color: #747775; }
+/* tabele */
+.odk5 .od-tab { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.odk5 .od-tab th { font: 500 12px var(--m3f); color: #444746; text-align: right; padding: 0 8px 10px; border-bottom: 1px solid #E1E3E1; }
+.odk5 .od-tab th:first-child, .odk5 .od-tab td:first-child { text-align: left; padding-left: 0; }
+.odk5 .od-tab td { padding: 0 8px; height: 46px; border-bottom: 1px solid #EDEFF0; text-align: right; font-size: 14px; }
+.odk5 .od-tab tr:last-child td { border-bottom: 0; }
+.odk5 .od-tab .bar { display: inline-block; height: 8px; border-radius: 4px; background: #0B57D0; vertical-align: middle; margin-right: 8px; }
+.odk5 .od-tab .m { color: #444746; font-size: 13px; }
+.odk5 .od-tab .zle { color: #8C1D18; font-weight: 500; }
+.odk5 .od-tag { font: 500 11px var(--m3f); padding: 2px 7px; border-radius: 6px; background: #E1E3E1; color: #444746; }
+.odk5 .od-tag.zle { background: #FFDAD6; color: #8C1D18; }
+/* paski udziałów */
+.odk5 .od-blk + .od-blk { margin-top: 18px; }
+.odk5 .od-blk h3 { font: 500 14px var(--m3f); margin: 0; }
+.odk5 .od-stack { display: flex; height: 28px; border-radius: 10px; overflow: hidden; gap: 2px; margin: 8px 0 10px; }
+.odk5 .od-stack i { display: grid; place-items: center; font: 500 12px var(--m3f); font-style: normal; min-width: 0; }
+.odk5 .od-sl { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #444746; }
+.odk5 .od-sl span { display: inline-flex; gap: 6px; align-items: center; }
+.odk5 .od-sl i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.odk5 .od-sl b { color: #1F1F1F; font-weight: 500; }
+.odk5 .od-ch svg { width: 100%; height: auto; display: block; }
+.odk5 .od-ch text { font-family: var(--m3f); }
+@media (max-width: 1300px) { .odk5 .od-w7, .odk5 .od-w6, .odk5 .od-w5, .odk5 .od-w4 { grid-column: span 12; } .odk5 .od-path { grid-template-columns: repeat(4, 1fr); } }
 </style>
 <script>
 window.ODK = (function () {
@@ -13668,230 +13466,263 @@ window.ODK = (function () {
   var NAZWY = ['esc', 'fmtPlnShort', 'qm', 'notatkaSlot', 's2Glowka', 's2Zm', 'icon', 'RAIL_VIEWS', 'state'];
   var B2H_RAPORT = 'https://b2h.cyfrowe.net.pl/reports';
   var B2H_LISTA = 'https://b2h.cyfrowe.net.pl/appraisals';
-  var GA4_ZDARZENIA = 'https://analytics.google.com/analytics/web/#/p251795511/reports/explorer?params=_u..nav%3Dmaui&r=top-events&collectionId=5161925695';
+  var GA4 = 'https://analytics.google.com/analytics/web/#/p251795511/reports/explorer?params=_u..nav%3Dmaui&r=top-events&collectionId=5161925695';
   var GTM = 'https://tagmanager.google.com/#/container/accounts/137578/containers/284816056/workspaces';
+  /* odcienie jednego niebieskiego, od najciemniejszego; ostatni szary */
+  var NIEB = [['#0842A0', '#fff'], ['#0B57D0', '#fff'], ['#4C8DF6', '#fff'], ['#A8C7FA', '#041E49'], ['#D3E3FD', '#041E49'], ['#E1E3E1', '#444746']];
+  var DNI = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
   function nf(x, d) { return (x == null || isNaN(x)) ? '-' : Number(x).toLocaleString('pl-PL', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
   function pr(x, d) { return nf(x * 100, d == null ? 0 : d) + '%'; }
   function zl(x) { return H.fmtPlnShort(x); }
   function e(s) { return H.esc(s); }
   function dt(s) { var p = s.split('-'); return +p[2] + '.' + p[1]; }
-  function karta(tytul, zdanie, zrodlo, klucz, tresc) {
-    return '<section class="s2-karta">' + H.s2Glowka(tytul, zdanie, zrodlo, null, '', klucz) + tresc + '</section>';
+  function wd(s) { return new Date(s + 'T12:00:00').getDay(); }
+  function lm(n, a, b, c) { var j = n % 10, d = n % 100; return n === 1 ? a : (j >= 2 && j <= 4 && (d < 12 || d > 14)) ? b : c; }
+  function suma(a) { return a.reduce(function (x, y) { return x + y; }, 0); }
+  function karta(kl, tytul, zdanie, zrodlo, klucz, tresc) {
+    return '<section class="s2-karta ' + kl + '">' + H.s2Glowka(tytul, zdanie, zrodlo, null, '', 'od5.' + klucz) + tresc +
+      H.notatkaSlot('odk5' + klucz) + '</section>';
   }
-  /* pozioma lista z paskiem w jednym kolorze, jak kanały w Sprzedaży */
-  function paski(wiersze, max, fmt) {
-    var siat = '<i class="siat" style="left:33.33%"></i><i class="siat" style="left:66.66%"></i>';
-    return '<div class="m3s-kan bez-zm"><div class="m3s-kan-in">' + wiersze.map(function (w) {
-      var u = Math.max(0.004, w.v / max);
-      return '<div class="m3s-kw-r"><span class="m3s-kw-n" title="' + e(w.n) + '">' + e(w.n) + '</span>' +
-        '<div class="m3s-kw-b">' + siat + '<div class="b" style="width:' + (u * 100).toFixed(2) + '%"></div>' +
-        '<span class="v" style="left:' + (u * 100).toFixed(2) + '%">' + fmt(w) + '</span></div></div>';
-    }).join('') + '</div></div>';
+  function spark(a) {
+    var mx = Math.max.apply(null, a), mn = Math.min.apply(null, a);
+    var pts = a.map(function (v, i) { return (i * 120 / (a.length - 1)).toFixed(1) + ',' + (26 - (v - mn) / (mx - mn || 1) * 22).toFixed(1); });
+    return '<svg class="od-sp" viewBox="0 0 120 28" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="#0B57D0" stroke-width="2" vector-effect="non-scaling-stroke" points="' + pts.join(' ') + '"/></svg>';
   }
 
-  /* ---------- 1. karta nagłówkowa ---------- */
+  /* ---------- nagłówek okresu ---------- */
   function hero() {
-    var G = D.przeglad, S = D.sankey.glowny, d = (G.odkupione_zl - G.poprz_odkupione_zl) / G.poprz_odkupione_zl;
-    var kaf = function (l, k, v, zm, x) {
-      return '<div class="m3s-kafel"><div class="m3s-k-l">' + e(l) + H.qm('', k) + '</div><div class="m3s-k-v">' + v + '</div>' +
-        (zm ? '<div class="m3s-k-d">' + zm + '</div>' : '') + (x ? '<div class="m3s-k-x">' + x + '</div>' : '') + '</div>';
+    var R = D.hero, Q = R.poprz, Z = D.dzien;
+    var kaf = function (l, k, v, zm, x, sp) {
+      return '<div class="m3s-kafel"><div class="m3s-k-l">' + e(l) + H.qm('', 'od5.' + k) + '</div><div class="m3s-k-v">' + v + '</div>' +
+        '<div class="m3s-k-d">' + zm + '</div><div class="m3s-k-x">' + x + '</div>' + spark(sp) + '</div>';
     };
-    return '<section class="s2-karta m3s-hero" aria-label="Odkup w okresie"><div class="m3s-hero-l">' +
-      '<div class="m3s-okres">' + dt(D.okres.od) + '-' + dt(D.okres.do) + '.2026 wobec poprzednich 28 dni · liczby przykładowe' + H.qm('', 'od.okres') + '</div>' +
-      '<h1><span class="m3s-kw pos">' + e(zl(G.odkupione_zl)) + '</span> odkupionego sprzętu, o ' + pr(d, 1) + ' więcej niż w poprzednich 28 dniach</h1>' +
-      '<p class="m3s-lead">' + nf(G.odkupione_szt) + ' sztuk z ' + nf(G.wyplacone_wyceny) + ' wycen. Odkupem kończy się <b>' + pr(S[7] / S[1]) +
-        '</b> pokazanych wycen, a od wyceny do wypłaty mija mediana <b>' + nf(G.czas_do_wyplaty_med, 1) + ' dnia</b>.</p>' + H.notatkaSlot('odkV4Okres') + '</div>' +
+    return '<section class="s2-karta m3s-hero od-w12" aria-label="Odkup w okresie"><div class="m3s-hero-l">' +
+      '<div class="m3s-okres">Odkup · ' + dt(D.okres.od) + '-' + dt(D.okres.do) + '.2026 wobec poprzednich 28 dni' + H.qm('', 'od5.okres') + '</div>' +
+      '<h1><span class="m3s-kw pos">' + nf(R.odkupione) + ' wycen</span> odkupionych za ' + e(zl(R.odkupione_zl)) + ', o ' + pr(R.odkupione_zl / Q.odkupione_zl - 1, 1) + ' więcej</h1>' +
+      '<p class="m3s-lead">Klienci zobaczyli ' + nf(R.pokazane) + ' wycen i wysłali ' + nf(R.wyslane) + ' (' + pr(R.wyslane / R.pokazane) + '). Do wypłaty doszło ' +
+        nf(R.odkupione) + ', a od wyceny do wypłaty mija mediana <b>' + nf(R.czas_med, 1) + ' dnia</b>.</p>' + H.notatkaSlot('odk5okres') + '</div>' +
       '<div class="m3s-hero-r"><div class="m3s-kafle">' +
-        kaf('Pokazane wyceny', 'od.pokazane', nf(S[1]), H.s2Zm(0.078), zl(D.sankey.wartosc[1]) + ' w wycenach') +
-        kaf('Wysłane wyceny', 'od.wyslane', nf(S[2]), H.s2Zm(0.052), pr(S[2] / S[1]) + ' pokazanych') +
-        kaf('Odkupione wyceny', 'od.odkupione', nf(S[7]), H.s2Zm(0.094), pr(S[7] / S[2]) + ' wysłanych') +
-        kaf('Od wyceny do wypłaty', 'od.czas', nf(G.czas_do_wyplaty_med, 1) + ' <small>dnia</small>', H.s2Zm(-0.099, false), 'mediana, było ' + nf(G.czas_do_wyplaty_poprz, 1)) +
+        kaf('Wejścia na odkup', 'wejscia', nf(R.wejscia), H.s2Zm(R.wejscia / Q.wejscia - 1), 'osoby na odkup.cyfrowe.pl', Z.wejscia) +
+        kaf('Pokazane wyceny', 'pokazane', nf(R.pokazane), H.s2Zm(R.pokazane / Q.pokazane - 1), pr(R.pokazane / R.wejscia) + ' wejść', Z.pokazane) +
+        kaf('Wysłane wyceny', 'wyslane', nf(R.wyslane), H.s2Zm(R.wyslane / Q.wyslane - 1), e(zl(R.wyslane_zl)) + ' w wycenach', Z.wyslane) +
+        kaf('Odkupiony sprzęt', 'odkupione', e(zl(R.odkupione_zl)), H.s2Zm(R.odkupione_zl / Q.odkupione_zl - 1), nf(R.odkupione) + ' wypłaconych wycen', Z.odkupione_zl) +
       '</div></div></section>';
   }
 
-  /* ---------- 2a. dzień po dniu, wykres jak "Obrót dzień po dniu" ---------- */
-  function dni() {
-    var Z = D.dzien, a = Z.zl, n = a.length, W = 900, Hh = 300, L = 56, B = 34, T = 18;
-    var srt = a.slice().sort(function (x, y) { return x - y; }), med = (srt[13] + srt[14]) / 2, mx = 200000;
-    var cw = (W - L) / n, bw = Math.min(22, cw * 0.62), y = function (v) { return Hh - B - v / mx * (Hh - B - T); };
-    var s = '<svg viewBox="0 0 ' + W + ' ' + Hh + '" role="img" aria-label="Odkupione dzień po dniu">';
-    [0, 50000, 100000, 150000, 200000].forEach(function (v) { s += '<line x1="' + L + '" x2="' + W + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="#EDEFF0"/><text x="' + (L - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end" font-size="12" fill="#5E6366">' + (v ? nf(v / 1000) + ' tys.' : '0') + '</text>'; });
-    var maxI = a.indexOf(Math.max.apply(null, a));
-    a.forEach(function (v, i) {
-      var wd = new Date(Z.d[i] + 'T12:00:00').getDay(), x = L + i * cw + (cw - bw) / 2;
-      if (wd === 0 || wd === 6) s += '<rect x="' + (L + i * cw) + '" y="' + T + '" width="' + cw + '" height="' + (Hh - B - T) + '" fill="#F0F4F9"/>';
-      s += '<rect x="' + x + '" y="' + y(v) + '" width="' + bw + '" height="' + (Hh - B - y(v)) + '" rx="3" fill="#0B57D0"><title>' + dt(Z.d[i]) + ': ' + zl(v) + '</title></rect>';
-      if (i % 7 === 0) s += '<text x="' + (x + bw / 2) + '" y="' + (Hh - 12) + '" text-anchor="middle" font-size="12" fill="#5E6366">' + ['nd', 'pn', 'wt', 'śr', 'cz', 'pt', 'sb'][wd] + ' ' + dt(Z.d[i]) + '</text>';
-      if (i === maxI) s += '<text x="' + (x + bw / 2) + '" y="' + (y(v) - 6) + '" text-anchor="middle" font-size="12.5" font-weight="500" fill="#1F1F1F">' + nf(v / 1000) + ' tys.</text>';
-    });
-    s += '<line x1="' + L + '" x2="' + W + '" y1="' + y(med) + '" y2="' + y(med) + '" stroke="#1F1F1F" stroke-dasharray="5 4"/>' +
-      '<text x="' + (L + 6) + '" y="' + (y(med) - 6) + '" font-size="12" fill="#1F1F1F">mediana ' + nf(med / 1000) + ' tys. zł</text></svg>';
-    var wkd = a.filter(function (v, i) { var w = new Date(Z.d[i] + 'T12:00:00').getDay(); return w !== 0 && w !== 6; });
-    var zd = 'Najwięcej w poniedziałki, kiedy centrala rozlicza paczki z weekendu. W dzień roboczy średnio <b>' + zl(wkd.reduce(function (x, y) { return x + y; }, 0) / wkd.length) + '</b>.';
-    return karta('Ile odkupujemy dzień po dniu?', zd, 'z B2H', 'od.dni',
-      '<div class="od-dz">' + s + '</div><p class="od-pod">Słupek: wartość wycen zakończonych wypłatą tego dnia. Szare tło: weekend.</p>');
-  }
-
-  /* ---------- 2b. droga wyceny, pasy jak w "Droga do zapłaty" ---------- */
-  function droga() {
-    var A = D.sankey.glowny, poprz = [null, null, 0.61, 0.73, 0.98, 0.90, 0.95, 0.96];
-    var naz = ['', 'Zobaczyli kwotę', 'Wysłali wycenę', 'Sprzęt dotarł', 'Zweryfikowany', 'Klient przyjął cenę', 'Umowa podpisana', 'Wypłacone'];
-    var najg = 2, i;
-    for (i = 2; i < A.length; i++) if (A[i] / A[i - 1] < A[najg] / A[najg - 1]) najg = i;
-    var w = '';
-    for (i = 2; i < A.length; i++) {
-      var c = A[i] / A[i - 1], p = poprz[i], dpp = (c - p) * 100;
-      w += '<div class="m3p-lj-w' + (i === najg ? ' zly' : '') + '"><div><b>' + naz[i] + '</b><small>' + nf(A[i]) + ' wycen</small></div>' +
-        '<div class="m3p-lj-t"><i style="width:' + (c * 100).toFixed(1) + '%"></i><u style="left:' + (p * 100).toFixed(1) + '%"></u></div>' +
-        '<span class="m3p-lj-r">' + pr(c) + '</span><span class="m3p-lj-d' + (Math.abs(dpp) < 0.5 ? '' : dpp < 0 ? ' down' : ' up') + '">' +
-        (Math.abs(dpp) < 0.5 ? 'bez zmian' : (dpp > 0 ? '+' : '-') + nf(Math.abs(dpp), 1) + ' p.p.') + '</span></div>';
+  /* ---------- lejek kreatora ---------- */
+  function lejek() {
+    var F = D.lejek, Q = D.lejek_poprz, i, max = F[0][2], w = '';
+    for (i = 0; i < F.length; i++) {
+      var s = F[i], d = i ? 1 - s[2] / F[i - 1][2] : null;
+      w += '<div class="od-fs' + (s[3] ? ' key' : '') + '"><div class="od-drop' + (d !== null && d < 0.1 ? ' ok' : '') + '">' +
+        (d === null ? '' : '-' + pr(d) + ' (' + nf(F[i - 1][2] - s[2]) + ')') + '</div>' +
+        '<div class="od-fb" title="' + e(s[0]) + ': ' + nf(s[2]) + ', poprzednio ' + nf(Q[i]) + '"><i style="height:' + (s[2] / max * 100).toFixed(1) + '%"></i>' +
+        '<u style="bottom:' + (Q[i] / max * 100).toFixed(1) + '%"></u></div>' +
+        '<div class="od-fn">' + nf(s[2]) + '</div><div class="od-fl"><b>' + (i + 1) + '. ' + e(s[0]) + '</b>' + e(s[1]) + '</div></div>';
     }
-    var zd = 'Procent wycen, które przeszły z kroku wyżej, licząc od ' + nf(A[1]) + ' pokazanych kwot (z ' + nf(A[0]) + ' osób w kreatorze). Kreska: poprzednie 28 dni.';
-    return karta('Gdzie wyceny odpadają?', zd, 'z Google Analytics i B2H', 'od.droga',
-      '<div class="m3p"><div class="m3p-lj">' + w + '</div></div><p class="od-pod">Najwięcej ubywa między pokazaniem kwoty a wysłaniem wyceny: dalej przechodzi ' +
-      pr(A[2] / A[1], 1) + '.</p>' + H.notatkaSlot('odkV4Droga'));
+    return karta('od-w12', 'Gdzie klienci odpadają w kreatorze?', 'Osoby, które doszły do kroku. Czerwona liczba to ubytek do poprzedniego kroku, kreska to ten sam krok w poprzednich 28 dniach.',
+      'z Google Analytics', 'lejek', '<div class="od-fun">' + w + '</div>');
   }
 
-  /* ---------- 3a. dlaczego nie odkupujemy ---------- */
-  function straty() {
-    var S = D.straty, mx = S[0][1] * 1.55, suma = S.reduce(function (a, x) { return a + x[1]; }, 0);
-    var zd = 'Z ' + nf(D.sankey.glowny[1]) + ' pokazanych wycen ' + nf(suma) + ' nie skończyło się odkupem. <b>' + pr((S[0][1] + S[1][1]) / suma) +
-      '</b> z nich to wyceny, których sprzęt nigdy do nas nie dotarł.';
-    return karta('Dlaczego wyceny nie kończą się odkupem?', zd, 'z B2H', 'od.straty',
-      paski(S.map(function (x) { return { n: x[0], v: x[1], z: x[2] }; }), mx, function (w) { return nf(w.v) + ' <em>· ' + e(zl(w.z)) + '</em>'; }) +
-      '<p class="od-pod">Liczba wycen i ich wartość według kwoty pokazanej klientowi.</p>');
-  }
-
-  /* ---------- 3b. na co zwrócić uwagę (jak w Przeglądzie) ---------- */
-  function uwagi() {
-    var pozycje = [
-      ['bad', 'm-alert', 'Kolejka · decyzja klienta', '<b>13 wycen czeka na decyzję klienta ponad tydzień</b> po zmianie ceny. Prośbę o decyzję wysyła operator ręcznie.', '13'],
-      ['warn', 'm-alert', 'Kolejka · umowa', '<b>8 umów czeka na podpis ponad tydzień</b>, razem 0,2 mln zł do wypłaty.', '8'],
-      ['warn', 'm-alert', 'Wyszukiwarka odkupu', '<b>"sony a7 iv" daje "Brak wyników"</b>, choć model jest w cenniku. 27 wyszukań.', '27'],
-      ['', 'm-tag', 'Cennik', '<b>GoPro HERO12 i Canon 5D Mark IV</b>: 74 wyszukania i 31 próśb o wycenę eksperta, brak w cenniku.', '74']
-    ];
-    return '<section class="s2-karta">' + H.s2Glowka('Na co zwrócić uwagę?', '', 'z B2H i Google Analytics', null, '', 'od.uwagi') +
-      '<div class="m3p"><div class="m3p-uw-lista">' + pozycje.map(function (p) {
-        return '<div class="m3p-uw" style="cursor:default"><span class="m3p-uw-ic ' + p[0] + '">' + H.icon(p[1]) + '</span>' +
-          '<span class="m3p-uw-t"><small>' + e(p[2]) + '</small><span>' + p[3] + '</span></span><span class="m3p-uw-n">' + p[4] + '</span></div>';
-      }).join('') + '</div></div></section>';
-  }
-
-  /* ---------- 4a. jaki sprzęt ---------- */
-  function produkty() {
-    var L = D.produkty.slice().sort(function (a, b) { return b[2] - a[2]; }), mx = Math.max.apply(null, L.map(function (p) { return p[2]; })) * 1.6;
-    var suma = L.reduce(function (a, p) { return a + p[2]; }, 0);
-    var rz = L.map(function (p, i) {
-      var u = p[2] / mx;
-      return '<div class="m3s-pr-r"><span class="nr">' + (i + 1) + '</span><span class="nz" title="' + e(p[0]) + '">' + e(p[0]) +
-        '<span class="od-x">sprzedaż po ' + p[3] + ' dniach, marża ' + pr(p[4]) + '</span></span>' +
-        '<div class="m3s-pr-t"><div class="b" style="width:' + (u * 100).toFixed(2) + '%"></div><span class="v" style="left:' + (u * 100).toFixed(2) + '%">' +
-        e(zl(p[2])) + ' <em>· ' + p[1] + ' szt.</em></span></div></div>';
+  /* ---------- nowa strona a stary kreator ---------- */
+  function porownanie() {
+    var w = D.stary.map(function (r) {
+      return '<span class="n">' + e(r[0]) + '</span><span class="t"><i style="width:' + r[1] + '%"></i></span><span class="p">' + r[1] + '%</span>' +
+        '<span></span><span class="t b"><i style="width:' + r[2] + '%"></i></span><span class="p b">' + r[2] + '%</span>';
     }).join('');
-    var zd = 'Pierwsza dziesiątka to <b>' + pr(suma / D.przeglad.odkupione_zl) + '</b> wartości odkupu. Najszybciej schodzi Canon RF 24-105 (6 dni, marża 26%), najwolniej GoPro HERO11 (41 dni, 5%).';
-    return '<section class="s2-karta"><div class="m3s-pr-h">' + H.s2Glowka('Jaki sprzęt odkupujemy?', zd, 'z B2H', null, '', 'od.produkty') + '</div>' +
-      '<div class="m3s-pr od-pr">' + rz + '</div>' + H.notatkaSlot('odkV4Produkty') + '</section>';
+    return karta('od-w7', 'Czy nowa strona prowadzi lepiej niż stary kreator?', 'Odsetek osób z kroku 1, które doszły do danego miejsca.', 'z Google Analytics', 'stary',
+      '<div class="od-leg"><span><i style="background:#0B57D0"></i>odkup.cyfrowe.pl</span><span><i style="background:#A0A4A8"></i>stary kreator na www (20-31.10, dane prawdziwe)</span></div>' +
+      '<div class="od-cmp">' + w + '</div>');
   }
 
-  /* ---------- 4b. kanały ---------- */
-  function kanaly() {
-    var C = D.klient.kanaly, mx = C[0][2] * 1.5;
-    var zd = 'Najwięcej sprzętu przychodzi ze sklepu: <b>' + pr(C[0][3]) + '</b> wartości odkupu. Salony (szybka wycena przy ladzie) dają ' + pr(C[3][3]) + '.';
-    return karta('Skąd przychodzą sprzedający?', zd, 'z Google Analytics i B2H', 'od.kanaly',
-      paski(C.map(function (c) { return { n: c[0], v: c[2], u: c[3] }; }), mx, function (w) { return e(zl(w.v)) + ' <em>· ' + pr(w.u) + '</em>'; }) +
-      '<p class="od-pod">Wartość odkupionego sprzętu według kanału, z którego klient przyszedł po wycenę.</p>');
-  }
-
-  /* ---------- 5a. ile trwa ---------- */
-  function czas() {
-    var E = D.czas.etapy, mx = 6;
-    var zd = 'Najdłużej trwa <b>decyzja klienta po zmianie ceny</b>: mediana 2,1 dnia, a co dziesiąta sprawa ponad 5,6 dnia.';
-    return karta('Ile trwa odkup?', zd, 'z B2H', 'od.czas2',
-      paski(E.map(function (x) { return { n: x[0], v: x[2], p: x[3] }; }), mx, function (w) { return nf(w.v, 1) + ' dnia <em>· 9 na 10 do ' + nf(w.p, 1) + '</em>'; }) +
-      '<p class="od-pod">Mediana dni między kolejnymi stanami wyceny w B2H.</p>');
-  }
-
-  /* ---------- 5b. stan deklarowany a weryfikacja ---------- */
-  function stan() {
-    var C = D.cena, M = C.deklar_weryf, ob = [0.31, 0.14, 0.09, 0.07, 0.05, 0.04];
-    var rz = C.stany.map(function (s, i) {
-      var r = M[i], suma = r.reduce(function (a, b) { return a + b; }, 0), zg = r[i] / suma;
-      return '<tr><td>' + s + '</td><td>' + nf(suma) + '</td><td' + (zg < 0.75 ? ' class="zle"' : '') + '><span class="bar" style="width:' + Math.round(zg * 90) + 'px"></span>' + pr(zg) + '</td><td' + (ob[i] >= 0.2 ? ' class="zle"' : '') + '>' + pr(ob[i]) + '</td></tr>';
-    }).join('');
-    var zd = 'Przy ocenie <b>10/10</b> technik potwierdza stan tylko w 66% przypadków, a co trzecia taka wycena traci na cenie.';
-    return karta('Czy klienci dobrze oceniają stan sprzętu?', zd, 'z Google Analytics i B2H', 'od.stan',
-      '<table class="od-tab"><thead><tr><th>Ocena klienta</th><th>Produkty</th><th>Technik potwierdził</th><th>Cena obniżona</th></tr></thead><tbody>' + rz + '</tbody></table>');
-  }
-
-  /* ---------- wyjaśnienia pod "?" ---------- */
-  function wyjasnienia() {
-    if (!window.WY || window.__odkWy) return; window.__odkWy = 1;
-    var ga4 = function (o) { return { nazwa: 'Google Analytics 4, usługa 251795511, host odkup.cyfrowe.pl', link: GA4_ZDARZENIA, opis: o }; };
-    var b2h = function (o, l) { return { nazwa: 'B2H, panel odkupu (dostęp przez VPN)', link: l || B2H_RAPORT, opis: o }; };
-    var gtm = { nazwa: 'Kontener GTM-NDXT48BF, folder "Odkup"', link: GTM, opis: 'Nasłuch kreatora zamienia kroki i odpowiedzi API odkupu na zdarzenia GA4.' };
-    var wpis = function (tytul, co, skad, jak, sprawdz, uwagi) { return function () { return { tytul: tytul, co: co, skad: skad, jak: jak, sprawdz: sprawdz || [], uwagi: uwagi || [] }; }; };
-    window.WY.dodaj({
-      'od.okres': wpis('Odkupiony sprzęt w okresie', 'Wartość wycen zakończonych wypłatą (stan "Zakończona" w B2H) w wybranym okresie i zmiana wobec poprzedniego okresu tej samej długości.',
-        [b2h('Arkusz "Wycena" z eksportu B2H, odświeżany co 15 minut: numer, stan, data zakończenia, kwota wypłaty.')],
-        ['Bierze wyceny ze stanem "Zakończona" i datą zakończenia w okresie.', 'Sumuje kwotę wypłaty (z bonusem przy karcie podarunkowej).', 'Porównuje z sumą z poprzednich 28 dni.'],
-        [{ tekst: 'W panelu B2H: raport "Lejek odkupu", wiersz "Zakończona" dla tych samych dat.', link: B2H_RAPORT }],
-        ['Nie liczy wycen w stanie "Rozliczenie", które jeszcze nie doszły do wypłaty.']),
-      'od.pokazane': wpis('Pokazane wyceny', 'Ile wycen klienci założyli w kreatorze na odkup.cyfrowe.pl, czyli ile razy zobaczyli kwotę.',
-        [b2h('Raport "Lejek odkupu", wiersz "Utworzona".'), ga4('Zdarzenie generate_lead przy założeniu wyceny.'), gtm],
-        ['Liczy wyceny z B2H założone w okresie.', 'GA4 daje kanał i drogę klienta, ale widzi tylko osoby ze zgodą na cookies, więc liczbę bierze z B2H.']),
-      'od.wyslane': wpis('Wysłane wyceny', 'Wyceny, w których klient wybrał wypłatę i sposób dostawy, czyli potwierdził zgłoszenie.',
-        [b2h('Raport "Lejek odkupu", wiersz "Wybrany sposób odbioru".'), ga4('Zdarzenie qualify_lead.')],
-        ['Liczy wyceny z wybranym sposobem odbioru w okresie.', 'Procent: wysłane podzielone przez pokazane.']),
-      'od.odkupione': wpis('Odkupione wyceny', 'Wyceny zakończone wypłatą przelewem albo wydaniem karty podarunkowej.', [b2h('Raport "Lejek odkupu", wiersz "Zakończona".')],
-        ['Procent: odkupione podzielone przez wysłane.']),
-      'od.czas': wpis('Od wyceny do wypłaty', 'Mediana dni od pokazania kwoty do zakończenia wyceny, dla wycen zakończonych w okresie.',
-        [b2h('Historia stanów wyceny: data utworzenia i data stanu "Zakończona".', B2H_LISTA)],
-        ['Dla każdej wyceny zakończonej w okresie liczy dni od utworzenia do zakończenia.', 'Bierze medianę, żeby pojedyncze sprawy w serwisie nie zawyżały wyniku.']),
-      'od.dni': wpis('Odkup dzień po dniu', 'Wartość wycen zakończonych wypłatą każdego dnia.', [b2h('Arkusz "Wycena": data zakończenia i kwota wypłaty.')],
-        ['Sumuje kwoty wypłat według dnia zakończenia.', 'Kreska: mediana dnia z okresu.']),
-      'od.droga': wpis('Gdzie wyceny odpadają?', 'Procent wycen, które przechodzą z kroku na krok: od pokazanej kwoty do wypłaty.',
-        [ga4('Wejścia do kreatora i pokazanie kwoty (buyback_step, generate_lead).'), b2h('Stany wyceny: wybrany odbiór, przyjęta, zweryfikowana, zaakceptowana, umowa, zakończona.')],
-        ['Kroki od "Wysłali wycenę" liczy B2H według stanów, przez które wycena przeszła.', 'GA4 i B2H łączy numer wyceny wysyłany w zdarzeniu generate_lead.', 'Kreska to ten sam procent w poprzednich 28 dniach.'],
-        [{ tekst: 'Raport "Lejek odkupu" w B2H pokazuje te same kroki dla tych samych dat.', link: B2H_RAPORT }]),
-      'od.straty': wpis('Dlaczego wyceny nie kończą się odkupem?', 'Wyceny pokazane w okresie, które nie doszły do wypłaty, według miejsca, w którym się zatrzymały.',
-        [b2h('Stan końcowy wyceny: wygasła, zamknięta bez odkupu, odrzucona przez klienta, odrzucona przez nas, zwrot.', B2H_LISTA)],
-        ['Bierze wyceny pokazane w okresie i ich obecny stan.', 'Wartość to kwota pokazana klientowi przy wycenie.']),
-      'od.uwagi': wpis('Na co zwrócić uwagę?', 'Sprawy, które dziś stoją za długo, i sygnały z kreatora: błędy wyszukiwarki, modele spoza cennika.',
-        [b2h('Lista wycen z czasem w obecnym stanie.', B2H_LISTA), ga4('Zdarzenia search, buyback_expert_start i buyback_error.')],
-        ['Kolejka: wyceny w tym samym stanie ponad 7 dni.', 'Cennik: frazy bez wyników albo prośby o wycenę eksperta, co najmniej 20 w okresie.']),
-      'od.produkty': wpis('Jaki sprzęt odkupujemy?', 'Dziesięć modeli z największą wartością odkupu w okresie, z czasem do sprzedaży i marżą.',
-        [b2h('Produkty z zakończonych wycen (indeks, kwota), kanban produktowy (data sprzedaży) i raport marży.')],
-        ['Sumuje kwotę odkupu według indeksu.', 'Czas do sprzedaży: mediana dni od odkupu do etapu "Sprzedany" w kanbanie.', 'Marża: (cena sprzedaży - cena odkupu) / cena sprzedaży, z raportu marży B2H.']),
-      'od.kanaly': wpis('Skąd przychodzą sprzedający?', 'Wartość odkupu według kanału, z którego klient przyszedł do kreatora.',
-        [ga4('Domyślny kanał sesji, w której pokazano kwotę (generate_lead z numerem wyceny).'), b2h('Kwota odkupu i źródło wyceny: strona albo salon.')],
-        ['Łączy kanał z GA4 z kwotą z B2H po numerze wyceny.', 'Salon: wyceny założone przy ladzie, bez strony.'],
-        [], ['Osób bez zgody na cookies GA4 nie widzi, więc ich wyceny nie mają kanału.']),
-      'od.czas2': wpis('Ile trwa odkup?', 'Mediana dni między kolejnymi stanami wyceny oraz czas, w którym mieści się 9 na 10 spraw.',
-        [b2h('Historia stanów wyceny.', B2H_LISTA)], ['Dla każdej pary stanów liczy dni między datami wejścia.']),
-      'od.stan': wpis('Czy klienci dobrze oceniają stan sprzętu?', 'Ocena stanu wybrana przez klienta w kreatorze wobec oceny technika przy weryfikacji.',
-        [ga4('Zdarzenie buyback_product_added z oceną klienta.'), b2h('Ocena po weryfikacji oraz kwota przed i po weryfikacji.')],
-        ['Technik potwierdził: produkty, w których ocena technika równa się ocenie klienta.', 'Cena obniżona: produkty, którym weryfikacja zmniejszyła kwotę.'])
+  /* ---------- dzień po dniu ---------- */
+  function dzien() {
+    var Z = D.dzien, n = Z.d.length, W = 620, Hh = 280, L = 34, B = 30, T = 26, mx = 250;
+    var cw = (W - L - 4) / n, bw = Math.max(8, cw * 0.62), y = function (v) { return Hh - B - v / mx * (Hh - B - T); };
+    var s = '<svg viewBox="0 0 ' + W + ' ' + Hh + '" role="img" aria-label="Pokazane i wysłane wyceny dzień po dniu">';
+    [0, 50, 100, 150, 200, 250].forEach(function (v) { s += '<line x1="' + L + '" x2="' + W + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="#EDEFF0"/><text x="' + (L - 6) + '" y="' + (y(v) + 4) + '" text-anchor="end" font-size="11" fill="#5E6366">' + v + '</text>'; });
+    var pl = [];
+    Z.d.forEach(function (d, i) {
+      var x = L + 4 + i * cw + (cw - bw) / 2, w = wd(d);
+      if (w === 0 || w === 6) s += '<rect x="' + (L + 4 + i * cw) + '" y="' + T + '" width="' + cw + '" height="' + (Hh - B - T) + '" fill="#F6F8FC"/>';
+      s += '<rect x="' + x + '" y="' + y(Z.pokazane[i]) + '" width="' + bw + '" height="' + (Hh - B - y(Z.pokazane[i])) + '" rx="3" fill="#A8C7FA"><title>' + dt(d) + ': pokazane ' + Z.pokazane[i] + ', wysłane ' + Z.wyslane[i] + '</title></rect>';
+      if (i % 7 === 0) s += '<text x="' + (x + bw / 2) + '" y="' + (Hh - 10) + '" text-anchor="middle" font-size="11" fill="#5E6366">pn ' + dt(d) + '</text>';
+      pl.push((x + bw / 2).toFixed(1) + ',' + y(Z.wyslane[i]).toFixed(1));
     });
+    s += '<polyline fill="none" stroke="#0842A0" stroke-width="2.5" stroke-linejoin="round" points="' + pl.join(' ') + '"/>' +
+      '<rect x="' + L + '" y="4" width="10" height="10" rx="3" fill="#A8C7FA"/><text x="' + (L + 16) + '" y="13" font-size="11" fill="#444746">pokazane</text>' +
+      '<line x1="' + (L + 90) + '" x2="' + (L + 104) + '" y1="9" y2="9" stroke="#0842A0" stroke-width="2.5"/><text x="' + (L + 110) + '" y="13" font-size="11" fill="#444746">wysłane</text></svg>';
+    return karta('od-w5', 'Jak szło dzień po dniu?', 'Pokazane i wysłane wyceny każdego dnia. Jaśniejsze tło: weekend.', 'z Google Analytics', 'dzien', '<div class="od-ch">' + s + '</div>');
   }
 
-  var WZOR = {
-    odkV4Okres: { teza: 'Odkup rośnie (+9,4%), a czas do wypłaty skrócił się z 7,1 do 6,4 dnia.', rozwiniecie: 'Najwięcej tracimy przed wysłaniem: 1 770 wycen wygasa bez reakcji klienta.', oparteNa: 'B2H i GA4 (przykład)', pewnosc: 'średnia' },
-    odkV4Droga: { teza: 'Co trzecia pokazana wycena wygasa bez wysłania.', rozwiniecie: 'Przypomnienie o wycenie 2. dnia ważności to najtańszy sposób na więcej wysłanych wycen.', oparteNa: 'B2H (przykład)', pewnosc: 'średnia' },
-    odkV4Produkty: { teza: 'Canon RF 24-105 i Sony A7 III schodzą w tydzień z marżą ponad 20%.', rozwiniecie: 'GoPro HERO11 i DJI Mini 3 Pro leżą ponad miesiąc z marżą poniżej 10%: kandydaci do niższej ceny skupu.', oparteNa: 'B2H (przykład)', pewnosc: 'niska' }
-  };
+  /* ---------- po wysłaniu (B2H) ---------- */
+  function po() {
+    var w = D.po.map(function (r, i) {
+      return '<div class="od-st ' + r[3] + '"><span class="l">' + e(r[0]) + '</span><span class="v">' + nf(r[1]) + '</span><span class="r">' + e(r[2]) + '</span></div>';
+    }).join('');
+    return karta('od-w12', 'Co dzieje się z wyceną po wysłaniu?', 'Wyceny wysłane w okresie i stan, do którego doszły w centrali.', 'z B2H', 'po', '<div class="od-path">' + w + '</div>');
+  }
+
+  /* ---------- wyszukiwarka ---------- */
+  function szukaja() {
+    var S = D.szukaja, m = S[0][1];
+    var rz = S.map(function (r) {
+      return '<tr><td><span class="bar" style="width:' + Math.round(r[1] / m * 70) + 'px"></span>' + e(r[0]) + '</td><td>' + nf(r[1]) + '</td><td class="m">' + e(r[2]) + '</td><td>' + nf(r[3]) + '</td><td>' + pr(r[3] / r[1]) + '</td></tr>';
+    }).join('');
+    return karta('od-w6', 'Czego klienci szukają?', 'Frazy z wyszukiwarki kreatora i to, co z nich wynikło.', 'z Google Analytics', 'szukaja',
+      '<table class="od-tab"><thead><tr><th>Fraza</th><th>Wyszukań</th><th>Wybrany produkt</th><th>Wyceny</th><th>Wyceny z wyszukań</th></tr></thead><tbody>' + rz + '</tbody></table>');
+  }
+  function brak() {
+    var rz = D.brak.map(function (r) {
+      var b = r[2] === 'blad';
+      return '<tr><td>' + e(r[0]) + '</td><td>' + nf(r[1]) + '</td><td><span class="od-tag' + (b ? ' zle' : '') + '">' + (b ? 'błąd wyszukiwarki' : 'brak w cenniku') + '</span></td><td>' + nf(r[3]) + '</td></tr>';
+    }).join('');
+    return karta('od-w6', 'Czego nie ma w cenniku odkupu?', 'Frazy bez wyników i prośby o wycenę eksperta.', 'z Google Analytics', 'brak',
+      '<table class="od-tab"><thead><tr><th>Fraza</th><th>Wyszukań</th><th>Powód</th><th>Prośby do eksperta</th></tr></thead><tbody>' + rz + '</tbody></table>');
+  }
+
+  /* ---------- udziały ---------- */
+  function stack(tytul, a) {
+    return '<div class="od-blk"><h3>' + e(tytul) + '</h3><div class="od-stack">' + a.map(function (r, i) {
+      var c = NIEB[i] || NIEB[5];
+      return '<i style="flex:' + r[1] + ';background:' + c[0] + ';color:' + c[1] + '" title="' + e(r[0]) + ': ' + r[1] + '%">' + (r[1] >= 12 ? r[1] + '%' : '') + '</i>';
+    }).join('') + '</div><div class="od-sl">' + a.map(function (r, i) {
+      return '<span><i style="background:' + (NIEB[i] || NIEB[5])[0] + '"></i>' + e(r[0]) + ' <b>' + r[1] + '%</b></span>';
+    }).join('') + '</div></div>';
+  }
+  function udzialy() {
+    var U = D.udzialy;
+    return karta('od-w4', 'Jak klienci chcą dostać pieniądze?', 'Udział w wysłanych wycenach.', 'z Google Analytics', 'wyplata', stack('Forma wypłaty', U.wyplata) + stack('Dokument', U.dokument)) +
+      karta('od-w4', 'Jak sprzęt do nas trafia?', 'Udział w wysłanych wycenach.', 'z Google Analytics', 'dostawa', stack('Dostawa', U.dostawa) + stack('Produktów w jednej wycenie', U.ile)) +
+      karta('od-w4', 'W jakim stanie jest sprzęt?', 'Udział w produktach dodanych do wycen.', 'z Google Analytics', 'stan', stack('Ocena klienta', U.ocena) + stack('Komplet akcesoriów', U.komplet));
+  }
+
+  /* ---------- kanały i błędy ---------- */
+  function kanaly() {
+    var rz = D.kanaly.map(function (r) {
+      return '<tr><td>' + e(r[0]) + '</td><td>' + nf(r[1]) + '</td><td>' + nf(r[2]) + '</td><td>' + nf(r[3]) + '</td><td>' + pr(r[3] / r[1], 1) + '</td><td>' + e(zl(r[4])) + '</td></tr>';
+    }).join('');
+    return karta('od-w7', 'Skąd przychodzą klienci, którzy wysyłają wyceny?', 'Kanał sesji, w której klient wszedł na odkup.', 'z Google Analytics i B2H', 'kanaly',
+      '<table class="od-tab"><thead><tr><th>Kanał</th><th>Wejścia</th><th>Pokazane wyceny</th><th>Wysłane</th><th>Wysłane z wejść</th><th>Odkupiony sprzęt</th></tr></thead><tbody>' + rz + '</tbody></table>');
+  }
+  function bledy() {
+    var rz = D.bledy.map(function (r) { return '<tr><td>' + e(r[0]) + '</td><td>' + nf(r[1]) + '</td><td class="m">' + e(r[2]) + '</td></tr>'; }).join('');
+    return karta('od-w5', 'Co przeszkadza klientom?', 'Błędy, blokady i porzucenia w kreatorze.', 'z Google Analytics', 'bledy',
+      '<table class="od-tab"><thead><tr><th>Co się stało</th><th>Razy</th><th>Na kroku</th></tr></thead><tbody>' + rz + '</tbody></table>');
+  }
+
+  /* ---------- odkupiony sprzęt ---------- */
+  function produkty() {
+    var L = D.produkty.slice().sort(function (a, b) { return b[2] - a[2]; }), m = L[0][2];
+    var rz = L.map(function (p) {
+      return '<tr><td><span class="bar" style="width:' + Math.round(p[2] / m * 70) + 'px"></span>' + e(p[0]) + '</td><td>' + nf(p[1]) + '</td><td>' + e(zl(p[2])) + '</td><td>' + e(zl(p[2] / p[1])) +
+        '</td><td' + (p[5] <= -0.1 ? ' class="zle"' : '') + '>' + (p[5] < 0 ? '-' : '') + pr(Math.abs(p[5])) + '</td><td' + (p[3] > 30 ? ' class="zle"' : '') + '>' + p[3] + '</td><td' + (p[4] < 0.1 ? ' class="zle"' : '') + '>' + pr(p[4]) + '</td></tr>';
+    }).join('');
+    return karta('od-w12', 'Jaki sprzęt odkupujemy i jak szybko go sprzedajemy?', 'Dziesięć modeli z największą wartością odkupu w okresie. Na czerwono: obniżka po weryfikacji od 10%, sprzedaż po ponad 30 dniach, marża poniżej 10%.', 'z B2H', 'produkty',
+      '<table class="od-tab"><thead><tr><th>Produkt</th><th>Sztuk</th><th>Odkup</th><th>Średnio za sztukę</th><th>Zmiana ceny po weryfikacji</th><th>Dni do sprzedaży</th><th>Marża</th></tr></thead><tbody>' + rz + '</tbody></table>');
+  }
+
+  /* ---------- wnioski AI: każda karta, liczby z danych ---------- */
+  function wnioski() {
+    var R = D.hero, Q = R.poprz, F = D.lejek, Z = D.dzien, K = D.kanaly, B = D.brak, U = D.udzialy, PO = D.po, PR = D.produkty;
+    var sr = {}, i;
+    Z.d.forEach(function (d, j) { var w = wd(d); (sr[w] = sr[w] || []).push(Z.pokazane[j]); });
+    var sredn = Object.keys(sr).map(function (k) { return [+k, suma(sr[k]) / sr[k].length]; }).sort(function (a, b) { return b[1] - a[1]; });
+    var ub = F.map(function (s, j) { return j ? [j, F[j - 1][2] - s[2]] : [0, 0]; }).sort(function (a, b) { return b[1] - a[1]; });
+    var kk = K.map(function (r) { return [r[0], r[3] / r[1]]; }).sort(function (a, b) { return b[1] - a[1]; });
+    var top2 = B.filter(function (r) { return r[2] === 'brak'; }).slice(0, 2), bl = B.filter(function (r) { return r[2] === 'blad'; })[0];
+    var szyb = PR.filter(function (p) { return p[3] <= 9 && p[4] >= 0.2; }), wol = PR.filter(function (p) { return p[3] > 30; });
+    var kr = function (n) { return n.replace(/^(Aparat|Obiektyw|Dron|Kamera) /, '').replace(/ Body$/, ''); };
+    return {
+      okres: ['Wejść przybyło ' + pr(R.wejscia / Q.wejscia - 1) + ', odkupu ' + pr(R.odkupione_zl / Q.odkupione_zl - 1, 1) + '.',
+        'Odsetek wysłanych wycen spadł z ' + pr(Q.wyslane / Q.pokazane) + ' do ' + pr(R.wyslane / R.pokazane) + ', więc wzrost daje ruch, a nie kreator.'],
+      lejek: ['Najwięcej osób odpada po kroku ' + F[ub[0][0] - 1][0] + ': ' + nf(ub[0][1]) + ' (' + pr(ub[0][1] / F[ub[0][0] - 1][2]) + ') nie przechodzi do kroku ' + F[ub[0][0]][0] + '.',
+        nf(F[5][2] - F[6][2]) + ' osób widzi kwotę i nie wybiera dostawy. Przy pierwszym kroku część nie znajduje modelu w cenniku (karta "Czego nie ma w cenniku odkupu?").'],
+      stary: ['Nowa strona doprowadza do wysłanej wyceny ' + D.stary[5][1] + '% osób, stary kreator ' + D.stary[5][2] + '%.',
+        'Do kwoty stary kreator doprowadzał częściej (' + D.stary[4][2] + '% wobec ' + D.stary[4][1] + '%), ale rzadziej kończył się wysłaniem.'],
+      dzien: ['Najwięcej wycen klienci zakładają w ' + (sredn[0][0] === 0 ? 'niedziele' : DNI[sredn[0][0]].replace(/ek$/, 'ki').replace(/a$/, 'y')) + ' (średnio ' + nf(sredn[0][1]) + '), najmniej w ' +
+        (sredn[6][0] === 6 ? 'soboty' : DNI[sredn[6][0]]) + ' (' + nf(sredn[6][1]) + ').', 'Wysłane idą za pokazanymi, odsetek dzień do dnia waha się między ' +
+        pr(Math.min.apply(null, Z.wyslane.map(function (v, j) { return v / Z.pokazane[j]; }))) + ' a ' + pr(Math.max.apply(null, Z.wyslane.map(function (v, j) { return v / Z.pokazane[j]; }))) + '.'],
+      po: ['Co czwarta wysłana wycena nie dociera do centrali: ' + nf(PO[0][1] - PO[1][1]) + ' paczek nie nadano albo nie doszło.',
+        'Po weryfikacji ' + nf(PO[4][1]) + ' wycen kończy się odrzuceniem ceny albo zwrotem. Od weryfikacji do wypłaty sprawy idą sprawnie: ' + pr(PO[6][1] / PO[3][1]) + ' przyjętych dochodzi do wypłaty.'],
+      szukaja: ['Z wyszukania do wyceny przechodzi ' + pr(Math.min.apply(null, D.szukaja.map(function (r) { return r[3] / r[1]; }))) + '-' + pr(Math.max.apply(null, D.szukaja.map(function (r) { return r[3] / r[1]; }))) + ' osób przy każdym z sześciu najczęstszych modeli.',
+        D.szukaja[0][0] + ' to ' + nf(D.szukaja[0][1]) + ' wyszukań, najwięcej w okresie.'],
+      brak: [top2[0][4] + ' i ' + top2[1][4] + ': ' + nf(top2[0][1] + top2[1][1]) + ' wyszukań i ' + nf(top2[0][3] + top2[1][3]) + ' ' + lm(top2[0][3] + top2[1][3], 'prośba', 'prośby', 'próśb') + ' o wycenę eksperta, brak w cenniku.',
+        'Fraza "' + bl[0] + '" daje "Brak wyników" przez błąd wyszukiwarki, choć model jest w cenniku (' + nf(bl[1]) + ' wyszukań).'],
+      wyplata: ['Prawie co druga osoba (' + U.wyplata[1][1] + '%) wybiera kartę podarunkową z bonusem 7%.', 'Firmy z fakturą to ' + (100 - U.dokument[0][1]) + '% wycen.'],
+      dostawa: [(U.dostawa[0][1] + U.dostawa[1][1]) + '% sprzętu przychodzi przesyłką zamówioną w kreatorze (Paczkomat i DPD).', 'Co czwarta wycena kończy się wizytą w salonie.'],
+      stan: [(U.ocena[1][1] + U.ocena[2][1]) + '% produktów klienci oceniają na 9/10 albo 8/10.', 'Komplet akcesoriów zaznacza co trzecia osoba.'],
+      kanaly: ['Najlepiej prowadzi ' + kk[0][0].toLowerCase() + ': ' + pr(kk[0][1], 1) + ' wejść kończy się wysłaną wyceną.', 'Najsłabiej ' + kk[kk.length - 1][0].toLowerCase() + ': ' + pr(kk[kk.length - 1][1], 1) + '.'],
+      bledy: [nf(D.bledy[0][1]) + ' osób zamknęło stronę z pokazaną kwotą po oknie "Opuścić wycenę?".', nf(D.bledy[2][1]) + ' razy klient wpisał nieprawidłowy numer konta.'],
+      produkty: [szyb.map(function (p) { return kr(p[0]); }).slice(0, 2).join(' i ') + ' sprzedajemy w ' + Math.min.apply(null, szyb.map(function (p) { return p[3]; })) + '-' + Math.max.apply(null, szyb.slice(0, 2).map(function (p) { return p[3]; })) + ' dni z marżą powyżej 20%.',
+        wol.map(function (p) { return kr(p[0]); }).join(' i ') + ' leżą ponad miesiąc z marżą poniżej 10%: kandydaci do niższej ceny skupu.']
+    };
+  }
   function notatki() {
     try {
-      var st = P('state');
+      var st = P('state'), W = wnioski();
       st.notatki = st.notatki || {}; st.notatki.zakres = st.days; st.notatki.sekcje = st.notatki.sekcje || {};
       var teraz = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Warsaw' }).slice(0, 16);
-      Object.keys(WZOR).forEach(function (k) { var o = {}; Object.keys(WZOR[k]).forEach(function (x) { o[x] = WZOR[k][x]; }); o.kiedy = teraz; o.faktyZ = teraz; st.notatki.sekcje[k] = o; });
+      Object.keys(W).forEach(function (k) {
+        st.notatki.sekcje['odk5' + k] = { teza: W[k][0], rozwiniecie: W[k][1], oparteNa: 'liczby przykładowe z tej karty', pewnosc: 'średnia', kiedy: teraz, faktyZ: teraz };
+      });
       P('wstawNotatki')();
     } catch (er) { if (window.console) console.error('Notatki odkupu: ' + er); }
   }
 
+  /* ---------- wyjaśnienia pod "?" ---------- */
+  function wyjasnienia() {
+    if (!window.WY || window.__odk5Wy) return; window.__odk5Wy = 1;
+    var ga4 = function (o) { return { nazwa: 'Google Analytics 4, usługa 251795511, host odkup.cyfrowe.pl', link: GA4, opis: o }; };
+    var b2h = function (o, l) { return { nazwa: 'B2H, panel odkupu (dostęp przez VPN)', link: l || B2H_RAPORT, opis: o }; };
+    var gtm = { nazwa: 'Kontener GTM-NDXT48BF, folder "Odkup"', link: GTM, opis: 'Nasłuch kreatora zamienia kroki i odpowiedzi API odkupu na zdarzenia GA4. Działa po zgodzie na statystyki w banerze Cookiebot.' };
+    var lejekB2H = { tekst: 'Raport "Lejek odkupu" w B2H dla tych samych dat.', link: B2H_RAPORT };
+    var wpis = function (tytul, co, skad, jak, sprawdz, uwagi) { return function () { return { tytul: tytul, co: co, skad: skad, jak: jak, sprawdz: sprawdz || [], uwagi: uwagi || [] }; }; };
+    var zgoda = 'GA4 widzi tylko osoby, które zgodziły się na statystyki. Udziały są wiarygodne, liczby bezwzględne są zaniżone; pełne liczby wycen daje B2H.';
+    window.WY.dodaj({
+      'od5.okres': wpis('Odkup w okresie', 'Wyceny zakończone wypłatą w okresie i wartość odkupionego sprzętu, wobec poprzednich 28 dni.',
+        [b2h('Arkusz "Wycena" z eksportu B2H, odświeżany co 15 minut: numer, stan, data zakończenia, kwota wypłaty.')],
+        ['Wyceny ze stanem "Zakończona" i datą zakończenia w okresie.', 'Mediana dni od utworzenia wyceny do zakończenia.'], [lejekB2H]),
+      'od5.wejscia': wpis('Wejścia na odkup', 'Osoby, które otworzyły odkup.cyfrowe.pl.', [ga4('Użytkownicy z odsłoną na hoście odkup.cyfrowe.pl.'), gtm], ['Liczy osoby, nie odsłony.'], [], [zgoda]),
+      'od5.pokazane': wpis('Pokazane wyceny', 'Ile razy klient zobaczył kwotę za swój sprzęt.', [b2h('Raport "Lejek odkupu", wiersz "Utworzona".'), ga4('Zdarzenie generate_lead z numerem wyceny.')],
+        ['Liczba z B2H, bo GA4 nie widzi osób bez zgody.'], [lejekB2H]),
+      'od5.wyslane': wpis('Wysłane wyceny', 'Wyceny, w których klient wybrał wypłatę i dostawę i potwierdził zgłoszenie.', [b2h('Raport "Lejek odkupu", wiersz "Wybrany sposób odbioru".'), ga4('Zdarzenie qualify_lead z kwotą.')],
+        ['Wartość: suma kwot dla wybranej formy wypłaty.'], [lejekB2H]),
+      'od5.odkupione': wpis('Odkupiony sprzęt', 'Kwota wypłacona klientom za sprzęt w okresie, przelewem albo kartą podarunkową.', [b2h('Arkusz "Wycena": kwota wypłaty wycen w stanie "Zakończona".')],
+        ['Suma kwot wypłaty z bonusem przy karcie podarunkowej.'], [lejekB2H]),
+      'od5.lejek': wpis('Gdzie klienci odpadają w kreatorze?', 'Osoby, które doszły do kolejnych kroków kreatora, od wyboru sprzętu do wysłania wyceny.',
+        [ga4('Zdarzenia buyback_step (kroki 1-7), generate_lead (kwota), qualify_lead (wysłana).'), gtm],
+        ['Liczy osoby, nie odsłony: cofnięcie się o krok nie zawyża liczby.', 'Ubytek: różnica do poprzedniego kroku.', 'Kreska: ten sam krok w poprzednich 28 dniach.'], [], [zgoda]),
+      'od5.stary': wpis('Nowa strona a stary kreator', 'Odsetek osób z pierwszego kroku, które doszły do kolejnych miejsc, na nowej stronie i w starym kreatorze na www.cyfrowe.pl.',
+        [ga4('Nowa strona: buyback_step. Stary kreator: awu_form_steps po nazwie kroku (step_name), 20-31.10.2026.')],
+        ['Teksty kroków starego kreatora sprowadzone do tych samych etapów co na nowej stronie.'], [], ['Liczby starego kreatora są prawdziwe, nowej strony przykładowe.']),
+      'od5.dzien': wpis('Jak szło dzień po dniu?', 'Pokazane (słupki) i wysłane (linia) wyceny każdego dnia.', [ga4('generate_lead i qualify_lead według daty.')],
+        ['Ostatnie dwa dni GA4 jeszcze koryguje, Puls ich nie pokazuje.'], [], [zgoda]),
+      'od5.po': wpis('Co dzieje się z wyceną po wysłaniu?', 'Wyceny wysłane w okresie i najdalszy stan, do którego doszły w centrali.',
+        [b2h('Historia stanów wyceny: przyjęta, zweryfikowana, zaakceptowana, odrzucona, umowa podpisana, zakończona.', B2H_LISTA)],
+        ['Każda wycena liczy się raz, w najdalszym stanie, do którego doszła.', 'Odsetek pod liczbą liczony od poprzedniego pola.'], [lejekB2H]),
+      'od5.szukaja': wpis('Czego klienci szukają?', 'Najczęstsze frazy z wyszukiwarki kreatora, produkt wybrany z listy i wyceny po wyszukaniu.',
+        [ga4('Zdarzenia search (fraza), select_item (wybór z listy), generate_lead w tej samej sesji.')], ['Frazy scalone bez względu na wielkość liter.'], [], [zgoda]),
+      'od5.brak': wpis('Czego nie ma w cenniku odkupu?', 'Frazy, po których klient nie wybrał nic z listy, i prośby o wycenę eksperta.',
+        [ga4('Zdarzenia search bez wyboru z listy, buyback_expert_start, buyback_error przy wyszukiwaniu.')],
+        ['Błąd wyszukiwarki: odpowiedź API spoza 2xx, klient widzi "Brak wyników".', 'Wyszukiwarka zwraca do 50 pozycji także dla modeli spoza cennika, więc o braku mówi brak wyboru z listy, a nie liczba wyników.']),
+      'od5.wyplata': wpis('Jak klienci chcą dostać pieniądze?', 'Forma wypłaty i rodzaj dokumentu w wysłanych wycenach.', [b2h('Pola wyceny payment_type i document_type.'), ga4('qualify_lead z formą wypłaty.')], ['Udział w wysłanych wycenach.']),
+      'od5.dostawa': wpis('Jak sprzęt do nas trafia?', 'Sposób przekazania sprzętu i liczba produktów w jednej wycenie.', [b2h('Pole collection_type i typ przesyłki (INPOST_LOCKER, COURIER_DPD).'), ga4('qualify_lead z liczbą produktów.')], ['Udział w wysłanych wycenach.']),
+      'od5.stan': wpis('W jakim stanie jest sprzęt?', 'Ocena stanu wybrana przez klienta i kompletność zaznaczonych akcesoriów.', [ga4('Zdarzenie buyback_product_added z oceną i akcesoriami.')], ['Udział w produktach dodanych do wycen.'], [], [zgoda]),
+      'od5.kanaly': wpis('Skąd przychodzą klienci?', 'Kanał sesji, w której klient wszedł na odkup, i wartość sprzętu, który potem odkupiliśmy.',
+        [ga4('Domyślny kanał sesji dla hosta odkup.cyfrowe.pl.'), b2h('Kwota wypłaty, połączona z GA4 numerem wyceny.')],
+        ['Przejście ze sklepu: sesja, która zaczęła się na www.cyfrowe.pl.'], [], [zgoda]),
+      'od5.bledy': wpis('Co przeszkadza klientom?', 'Błędy i porzucenia w kreatorze.', [ga4('Zdarzenia buyback_error (odpowiedź API spoza 2xx, komunikat błędu) i buyback_leave (okno "Opuścić wycenę?").'), gtm],
+        ['403: blokada Cloudflare. 429: limit zapytań.']),
+      'od5.produkty': wpis('Jaki sprzęt odkupujemy?', 'Modele z największą wartością odkupu w okresie, zmiana ceny po weryfikacji, czas do sprzedaży i marża.',
+        [b2h('Produkty z zakończonych wycen (indeks, kwota przed i po weryfikacji), kanban produktowy (etap "Sprzedany") i raport marży odsprzedaży.')],
+        ['Dni do sprzedaży: mediana od odkupu do etapu "Sprzedany".', 'Marża: (cena sprzedaży - cena odkupu) / cena sprzedaży.'])
+    });
+  }
+
   function naglowek() {
     return '<div class="topbar" id="sec-top"><span class="tb-logo" aria-hidden="true">' + H.icon('m-pulse') + '</span>' +
-      '<div class="tb-t"><h1>Odkup używanych</h1><p>Puls sklepu · odkup.cyfrowe.pl i panel B2H · liczby przykładowe</p></div><span class="gap"></span>' +
+      '<div class="tb-t"><h1>Odkup używanych</h1><p>Puls sklepu · odkup.cyfrowe.pl i panel B2H</p></div><span class="gap"></span>' +
       '<div class="seg" role="group" aria-label="Zakres"><button class="seg-b" type="button">7 dni</button><button class="seg-b on" type="button">28 dni</button><button class="seg-b" type="button">90 dni</button></div>' +
       (H.RAIL_VIEWS || []).map(function (v) { return '<button class="btn only-narrow" type="button" data-view="' + v.view + '">' + H.icon(v.ic) + '<span class="btn-t">' + e(v.n || v.t) + '</span></button>'; }).join('') + '</div>';
   }
@@ -13902,12 +13733,10 @@ window.ODK = (function () {
       NAZWY.forEach(function (n) { try { H[n] = p(n); } catch (er) { H[n] = null; } });
       if (!D) return '<div class="banner bad">Brak danych odkupu.</div>';
       wyjasnienia(); setTimeout(notatki, 0);
-      return naglowek() + '<div class="m3s odk"><div class="m3s-blok">' + hero() +
-        '<div class="m3s-rz">' + dni() + droga() + '</div>' +
-        '<div class="m3s-rz">' + straty() + uwagi() + '</div>' +
-        '<div class="m3s-rz">' + produkty() + kanaly() + '</div>' +
-        '<div class="m3s-rz">' + czas() + stan() + '</div>' +
-        '</div></div>';
+      return naglowek() + '<div class="m3s odk5"><div class="m3s-blok"><div class="od-g">' +
+        '<div class="od-demo od-w12"><b>Poglądówka.</b> Liczby są przykładowe. Prawdziwe są tylko udziały starego kreatora w karcie porównania (GA4, 20-31.10).</div>' +
+        hero() + lejek() + porownanie() + dzien() + po() + szukaja() + brak() + udzialy() + kanaly() + bledy() + produkty() +
+        '</div></div></div>';
     }
   };
 })();
